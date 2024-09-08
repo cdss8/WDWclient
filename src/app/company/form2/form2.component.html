@@ -1,0 +1,69 @@
+
+<app-header-template></app-header-template>
+    <body>
+      <div class="navegator">
+        <a [routerLink]="['']">Home</a> 
+        <i class="fa-solid fa-chevron-right"></i>
+        <a class="current">do no track my info</a>
+    </div>
+        <div class="text-cover">
+            <h1>    PERSONAL INFORRMATION</h1>
+            <p>Do No Sell My Personal Information</p>
+        </div>
+                
+        <section>
+          <p> Please, fill out the form below if you are want to be removed from the email list for Marketing Goals of Engage Digital Wealth LLC.
+            <br> By filling out this form, You wont receives updates, your email and personal information wont be tracked or be sell to 3rd companies. </p>
+
+            <div class="form2-ctn">
+                <form id="getstarted" [formGroup]="doNoSellMyDataForm" (submit)="submitDoNoSellMyData()">
+                    <div class="name-ctn">
+                      <div class="fname">
+                        <label for="firstname">First Name <i class="fa-solid fa-asterisk"></i></label>
+                        <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
+                      </div>
+                      <div class="lname">
+                        <label for="lastname">Last Name <i class="fa-solid fa-asterisk"></i></label>
+                        <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+                      </div>
+                    </div>
+                    <div class="email-ctn">
+                      <label for="email">Email <i class="fa-solid fa-asterisk"></i></label>
+                      <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
+                      <span class="error-message">The entry is Invalid</span>
+                    </div>
+                    <div class="name-ctn">
+                        <div class="fname">
+                          <label for="city">City <i class="fa-solid fa-asterisk"></i></label>
+                          <input formControlName="city" type="text" id="city"  placeholder=" " required>
+                        </div>
+                        <div class="lname">
+                          <label for="zipcode">Street<i class="fa-solid fa-asterisk"></i></label>
+                          <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+                        </div>
+                      </div>
+                      <div class="name-ctn">
+                        <div class="fname">
+                          <label for="firstname">Zip-Code<i class="fa-solid fa-asterisk"></i></label>
+                          <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
+                        </div>
+                        <div class="lname">
+                          <label for="lastname">Phone<i class="fa-solid fa-asterisk"></i></label>
+                          <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+                        </div>
+                      </div>
+                      <div class="email-ctn">
+                        <label for="email">Additional comments<i class="fa-solid fa-asterisk"></i></label>
+                        <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
+                        <span class="error-message">The entry is Invalid</span>
+                      </div>
+
+                      <div class="email-ctn">
+                        submit
+                      </div>
+                  </form>
+            </div>         <!--ng-->
+        </section>
+       
+    </body>
+<app-footer-template></app-footer-template>

@@ -1,0 +1,229 @@
+body{
+    width: 100%;
+    height: 200vh;
+    max-height: 2100px;
+    display:flex;
+    flex-direction: column;
+    background: #fff;
+    justify-content:space-between;
+}
+.cmp-info{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    height: 1600px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+    justify-content: space-around;
+}
+
+
+section .company{
+    margin-top: 15%;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.company div{
+    width: 15%;
+    height: 300px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items:center;
+    margin-bottom: 100px;
+}
+
+
+.company div h5{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    text-align: center;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    background-color: #f50;
+    color: #111827;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'DM sans', sans-serif;
+}
+
+.company div p{
+    width: 90%;
+    padding: 0 5%;
+    text-align: justify;
+    text-transform:inherit;
+    height: 25%;
+    border: 0;
+    display: flex;
+    border-top: 10px solid #fff;
+    background: #fff;
+    color: #111827;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'DM sans', sans-serif;
+
+}
+
+.prospect-ctn{
+    width: 100%;
+    height: 40%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+            flex-direction: column;
+}
+
+.prospect-ctn div{
+    flex-direction: row;
+}
+
+.txt{
+
+    justify-content: center;
+    height: 1000px;
+    width: 100%;
+    background: transparent;
+    margin: 0;
+}
+
+.txt h1{
+    background-color: transparent;
+    justify-self: center;
+    margin: 0 20%;
+    text-transform: capitalize;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'DM sans', sans-serif;
+    color: #ff5500;
+}
+
+.txt p{
+    margin: 5% 20% 0 20%;
+    font-size: 18px;
+    text-align: justify;
+
+}
+
+.prospect{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111827;
+}
+
+.prospect div{
+    width: 20%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DM sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #f50;
+
+}
+
+.prospect div i{
+    font-weight: 600;
+    color: #111827;
+    font-size: 13px;
+}
+
+.prospect img{
+    padding: 10px 0;
+    width: 12%;
+
+}
+
+
+.inds{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 200px;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0;
+    overflow-x: hidden;
+
+}
+
+.inds div{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: baseline;
+}
+
+.inds div div{
+    font-family: 'DM sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items:center;   
+}
+
+.inds img{
+    width: 30%;
+    height: 30%;
+}
+
+.navegator{
+    display: block;
+    position: absolute;
+    top:220px;
+    left:300px;
+    z-index: 100;
+}
+
+.navegator a, .navegator p, .navegator i{
+    display: inline-block;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 0 5px;
+
+    
+
+}
+
+.current{
+    color:#f50;
+    font-weight: 500;
+}
+
+.navegator a, .navegator p{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'DM sans';
+}
+
+.navegator a:hover{
+    font-weight: 700;
+    transition: ease-in .1s;
+}
+
+.navegator p:hover{
+    font-weight: 700;
+    transition: ease-in .1s;
+}
+
+

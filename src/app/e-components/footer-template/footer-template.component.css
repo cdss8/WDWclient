@@ -1,0 +1,143 @@
+footer{
+    width: 100%;
+    height: 20vh;
+    max-height: 250px;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+        flex-direction: column;
+    background-color: #111827;
+}
+
+.f-t-info{
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    display: flex;
+}
+
+.f-t-info div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-t-logo{
+justify-content: end;
+background: #000;
+}
+
+.f-t-logo img{
+    height: 70%;
+    padding-bottom: 5px;
+    background: transparent;
+}
+.f-t-logo h3{
+    color: #fff;
+    font-family: 'Zain', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    background: transparent;
+}
+
+.ctn-df{
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.ctn-df div{
+    width: 100%;
+    height: 50%;
+}
+.f-t-info .ctn-df .f-t-quick-menu ul{
+    background: transparent;
+}
+.f-t-info .ctn-df .f-t-quick-menu ul li{
+    display: inline;
+    list-style: none;
+    background: transparent;
+}
+.f-t-info .ctn-df .f-t-quick-menu{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    justify-content: center;
+}
+
+.f-t-info .ctn-df .f-t-quick-menu ul li a{
+    margin: 15px;
+    text-decoration: none;
+    font-family: 'Zain', sans-serif;
+    font-size: 14px;
+    background: transparent;
+    color: #fff;
+    background: transparent;
+}
+
+.f-t-info .ctn-df .f-t-quick-menu ul li a:hover{
+    color: #f50;
+}
+.f-t-info  .f-t-icons {
+    display:flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background:transparent;
+}
+
+.f-t-info  .f-t-icons a{
+    margin: 10px;
+    font-size: 20px;
+    background:transparent;
+}
+
+.f-t-info  .f-t-icons a i{
+    background:transparent;
+    color: #f50;
+}
+
+
+
+.f-t-info  .f-t-icons a i:hover{
+    cursor: pointer;
+    color: #fff;
+
+}
+
+
+
+.f-t-details{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    margin: 0;
+    background: #000;
+    justify-content: center;
+}
+
+.f-t-details ul{
+    padding-top: 20px;
+    background: transparent;
+    
+}
+.f-t-details ul li, .f-t-details ul li span{
+    display: flex;
+    display: inline;
+    align-items: center;
+    background: transparent;
+    font-size: 10px;
+    color: #f50;
+}
+
+.f-t-details ul li a{
+    margin: 15px;
+    font-size: 10px;
+    color: #999;
+    background: transparent;
+}

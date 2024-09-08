@@ -1,0 +1,154 @@
+body{
+    width: 100%;
+    height: 200vh;
+max-height: 2000px;
+    background:url("/assets/covers/cover2.jpg")no-repeat top center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position-y:-300px ;
+    background-color: #f6faff;
+    opacity: 1;
+    margin: 0;
+}
+
+.text-cover{
+    padding-top: 200px;
+    width: 85%;
+    height: 20vh;
+    max-height: 250px;
+    display:flex;
+    background-color: rgba(79, 54, 40, 0.35);
+    margin: 0;
+    justify-content: baseline;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 600;
+    padding-left: 15%;
+    color:#fff
+}
+
+.logo-cover{
+    width: 100%;
+    height: 20vh;
+    max-height: 200px;
+    display:flex;
+    background: #fff;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.logo-cover img{
+    margin-left: 60% ;
+    height: 70%;
+}
+
+.titulo{
+    padding: 20px 15%;
+    display: inline-flex;
+    height: 20%;
+    width: 70%;
+    align-items: center;
+    font-size:30px;
+    font-weight: 600;
+}
+p {
+    padding: 80px  15%;
+    align-self: baseline;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6faff;
+}
+
+main{
+    width: 100%;
+    height: 180vh;
+    background: #f6faff;
+}
+
+section{
+    cursor: default;
+    width: 85%;
+    padding-left: 15%;
+    height: 100vh;
+    max-height: 1500px;
+    background-color: #f6faff;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+}
+
+section .lct{
+    display:flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: baseline;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+section .lct div{
+    box-sizing: border-box;
+    display:flex;
+    width: 20%;
+    height: 100%;
+    justify-content: baseline;
+    align-items: baseline;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor: default;
+}
+
+.lct div img{
+    width: 200px;
+    height: 250px;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.lct img:hover {
+    cursor: default;
+    opacity: .75;
+    border-bottom: 4px solid #f50;
+    transition: all 0.2s;
+
+}
+
+
+.title{
+    background: transparent;
+    font-size:12px;
+    font-style:italic;
+    color: rgb(255, 85, 0);
+    padding-bottom: 10px;
+    cursor: default;
+}
+
+.countries{
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background:transparent;
+    cursor: default;
+}
+span{
+    background:transparent;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+section .lct-text{
+    display:flex;
+    width: 100%;
+    height: 50%;
+    background: red;
+}

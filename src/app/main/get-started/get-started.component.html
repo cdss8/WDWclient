@@ -1,0 +1,56 @@
+<section class="get-started">
+    <div class="get-started-ctainer">
+      <div class="gs-text">
+        <h2>Quick Message <span class="h2line"></span></h2>
+        <div class="gs-text-1">     
+          <h3>Curious? <br>Ready to dive deeper? <br><span> Let's talk</span></h3>
+          <h4>Are You ready to take the next step up for your Business?  
+          <br>Get in touch for 100 % free custom audit and Lets take together
+          <br> Your business to the next level </h4>
+        </div>
+        <div class="gs-text-2">
+<!--planned calendy calendar--> 
+        </div>
+      </div>
+      <div class="gs-form">
+
+        <!--ng-->
+        <form id="getstarted" [formGroup]="contactUsForm" (submit)="submitContactUs()">
+          <div class="name-ctn">
+            <div class="fname">
+              <label for="firstname">First Name</label>
+              <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
+            </div>
+            <div class="lname">
+              <label for="lastname">Last Name</label>
+              <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+            </div>
+          </div>
+
+          <div class="email-ctn">
+            <label for="email">Email <i class="fa-solid fa-asterisk"></i></label>
+            <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
+            <span class="error-message">The entry is Invalid</span>
+          </div>
+          <div class="company-ctn">
+            <label for="company">Company</label>
+            <input formControlName="company"  type="text" id="Company" placeholder=" " required>
+          </div>
+          <div class="enquiree-ctn">
+            <label for="enquiree">Message</label>
+            <input formControlName="message" type="text" id="Message"  placeholder="Quick Message About Your Project" required>
+          </div>
+
+          <div class="privacy-ctn">
+            <input formControlName="terms"  type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">By submitting this form, I consent Engage Digital Wealth processing my data according to their <a href="#">Privacy Policy</a>.</label>
+          </div>
+          <div class="contactus-ctn">
+            <span class="error-message"></span>
+            <button type="submit">Contact Us</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    </section>

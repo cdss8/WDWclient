@@ -1,0 +1,87 @@
+
+
+.sp-bt-st{
+    margin-top: 10vh;
+    height: 60vh;
+    max-height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ptn-text{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+    justify-content: baseline;
+    background: transparent; 
+    align-items: center;
+}
+.ptn-text h1{
+    font-size: 40px;
+    padding-bottom:20px ;
+}
+.ptn-text p{
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    opacity: .6;
+}
+
+.ptn-logos{
+    padding-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 65%;
+
+    justify-content: center;
+
+}
+
+.ptn-logos div{
+    height: 30%;
+    width: 10%;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    cursor: text;
+
+}
+
+.gads{
+    height: 60%;
+}
+.gmkt{
+    height: 45%;
+}
+.gprnt{
+    width: 55%;
+}
+.fmeta{
+    width: 60%;
+}
+.gptn{
+    width: 100%;
+}
+.shpf{
+    height: 100%;
+}
+.mcst{
+    width: 70%;
+}
+.klav{
+    width: 55%;
+}
+
+.xprnt{
+    height: 70%;
+}
+
+.yandx{
+    width: 60%;
+}

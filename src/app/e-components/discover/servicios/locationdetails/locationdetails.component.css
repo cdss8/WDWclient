@@ -1,0 +1,170 @@
+body{
+    width: 100%;
+    max-height: 1500px;
+    background-size: cover;
+    background-position-y:-400px ;
+    background-color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-cover{
+    width: 100%;
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background:transparent;
+    margin: 0;
+}
+
+.text-cover h1{
+    color:#f50;
+    font-size: 55px;
+    background: transparent;
+}
+
+.text-cover p{
+    padding-top: 20px;
+    color:#111827;
+    font-size: 35px;
+    font-weight: 600;
+}
+section p {
+    padding: 80px 18%;
+    align-self: baseline;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family:'DM sans', sans-serif;
+    background-color: #fff;
+    text-align: justify;
+}
+
+section{
+    cursor: default;
+    width: 85%;
+    padding-left: 15%;
+    height: 100vh;
+    max-height: 1500px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+}
+
+section .lct{
+    display:flex;
+    width: 85%;
+padding-left: 15%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: baseline;
+    background: transparent;
+}
+
+section .lct div{
+    box-sizing: border-box;
+    display:flex;
+    width: 20%;
+    height: 100%;
+    justify-content: baseline;
+    align-items: baseline;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor: default;
+}
+
+.lct div img{
+    width: 200px;
+    height: 250px;
+    border-radius: 4px;
+    cursor: default;
+}
+
+section div p{
+    align-self: baseline;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-family:DM sans;
+    font-weight: 400;
+    background-color: #fff;
+    color:#111827;
+    text-align: justify;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.lct img:hover {
+    cursor: default;
+    border-bottom: 4px solid #f50;
+    transition: all 0.2s;
+
+}
+
+
+.title{
+    background: transparent;
+    font-size:12px;
+    font-style:italic;
+    color: rgb(255, 85, 0);
+    padding-bottom: 10px;
+    cursor: default;
+}
+
+.countries{
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background:transparent;
+    cursor: default;
+}
+span{
+    background:transparent;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+
+.navegator{
+    display: block;
+    position: absolute;
+    top:220px;
+    left:300px;
+    z-index: 100;
+}
+
+.navegator a, .navegator p, .navegator i{
+    display: inline-block;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 0 5px; 
+}
+
+.current{
+    color:#f50;
+    font-weight: 500;
+}
+
+.navegator a, .navegator p{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'DM sans';
+}
+
+.navegator a:hover{
+    font-weight: 700;
+    transition: ease-in .1s;
+}
+
+.navegator p:hover{
+    font-weight: 700;
+    transition: ease-in .1s;
+}

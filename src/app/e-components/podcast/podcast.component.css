@@ -1,0 +1,264 @@
+body{
+    height: 120vh;
+    max-height: 2000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+body .head-template{
+    flex-direction: column;
+    width: 80%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background: #111827;
+    margin: 5vh 10%;
+}
+
+.head-template div{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.head-template h1{
+    background: transparent;
+    margin: 0;
+    font-size: 40px;
+    color: #f50;
+
+
+}
+.head-template p{
+    padding-top:25px ;
+    background: transparent;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'DM sans', sans-serif;
+}
+
+.services{
+    margin: 5vh 10%;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.podcast {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+}
+
+.podcast-info,  .podcast-cover{
+    width: 48%;
+    margin: 0 2%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+.podcast-info{
+    flex-direction: column;
+}
+.podcast-info h3{
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    font-style: italic;
+    color: #f50;
+}
+.podcast-info h2{
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    font-family: 'DM sans', sans-serif;
+}
+
+.podcast-info p{
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 15px;
+
+    font-family: 'DM sans', sans-serif;
+}
+.podcast-cover div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.podcast-cover div h1{
+    background: transparent;
+    margin-top: 22%;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: 'DM sans', sans-serif;
+    font-weight: 400;
+}
+
+.podcast-cover div p{
+    font-weight: 200;
+    padding-top: 10px;
+    color: #f50;
+    text-transform: capitalize;
+}
+
+.podcast-cover div img{
+    margin-top: 15%;
+    height: 220px;
+    cursor:pointer;
+}
+
+.podcast-cover div h3{
+    padding-top: 10px;
+    font-size: 16px;
+    font-family: 'DM sans', sans-serif;
+    font-weight: 500;
+}
+
+
+.podcast-cover button{
+margin-top: 15px;
+    border:0;
+    border-radius: 12px;
+    width: 120px;
+    height: 5px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #ff5500;
+    font-size: 11px;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor:pointer;
+    color: #000;
+ }
+
+ .podcast-cover button:hover{
+background: #32383f2a;
+
+ }
+
+
+.suscb{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+}
+.podcast-info{
+    align-items: center;
+    justify-content: baseline;
+}
+
+.podcast-info p{
+    margin: 0 50px;
+    padding: 0;
+    background: transparent;
+}
+
+
+.bn-wrapper{
+    margin-top: 70px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background:transparent;
+}
+
+#sign-up-form {
+    border-radius: 8px;
+    width: 60%;
+}
+.bn-wrapper form {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    background:#fff;
+}
+.bn-wrapper .form-group {
+    background:transparent;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.bn-wrapper label {
+    background: transparent;
+    align-self: baseline;
+    font-size: 18px;
+    font-family: "Zain", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+.bn-wrapper input[type="email"] {
+    background:transparent;
+    width: 95%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.bn-wrapper input[type="email"]:focus {
+    outline: none;
+    border-color: #ff5500;
+}
+.bn-wrapper input[type="email"].invalid {
+    border-color: #dc3545;
+}
+.bn-wrapper .error-message {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+.bn-wrapper button {
+    justify-self: center;
+    align-self: center;
+    width: 60%;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: "Zain", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 0.75rem;
+    background: #ff5500;
+    color: blak;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.bn-wrapper button:hover {
+background-color: #32383f80;
+transition: ease-in .3s;
+color: #fff;
+}
+
+.suscb p{
+    padding-top: 50px;
+    color: #aaa;
+}
+
+.suscb p span{
+    color: #aaa;
+}

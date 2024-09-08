@@ -1,0 +1,231 @@
+
+.get-started{
+    width: 85%;
+    margin: 0 auto;
+    height:600px;
+    padding: 0px;
+}
+
+.get-started-ctainer{
+    width: 100%;
+    height: 100%;
+    display:flex;
+
+}
+.gs-text{
+    width:60%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.get-started h2{
+    align-self: baseline;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding-left: 50px;
+    font-size: 15px;
+    height: 15px;
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    color:#32383f80;
+}
+
+.gs-text-1{
+    width :100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.gs-text-1 h3{
+    padding-left: 50px;
+    width: 100%;
+    height: 45%;
+    padding-top:10%;
+    font-size: 40px;
+    font-family: 'DM sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+h3 span{
+    font-family: 'DM sans', sans-serif;
+    color:#f50;
+    font-weight: 700;
+}
+.gs-text-1 h4{
+    padding-left: 50px;
+    width: 100%;
+    height: 55%;
+    font-size: 20px;
+    text-transform:initial;
+    font-family: "Zain", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.gs-text-2{
+    display: flex;
+    align-items: end;
+    justify-content: baseline;
+    width :100%;
+    height: 10%;
+}
+.gs-text-2 p{
+    padding-left: 50px;
+    color: #32383f80;
+}
+
+.gs-text-2 span{
+    background-color: transparent;
+    color:#ff5500;
+    font-weight: 700;
+    opacity:.6;
+}
+
+.gs-form{
+    display:flex;
+    width:40%;
+    height: 100%;
+    border-radius: 0px;
+    background-color:#000;  
+    margin: auto;
+
+}
+
+.gs-form form{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    margin: auto;
+    flex-direction: column;
+}
+
+.get-started form div{
+    width: 90%;
+    background: transparent;
+}
+.get-started form input{
+    border: 0;
+    color:#fff;
+}
+
+.name-ctn, .email-ctn, .company-ctn, .enquiree-ctn, .privacy-ctn, .contactus-ctn{
+    padding-left: 10%; 
+    height: 15%;
+    display: flex;
+    margin: 0;
+}
+
+.name-ctn, .email-ctn, .enquiree-ctn, .privacy-ctn, .contactus-ctn{
+    justify-content: end;
+}
+.company-ctn{
+    justify-content: center;
+}
+.enquiree-ctn{
+    height: 25%;
+}
+.email-ctn, .company-ctn, .enquiree-ctn{
+    flex-direction: column;
+}
+
+form .name-ctn div{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+form div label{
+    color: #eee;
+    background: transparent;
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-family: "Zain", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+form .name-ctn input{
+    margin: 0;
+    width: 80%;
+    height: 40%;
+    background-color: #32383f80;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.company-ctn input, .email-ctn input{
+    margin: 0;
+    width: 90%;
+    height: 40%;
+    background-color: #32383f80;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.enquiree-ctn input{
+    margin: 0;
+    width: 90%;
+    height: 70%;
+    background-color: #32383f80;
+    font-size: 12px;
+    padding-left: 5px;   
+}
+.email-ctn span{
+    height: 10%;
+    background: transparent;
+    margin: 0;
+    opacity: 0;
+}
+
+.privacy-ctn label {
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 70px;
+   font-size: 12px;
+ }
+
+ .privacy-ctn a, .get-started form i{
+    font-size: 14px;
+    font-family: "Zain", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:#f50;
+    background: transparent;
+    text-decoration: none;
+}
+
+.contactus-ctn button{
+    width: 180px;
+    height: 40px;
+    border: 0;
+    background: #f50;
+    font-size: 14px;
+    font-family: "Zain", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:#fff;
+}
+.contactus-ctn button:hover{
+    background-color: #32383f80;
+    transition: ease in .3s;
+}
+
+
+
+
+

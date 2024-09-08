@@ -1,0 +1,99 @@
+<header>
+    <img src="assets/logo.png" alt="Logo" arria-hidden="true" [routerLink]="['']">
+</header>
+
+<body>
+
+  <div class="navegator">
+    <a [routerLink]="['']">Home</a> 
+    <i class="fa-solid fa-chevron-right"></i>
+    <a class="current">Landing Page</a>
+</div>
+    <section class="ct-text">
+        <h1>You Are Just a Click Away to Potencially Transform Your Business</h1>
+        <p>Reach To Our Experts Today And Get 100% Free Custom Consultation</p>
+    </section>
+    <section class="ct-form">
+        <form id="getstarted" [formGroup]="contactUsForm" (submit)="submitContactUs()">
+            <div class="name-ctn">
+              <div class="fname">
+                <label for="firstname">First Name<i class="fa-solid fa-asterisk"></i> </label>
+                <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
+              </div>
+              <div class="lname">
+                <label for="lastname">Last Name<i class="fa-solid fa-asterisk"></i></label>
+                <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+              </div>
+            </div>
+            <div class="email-ctn">
+              <label for="email">Work Email <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
+              <span class="error-message">The entry is Invalid</span>
+            </div>
+            <div class="company-ctn">
+              <label for="company">Company</label>
+              <input formControlName="company"  type="text" id="Company" placeholder=" " required>
+            </div>
+            <div class="enquiree-ctn">
+              <label for="enquiree">Message</label>
+              <input formControlName="message" type="text" id="Message"  placeholder="Tell Us More About Your Project" required>
+            </div>
+    
+            <div class="budget-ctn">
+              <label for="budget">Budget</label>
+              <input formControlName="budget" type="text" id="Budget" placeholder=" " required>
+            </div>
+            <div class="revenue-ctn">
+              <label for="revenue">What is Your Anual Revenue? <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="anualRevenue" type="text" id="Revenue" placeholder="Select An Option" list="rev" required>
+              <datalist id="rev">
+                <option> Less than $500K</option>
+                <option>$500K-$2M</option>
+                <option>$2M-$6M</option>
+                <option>$6M-$10M</option>
+                <option>More than $10M</option>
+              </datalist>
+            </div>
+            <div class="how-ctn">
+              <label for="how">How Did You Know Us <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="howKnowUs" type="text" id="How-know" placeholder="Select An Option"  list="how" required>
+              <datalist id="how">
+                <option>I'm Already A Client</option>
+                <option>Recomendation</option>
+                <option>Social Media & Podcast</option>
+                <option>In Person Event</option>
+                <option>Digital Event</option>
+                <option>Blog & NewsLetter</option>
+                <option>Partners & Affiliates</option>
+                <option>Google Search or/and Other Searhing Machine</option>
+                <option>None Above</option>
+              </datalist>
+            </div>
+            <div class="suscribe-ctn">
+              <input formControlName="suscribe"   type="checkbox" id="suscribe" name="suscribe">
+              <label for="suscribe">I would also like to receive additional business communications and updates on 
+              Engage Digital Wealth products, services, solutions and events. </label>
+            </div>
+            <div class="privacy-ctn">
+              <input formControlName="terms"  type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">By submitting this form, I consent Engage Digital Wealth storing, processing and contacting me in response to my inquiry. 
+              You can unsubscribe at any time. Please read our <a href="#">Privacy Policy</a> for more information. <i class="fa-solid fa-asterisk"></i> </label>
+            </div>
+            <div class="contactus-ctn">
+              <!--<span class="error-message"></span>-->
+              <button type="submit">Contact Us</button>
+            </div>
+  
+          </form>
+    </section>
+
+    <section class="ct-f-text">
+        <ul>
+            <li>Engage Digital Wealth <span>&#169;</span> 2024 </li>
+            <li><a [routerLink]="['/privacy']">Privacy & Legal</a></li>
+            <li><a [routerLink]="['/conditions']">Terms of Service</a></li>
+            <li><a [routerLink]="['/do-no-track']">Do Not Sell My Info</a></li>
+            <li><a [routerLink]="['/cookies']">Cookies Policy</a></li>
+        </ul>
+    </section>
+</body>

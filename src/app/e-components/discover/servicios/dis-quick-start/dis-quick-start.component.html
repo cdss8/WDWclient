@@ -1,0 +1,40 @@
+<app-header></app-header>
+<body>
+    <div class="navegator">
+        <a [routerLink]="['/discover']">discover</a> 
+        <i class="fa-solid fa-chevron-right"></i>
+        <a class="current">quick start</a>
+    </div>
+    <section class="qs-title">
+        <div>
+           <h1> <span>Don't settle for just one service </span><br> Elevate your business with our all-in-one solutions </h1>
+           <p>Our comprehensive packages, combined with strategic growth playbooks, deliver transformative results for your business.
+                <br>Everything you need to succeed.
+           </p>
+        </div>
+    </section>
+
+    <section class="qs-links">
+        <div class="qs-r1">
+            <div [routerLink]="['/qs-boost-sales']">
+                <h1>Struggling to hit your revenue goals?<br> Skyrocket your sales</h1>
+                <p>Learn more <i class="fa-solid fa-arrow-right"></i> </p>
+            </div>
+            <div [routerLink]="['/qs-brand-growth']">
+                <h1>Long-Term brand growth? <br>Create a strong reputation &<br> Sell effortlessly</h1>
+                <p>Learn more <i class="fa-solid fa-arrow-right"></i> </p>
+            </div>       
+        </div>
+        <div class="qs-r2">
+            <div [routerLink]="['/qs-build-team']">
+                <h1>Ready to dominate your industry? <br>Create a team of champions that drives exceptional results</h1>
+                <p>Learn more <i class="fa-solid fa-arrow-right"></i> </p>
+            </div>            
+            <div [routerLink]="['/qs-tech']">
+                <h1>Technichal Problem? <br> Stay ahead of the curve. <br>Leverage the latest technology to boost your sales</h1>
+                <p>Learn more <i class="fa-solid fa-arrow-right"></i> </p>
+            </div>
+        </div>
+    </section>
+</body>
+<app-footer></app-footer>

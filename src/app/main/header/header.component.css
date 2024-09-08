@@ -1,0 +1,224 @@
+html{
+    overflow: scroll;
+}
+
+header{ 
+    display: flex;
+    height: 165px;
+}
+nav{
+    width:100%;
+    display: flex;
+    margin-top: 0;
+    align-items:end;
+    height: 130px;
+}
+.img-container{
+    display:flex;
+    width:40%;
+justify-content: center;
+    align-items:end;
+    margin: 0;
+    padding: 0;
+}
+.img{
+    margin-top: 0%;
+    width: 250px;
+    height: 130px;
+    cursor:pointer;
+    z-index: 999;
+ }
+
+.s-menu{
+    display: flex;
+    overflow: hidden;
+    height: 55px;
+    width: 80%;
+    margin:0;
+    padding: 0;
+    justify-content:center;
+    align-items: end;
+}
+.s-menu li {
+    background: transparent;
+    	display: inline-block;
+		transition: 0.2s ease-in-out;
+        justify-content: center;
+        margin: 0 5px 0 5px ;
+}
+
+.s-menu li a {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0);
+    font-size: 20px;  
+    font-family: "Zain", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition:.2s;
+    color: #000;
+    border-radius: 5px;
+}
+
+.container{
+    align-items: flex-end;
+    display:flex;
+    width:40%;
+    height: 55px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav button{
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    align-items: center;
+    justify-items: center;
+    border-radius: 12px;
+    border: 1px solid #000;
+    padding: 15px;
+    font-size: 18px;
+    cursor:pointer;
+    overflow: hidden;
+    font-family: "Zain", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    z-index: 99;
+
+}
+
+header nav button:hover{
+
+     color: #f50;
+    transition: ease-out .2s;
+}
+
+.hamburger_menu{
+    margin: 0;
+    width:50px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 8%;
+    align-items: center;
+    display:none;
+}
+
+label.hamburger {
+    align-self: center;
+    justify-content: center;
+    display: block;
+    width: 35px; /* less width = square hamburger */
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+ }
+ 
+ input#hamburger {
+   display:none
+ }
+ 
+ .line {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #000;
+    transition: 0.5s;
+ }
+ /* steps of 12 are optional, could also be 10, 13 etc */
+ .line:nth-child(1) { top: 30%; }
+ .line:nth-child(2) { top: 50%; }
+ .line:nth-child(3) { top: 70%; }
+ 
+ /* translateY must be same as */
+ #hamburger:checked + .hamburger .line:nth-child(1){
+    transform: translateY(10px) rotate(-45deg);
+    width: 35px;
+    background-color: #FF5500;
+}
+ 
+ #hamburger:checked + .hamburger .line:nth-child(2){
+    opacity:0;
+}
+ 
+ #hamburger:checked + .hamburger .line:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+    width: 35px;
+    background-color: #FF5500;
+}
+.main{
+    display:flex;
+    margin-top: 5vh;
+    height: 860px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 0;
+    background-color: #000;
+    box-sizing: border-box;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-subcontainer1{
+    width:50%;
+    height: 100%;
+    background-color:#000;
+    z-index: 1;
+    display:flex;
+    justify-content: center;
+    align-items:baseline;
+    flex-direction: column;
+}
+
+.main-subcontainer1 h1{
+    margin: 0 0 5% 10%;
+    font-size: 50px;
+    color:#fff;
+    background-color: #000;
+}
+
+.main-subcontainer1 p{
+    margin: 0 0 6% 10%;
+    font-size: 14px;
+    color:#fff;
+    background-color: #000;
+}
+
+.main div button{
+    margin-left:10%;
+    width: 220px;
+    height: 50px;
+    justify-content: center;
+    border-radius: 15px;
+    border: 0;
+    padding: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;;
+    cursor:pointer;
+    overflow: hidden;
+    color: #000;
+    background-color: #FF5500;
+    font-size: 12px;
+}
+
+.main-subcontainer1 button:hover{
+    transition: ease .3s;
+    background-color: #FFf;
+    color: #000;
+}
+
+.main-subcontainer2{
+    width:50%;
+    height: 100%;
+    background: rgb(0,0,0);
+    z-index: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}

@@ -1,0 +1,172 @@
+body{
+    height: 300vh;
+    max-height: 3100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+body .head-template{
+    flex-direction: column;
+    width: 80%;
+    height: 80vh;
+    max-height: 820px;
+    display: flex;
+    flex-direction: column;
+    background: #111827;
+    margin: 5vh 10%;
+}
+
+.head-template div{
+    width: 60%;
+    margin: 0 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background: transparent;
+}
+
+.head-template h1{
+    background: transparent;
+    margin: 0;
+    font-size: 50px;
+    color: #fff;
+    text-transform: capitalize;
+
+}
+
+.head-template span{
+    background: transparent;
+    color: #f50;
+}
+.head-template p{
+    line-height: 25px;
+    word-spacing: 3px;
+    padding-top:10% ;
+    background: transparent;
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'DM sans', sans-serif;
+}
+
+.services{
+    margin-top: 5%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.services div {
+    width: 70%;
+    height: 20%;
+    margin: 0 15% ;
+    background: transparent;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+
+ }
+
+ 
+.services div div {
+    border-top-right-radius: 50px;
+    width: 20%;
+    margin: 15px;
+    height: 80%;
+    margin-bottom: 15%;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*duplicated*/
+.template{
+    border-top-right-radius: 50px;
+    width: 20%;
+    margin: 5px;
+    height: 98%;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.services .template:hover {
+   transition: .3s;
+   border-bottom: 3px solid #111827;
+}
+.services .template .tem-ctn{
+    width: 100%;
+    margin:0;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(213, 218, 224, 0.469);
+    justify-content: space-between;
+    border-bottom-left-radius: 50px;
+}
+
+.tem-ctn h1{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    background: transparent;
+    color: #000;
+}
+section div span{
+    background: transparent;
+}
+
+section div span i{
+    background: transparent;
+    border: 0;
+    color: red;
+
+}
+
+.services .template .tem-txt{
+    width: 100%;
+    height: 80%;
+    margin: 0;
+    display: flex;
+
+}
+
+.tem-txt p{
+    margin-left: 15px;
+    padding-right: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    background: transparent;
+    color:#000;
+    opacity: 0.4;
+}
+
+
+.template .tem-txt:hover, .services div div:hover .tem-txt {
+    transform: translateX(20px);
+    transition: .5s;
+
+}
+
+.services .template:hover, .services .template:hover h1{
+    color: #f50;
+    cursor: pointer;
+}
+
+.services .template:hover, .services .template:hover p{
+    opacity:1;
+}
+
