@@ -1,0 +1,397 @@
+
+
+.intro-ctn{
+    padding:0 2.5%;
+    height: 95vh;
+    min-height: 900px;
+    max-height: 950px;
+    width: 85%;
+    margin: 5vh auto;
+    background: #18171c;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-position: right bottom, left center;
+    background-repeat: no-repeat;
+}
+.intro-ctn h2{
+    margin: 0;
+    align-self: baseline;
+    height: 10%;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-left: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    color: #ddddddcc;
+}
+
+.intro-ctn .intro-texto {
+    width: 90%;
+    margin: 0;
+    height: 60%;
+    background: transparent;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+}
+
+.intro-ctn .intro-texto h1{
+  padding-top: 5%;
+    background: transparent;
+    color:#f50;
+    text-transform: uppercase;
+    font-size: 3.8rem;  
+    letter-spacing: 1px;
+    text-align: center;  
+    font-family: 'DM sans', sans-serif;
+    font-weight: 700;
+
+}
+.intro-texto h3{
+  background: transparent;
+  text-transform: capitalize;
+  color:#fff;
+  font-size: 3rem;
+  margin-bottom: 10%;  
+}
+.intro-texto h4{
+  padding: 0 20%;
+  background: transparent;
+  text-align: center;
+  color:#fff;
+  font-size: 1.4rem;
+}
+span {
+  background: #f50;
+}
+
+.intro-ctn .tier {
+  overflow: hidden;
+  width: 100%; 
+  padding: 0 10%;
+  height: 35%; 
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  margin-bottom: 2.5%;
+  background: transparent;
+
+}
+
+.tier div{
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+  margin: 0 1%;
+  background: transparent;
+}
+
+.tier div div {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  padding: 10%;
+}
+
+
+.tier .timg1{
+  background: url('/assets/covers/tier1.png');
+  background-size:20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #eee;
+}
+
+.tier .timg2{
+  background: url('/assets/covers/growing.png');
+  background-size:20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #eee;
+
+}
+.tier .timg3{
+  background: url('/assets/covers/money-flow.png');
+  background-size:20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #eee;
+
+}
+.tier p{
+  display: none;
+  cursor:default;
+}
+
+.tier .timg1:hover, .tier .timg2:hover, .tier .timg3:hover{
+  background: #f50;
+  transition: ease-in-out .3s;
+}
+
+.tier .timg1:hover p, .tier .timg2:hover p, .tier .timg3:hover p{
+  display: flex;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: ease-in-out .3s;
+
+
+}
+
+.tier .ttxt{
+  background:transparent;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+
+  .intro-ctn{
+    width: 100%;
+    margin: 0;
+}
+.intro-ctn h2{
+  font-size: 1rem;
+}
+
+  .intro-ctn .intro-texto h1{
+    font-size: 2rem;
+    margin-bottom: 5%;
+  }
+  .intro-texto h3{
+    text-align: center;
+    font-size: 1.5rem;  
+    margin-bottom: 20%;
+  }
+  .intro-texto h4{
+    padding: 0 5%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  .tier{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tier div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+  }
+
+  .tier div div {
+    width: 100%;
+    height: 40%;
+    margin: 1% ;
+    font-size: 1rem;
+    }
+
+  .tier .timg1{
+    background-size:10%;
+  }
+  .tier .timg2{
+    background-size:10%;
+  }
+  .tier .timg3{
+    background-size:10%;
+  }
+  
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+  .intro-ctn{
+    width: 100%;
+    margin: 0;
+}
+.intro-ctn h2{
+  font-size: 1rem;
+}
+
+  .intro-ctn .intro-texto h1{
+    padding: 0 10%;
+    font-size: 2.5rem;
+    margin-bottom: 4%;
+  }
+  .intro-texto h3{
+    padding: 0 15%;
+    text-align: center;
+    font-size: 2rem;  
+    margin-bottom: 20%;
+  }
+  .intro-texto h4{
+    padding: 0 10%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: justify;
+  }
+
+  .tier{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+  }
+  
+  .tier div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+  }
+
+  .tier div div {
+    width: 100%;
+    height: 30%;
+    margin: auto 0;
+    font-size: 1rem;
+    }
+
+  .tier .timg1{
+    background-size:10%;
+  }
+  .tier .timg2{
+    background-size:10%;
+  }
+  .tier .timg3{
+    background-size:10%;
+  }
+  
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+
+  .intro-ctn{
+    width: 100%;
+    margin: 0;
+}
+.intro-ctn h2{
+  font-size: 1rem;
+}
+
+  .intro-ctn .intro-texto h1{
+    padding: 0 10%;
+    font-size: 2.5rem;
+    margin-bottom: 4%;
+  }
+  .intro-texto h3{
+    padding: 0 15%;
+    text-align: center;
+    font-size: 2rem;  
+    margin-bottom: 10%;
+  }
+  .intro-texto h4{
+    padding: 0 10%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: justify;
+  }
+  
+  .tier{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .tier div{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 100%;
+  }
+
+  .tier div div {
+    width: 100%;
+    height: 50%;
+    margin: auto 0;
+    font-size: 1rem;
+    }
+
+  .tier .timg1{
+    background-size:25%;
+  }
+  .tier .timg2{
+    background-size:25%;
+  }
+  .tier .timg3{
+    background-size:25%;
+  }
+  
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+
+  .intro-ctn{
+    width: 100%;
+    margin: 0;
+}
+.intro-ctn h2{
+  font-size: 1rem;
+}
+
+  .intro-ctn .intro-texto h1{
+    font-size: 2.5rem;
+    margin-bottom: 4%;
+  }
+  .intro-texto h3{
+    text-align: center;
+    font-size: 2.1rem;  
+    margin-bottom: 10%;
+  }
+  .intro-texto h4{
+    padding: 0 10%;
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+  .intro-ctn{
+    width: 100%;
+    margin: 0;
+}
+
+  .intro-ctn .intro-texto h1{
+    font-size: 2.9rem;
+  }
+  .intro-texto h3{
+    font-size: 2.4rem;  
+    margin-bottom: 10%;
+  }
+  .intro-texto h4{
+    padding: 0 10%;
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+}
+
+@media(min-width:1440px) and (max-width:1800px){
+  .intro-ctn .intro-texto h1{
+    font-size: 3rem;
+  }
+  .intro-texto h3{
+    font-size: 2.5rem;  
+    margin-bottom: 15%;
+  }
+  .intro-texto h4{
+    padding: 0 15%;
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+}

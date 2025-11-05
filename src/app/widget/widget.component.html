@@ -1,0 +1,50 @@
+<body *ngIf="showMIcon">
+    <button class="chatbox-open" (click)="toggleButton()">
+        <i *ngIf="!open" class="fa fa-comment fa-2x" aria-hidden="true"></i>
+        <i  *ngIf="open" id="icon2" class="fa fa-arrow-circle-left"></i>
+    </button>
+    <div class="ctn" *ngIf="open" [ngClass]="{'ctn': true, 'ctn--open': open}">
+        <div class="dm">
+            <div id="dm-icons">
+                <div class="tt">
+                    <p>The experts are here to help you! </p>
+                </div>
+                <div>
+                    <a href="">
+                        <div class="wa">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <p> WhatsApp</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="msg">
+                            <i class="fab fa-facebook-messenger"></i>
+                            <p>Messenger</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <div class="x">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <p> X (Twitter)</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="tg">
+                            <i class="fa-brands fa-telegram"></i>
+                            <p>Telegram</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="email" >
+                <p>sales<i class="fas fa-at"></i>wisedigitalwealth.com</p>
+            </div>
+        </div>
+        <div class="prt" [routerLink]="['/contact']">
+            <p [routerLink]="['/contact']">Get In Touch<i class="fa fa-arrow-right"></i></p>
+        </div>
+    </div>
+</body>
+

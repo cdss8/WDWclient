@@ -1,12 +1,4 @@
-<app-header></app-header>
 <body>
-    <div class="navegator">
-        <a [routerLink]="['/discover']">discover</a> 
-        <i class="fa-solid fa-chevron-right"></i>
-        <a [routerLink]="['/quickstart']">quick start</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <a class="current">Build Your Team</a>
-    </div>
     <section class="bs-pg-template">
         <div class="bs-title">
             <h1>High Performance Team
@@ -23,31 +15,78 @@
         </div>
     </section>
     <div class="bs-exp"> 
+        <div class="navegator">
+            <a [routerLink]="['/expertise']">Expertise</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a class="current" ngbTooltip="You are here" triggers="click:blur">Build Your Team</a>
+        </div>
         <div class="bs-hder-ctn">
             <h2> Revealing the capabilities of High-Performing Teams: A Blueprint for Success</h2>
         </div>
         <div class="bs-exp-ctn">
-            <div class ="bs-empty"></div>
             <div class="bs-content">
-                <p>At Engage Digital Wealth we consider that a team is not just a collection of talented individuals, but it's a cohesive unit that works together seamlessly to achieve extraordinary results.
+                <p>At Wise Digital Wealth we consider that a team is not just a collection of talented individuals, but it's a cohesive unit that works together seamlessly to achieve extraordinary results.
                 
                 <br><br>According to Harvard Business Review, the culture —shared beliefs, values, and behaviors— of a company or team, makes them High Performing.
                 Researchs suggest that High-Performing teams often share three key characteristics: 1. Sense Of Common Understanding, 
                 2. Psychological Safety, and 3. Prosocial Purpose. 
-                <br><br>Common Understanding it is the shared understanding of goals, roles, and responsibilities that guides a team towards achieving the company's vision. 
+                <br><br>Common Understanding - shared understanding of goals, roles, and responsibilities that guides a team towards achieving the company's vision. 
                 By focusing on their individual tasks and how they contribute to the overall objectives, team members can work more effectively and efficiently.
-                <br><br>At Engage Digital Wealth, we prioritize Common Understanding as the foundation for building exceptional teams that aligns to companies' objectives and  drive results for Business Owners.
+                <br><br>At Engage Digital Wealth, we prioritize Common Understanding as the foundation for building exceptional teams that aligns to companies' objectives and  drive results.
                 
 
-               <br><br> Tell us your need, lets collaborate together to identify opprotunities of growth. 
+               <br><br> We trying to avoid Outstaffing and Outsourcing for our partners, providing them a dedicated professional that can be in touch 24/7 if something happens (as a Common understanding factor). Bellow, you can whatch some of the benefits 
+               building team with us. 
             </p>
             </div>
         </div>
+        <div class="st-services">
+            <div>
+                <div >
+                    <h1>Reduce Hiring Risk</h1>
+                    <p>We Reduce business owners the cost of hiring new employees, saving Time & Productivity of current team</p>
+                </div>
+                <div >
+                    <h1>Only Professionals:  Proven work experience</h1>
+                    <p>People experts on their field that can do the real work</p>
+                </div>
+                <div >
+                    <h1>Result Oriented Team</h1>
+                    <p>We Reduce Companies the cost of hiring new employees, saving Time & Money</p>
+                </div>
+            </div>
+            
+            
+            <div>
+                <div>
+                    <h1>Managemnet</h1>
+                    <p>Professional that will deliver Results in established deadlines </p>
+                </div>
+                
+                <div>
+                    <h1>Soft & Hard Skills</h1>
+                    <p>We Reduce Companies the cost of hiring new employees, saving Time & Money</p>
+                </div>
+                
+                <div>
+                    <h1>Adaptibilty & dedication</h1>
+                    <p>We Reduce Companies the cost of hiring new employees, saving Time & Money</p>
+                
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h1>Save Money</h1>
+                    <p>Management</p>
+                </div>
+
+            </div>
+        </div>
         <div class="bs-cnt-ctn">
-            <h3>Are you looking for the best Results?</h3>
-            <button [routerLink]="['/Contact-Us']">Get a Free Consultation</button>
+            <h1>Get in touch today and free consultation</h1>
         </div>
     </div>
-
 </body>
-<app-footer></app-footer>
+<br><br><br>
+<app-get-started></app-get-started>
+<br><br><br><br>

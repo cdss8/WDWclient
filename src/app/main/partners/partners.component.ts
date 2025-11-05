@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -11,5 +11,4 @@ import { RouterModule } from '@angular/router';
 
 
 export class PartnersComponent {
-  @Input() y:number=0;   //to initialize the component in different positions
 }

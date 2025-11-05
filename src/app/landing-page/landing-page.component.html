@@ -1,67 +1,279 @@
 <header>
-    <img src="assets/logo.png" alt="Logo" arria-hidden="true" [routerLink]="['']">
+    <img src="assets/logo.png" alt="Logo" arria-hidden="true" [routerLink]="['/']">
 </header>
 
 <body>
 
-  <div class="navegator">
-    <a [routerLink]="['']">Home</a> 
-    <i class="fa-solid fa-chevron-right"></i>
-    <a class="current">Landing Page</a>
-</div>
-    <section class="ct-text">
-        <h1>You Are Just a Click Away to Potencially Transform Your Business</h1>
-        <p>Reach To Our Experts Today And Get 100% Free Custom Consultation</p>
-    </section>
-    <section class="ct-form">
-        <form id="getstarted" [formGroup]="contactUsForm" (submit)="submitContactUs()">
-            <div class="name-ctn">
-              <div class="fname">
-                <label for="firstname">First Name<i class="fa-solid fa-asterisk"></i> </label>
-                <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
+  <section>
+        <div class="ct-text">
+            <h1>You Are Just a few step Away to Potencially Transform Your Business</h1>
+            <p>Reach to our experts today and get 100% free custom consultation</p>
+        </div>
+        <form 
+          [formGroup]="LandingPageForm"
+          (submit)="onSubmit()">
+
+          <div 
+            class="layer1"
+            *ngIf="LayerId===1">
+            
+              <P> <span class="ff" style="color:#f50">{{LayerId}}</span> / 6</P>
+              <h2>What define You Better?</h2>
+
+              <div class="content1" >
+                  <div>
+                    <label class="custom-radio">
+                    <input type="radio" formControlName="lead" name="lead" value=" I am seeking CONCRETE expertise for my business">
+                    <span class="radio-checkmark"></span>
+                      I am seeking CONCRETE expertise for my business
+                    </label>
+                  </div>
+            
+                  <div>
+                    <label class="custom-radio">
+                    <input type="radio" formControlName="lead" name="lead" value="I want to SCALE my business"> 
+                    <span class="radio-checkmark"></span>
+                      I want to SCALE my business
+                    </label>
+                  </div>
+            
+                  <div>
+                    <label class="custom-radio">
+                    <input type="radio" formControlName="lead" name="lead" value="I want to START my business">
+                    <span class="radio-checkmark"></span>
+                     I want to START my business
+                    </label>
+                  </div>
               </div>
-              <div class="lname">
-                <label for="lastname">Last Name<i class="fa-solid fa-asterisk"></i></label>
-                <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('lead')?.invalid && LandingPageForm.get('lead')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('lead')?.errors?.['required']">Select an Option</small>
+              </div>
+
+              <div class="btn-ctn">
+                <button class="prev" style="opacity:0; cursor:default; z-index: -1;;">Previous</button>
+                <p>Powered by Wise Digital Wealth </p>
+                <button class="next" (click)="next()">Next</button>
+              </div>
+          </div>
+          
+
+
+
+          <div class="layer2"  *ngIf="LayerId===2">
+            <P> <span class="ff" style="color:#f50">{{LayerId}}</span> / 6</P>
+            <h2>Tell Us More About Your Business</h2>
+            <div class="content2">
+              <div class="industry">
+                <label for="Industry">Industry <i class="fa-solid fa-asterisk"></i> </label>
+                <input formControlName="industry" type="text" id="industry"  placeholder="Ex: Saas, HealthCare, eCommerce " required>
+                <div class="error-ctn"  *ngIf="LandingPageForm.get('industry')?.invalid && LandingPageForm.get('industry')?.touched">
+                  <small class="error-message" *ngIf="LandingPageForm.get('industry')?.errors?.['required']">This field is required</small>
+                </div> 
+              </div>
+  
+              <div class="company">
+                <label for="company">Company <i class="fa-solid fa-asterisk"></i></label>
+                <input formControlName="company" type="text" id="company" placeholder=" Company or https://yourcompany.com" required>
+                <div class="error-ctn" *ngIf="LandingPageForm.get('company')?.invalid && LandingPageForm.get('company')?.touched">
+                  <small class="error-message" *ngIf="LandingPageForm.get('company')?.errors?.['required']">This field is required</small>
+                </div>
+              </div>
+            
+              <div class="decription">
+                <label for="description">Description Your Business In Few Sentences <i class="fa-solid fa-asterisk"></i></label>
+                <textarea formControlName="description" id="description" placeholder="We sell our AI SaaS to Companies for a Suscription Plan, $ 1.500 Monthly For Our Start Package" required></textarea>
+                <div class="error-ctn" *ngIf="LandingPageForm.get('description')?.invalid && LandingPageForm.get('description')?.touched">
+                  <small class="error-message" *ngIf="LandingPageForm.get('description')?.errors?.['required']">This field is required</small>
+                </div>
+              </div>
+  
+              <div class="message">
+                <label for="company">Message <i class="fa-solid fa-asterisk"></i></label>
+                <textarea formControlName="message" id="message" placeholder="Ex: Your Objectives, Your Challenges in Business, etc." required></textarea>
+                <div class="error-ctn" *ngIf="LandingPageForm.get('message')?.invalid && LandingPageForm.get('message')?.touched">
+                  <small class="error-message" *ngIf="LandingPageForm.get('message')?.errors?.['required']">This field is required</small>
+                </div>
               </div>
             </div>
-            <div class="email-ctn">
-              <label for="email">Work Email <i class="fa-solid fa-asterisk"></i></label>
-              <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
-              <span class="error-message">The entry is Invalid</span>
+            <div class="btn-ctn">
+              <button class="prev" (click)="prev()">Previous</button>
+              <p>Powered by Wise Digital Wealth </p>
+              <button class="next" (click)="next()">Next</button>
             </div>
-            <div class="company-ctn">
-              <label for="company">Company</label>
-              <input formControlName="company"  type="text" id="Company" placeholder=" " required>
+          </div>
+
+        <div class="layer3"  *ngIf="LayerId===3">
+          <P> <span class="ff" style="color:#f50">{{LayerId}}</span> / 6</P>
+            <h2>What Define You Best? </h2>
+            <div class="content3">
+                <div>
+                  <label class="custom-radio">
+                    <input type="radio" formControlName="tier" name="tier" value="I am the owner, managing parter and/or founder ">
+                    <span class="radio-checkmark"></span>
+                     I am the owner, managing parter and/or founder  
+                  </label>
+                </div>
+
+                <div>
+                  <label class="custom-radio">
+                    <input type="radio" formControlName="tier" name="tier" value="I am the managing director, CEO or related"> 
+                    <span class="radio-checkmark"></span>
+                    I am the managing director, CEO or related <br><br>(Ex: CTO, COO, CBDO...)
+                  </label>
+                </div>
+
+                <div>
+                   <label class="custom-radio">
+                   <input type="radio" formControlName="tier" name="tier" value="I am a top tier of the company">
+                   <span class="radio-checkmark"></span>
+                   I am a top tier of the company <br><br>(Ex: Senior BDM, Head of Product...) 
+                  </label>
+                </div>
+              </div>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('tier')?.invalid && LandingPageForm.get('tier')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('tier')?.errors?.['required']">Select an Option</small>
+              </div>
+              <div class="btn-ctn">
+                <button class="prev" (click)="prev()">Previous</button>
+                <p>Powered by Wise Digital Wealth </p>
+                <button class="next" (click)="next()">Next</button>
+              </div>
+        </div>
+          
+        <div class="layer4"  *ngIf="LayerId===4">
+          <P> <span class="ff" style="color:#f50">{{LayerId}}</span> / 6</P>
+          <h2>Define Your Business in numbers</h2>
+          <div class="content4">
+            <div class="industry">
+              <label for="revenueYear">Revenue per Year <i class="fa-solid fa-asterisk"></i> </label>
+              <input formControlName="revenueYear" type="text" id="revenueYear"  placeholder="Ex: $2M - $3M " required>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('revenueYear')?.invalid && LandingPageForm.get('revenueYear')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('revenueYear')?.errors?.['required']">This field is required</small>
+              </div>
             </div>
-            <div class="enquiree-ctn">
-              <label for="enquiree">Message</label>
-              <input formControlName="message" type="text" id="Message"  placeholder="Tell Us More About Your Project" required>
+  
+            <div class="revenueQuatrimestral">
+              <label for="revenueQuatrimestral">Revenue of Last 4 Months <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="revenueQuatrimestral" type="text" id="revenueQuatrimestral" placeholder="Ex: $600k - $800k " required>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('revenueQuatrimestral')?.invalid && LandingPageForm.get('revenueQuatrimestral')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('revenueQuatrimestral')?.errors?.['required']">This field is required</small>
+              </div>
             </div>
+          
+            <div class="eBITDAYear">
+              <label for="eBITDAYear">EBITDA per Year <i class="fa-solid fa-asterisk"></i></label>
+              <textarea formControlName="eBITDAYear" id="eBITDAYear" placeholder="Ex: $500k - $750k " required></textarea>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('eBITDAYear')?.invalid && LandingPageForm.get('eBITDAYear')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('eBITDAYear')?.errors?.['required']">This field is required</small>
+              </div>
+            </div>
+  
+            <div class="eBITDAQuatrimestral">
+              <label for="eBITDAQuatrimestral">EBITDA of Last 4 Month <i class="fa-solid fa-asterisk"></i></label>
+              <textarea formControlName="eBITDAQuatrimestral" id="eBITDAQuatrimestral" placeholder="Ex: $150k - $250k" required></textarea>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('eBITDAQuatrimestral')?.invalid && LandingPageForm.get('eBITDAQuatrimestral')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('eBITDAQuatrimestral')?.errors?.['required']">This field is required</small>
+              </div>
+            </div>
+          </div>
+          <div class="btn-ctn">
+            <button class="prev" (click)="prev()">Previous</button>
+            <p>Powered by Wise Digital Wealth </p>
+            <button class="next" (click)="next()">Next</button>
+          </div>
+        </div>
+          
+        <div class="layer5"  *ngIf="LayerId===5">
+          <P> <span class="ff" style="color:#f50">{{LayerId}}</span> / 6</P>
+          <h2>Personal Information</h2>
+          <div class="content5">
+            <div class="fullname">
+              <div class="firstname">
+                <label for="firstName">First Name <i class="fa-solid fa-asterisk"></i> </label>
+                <input formControlName="firstName" type="text" id="firstName"  placeholder="First Name" required>
+                <div class="error-ctn" *ngIf="LandingPageForm.get('firstName')?.invalid && LandingPageForm.get('firstName')?.touched">
+                  <small class="error-message" *ngIf="LandingPageForm.get('firstName')?.errors?.['required']">This field is required</small>
+                </div>
+              </div>
     
-            <div class="budget-ctn">
-              <label for="budget">Budget</label>
-              <input formControlName="budget" type="text" id="Budget" placeholder=" " required>
+              <div class="lastname">
+                <label for="lastName">Last Name <i class="fa-solid fa-asterisk"></i></label>
+                <input formControlName="lastName" type="text" id="lastName" placeholder="Last Name" required>
+                <div class="error-ctn" *ngIf="LandingPageForm.get('lastName')?.invalid && LandingPageForm.get('lastName')?.touched">
+                  <small class="error-message" *ngIf="LandingPageForm.get('lastName')?.errors?.['required']">This field is required</small>
+                </div>
+              </div>
             </div>
-            <div class="revenue-ctn">
-              <label for="revenue">What is Your Anual Revenue? <i class="fa-solid fa-asterisk"></i></label>
-              <input formControlName="anualRevenue" type="text" id="Revenue" placeholder="Select An Option" list="rev" required>
-              <datalist id="rev">
-                <option> Less than $500K</option>
-                <option>$500K-$2M</option>
-                <option>$2M-$6M</option>
-                <option>$6M-$10M</option>
-                <option>More than $10M</option>
-              </datalist>
+  
+            <div class="email">
+              <label for="email">Corporative Email <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="email" id="email" placeholder="your@email.com" required>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('email')?.invalid && LandingPageForm.get('email')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('email')?.errors?.['required']">This field is required</small>
+                <small class="error-message" *ngIf="LandingPageForm.get('email')?.errors?.['email']">Please, input a valid email address</small>
+              </div>     
             </div>
+  
+            <div class="location-ctn">
+              <div class="location">
+                <label for="location">Location <i class="fa-solid fa-asterisk"></i></label>
+                <select formControlName="location" id="location" name="location" required>
+                  <option value="" disabled selected hidden>Select your location</option>
+                  <option *ngFor="let country of countryList" [value]="country.name">
+                    {{ country.name }} ({{ country.flag }}) 
+                  </option>
+                  </select>
+                  <div class="error-ctn" *ngIf="LandingPageForm.get('location')?.invalid && LandingPageForm.get('location')?.touched">
+                    <small class="error-message" *ngIf="LandingPageForm.get('location')?.errors?.['required']">Select your location</small>
+                  </div> 
+                </div>
+    
+              <div class="phone">
+                <label for="phone">Telephone <i class="fa-solid fa-asterisk"></i></label>
+                <input formControlName="phone" type="tel" id="phone" placeholder="Country code, hyphen and phone number without spacing" required>
+                <div class="error-ctn" style="margin: 0;" *ngIf="LandingPageForm.get('phone')?.invalid && LandingPageForm.get('phone')?.touched">
+                  <small class="error-message" *ngIf="LandingPageForm.get('phone')?.errors?.['pattern']">Invalid phone number. Example: +1-985..</small>
+                  <small class="error-message" *ngIf="LandingPageForm.get('phone')?.errors?.['required']">Please, input a valid phone</small>
+                </div> 
+             </div>
+            </div>
+            
+            <div class="social">
+              <div class="dm">
+                <label for="dm">Direct Message (Business Messenger)</label>
+                <input formControlName="dm" type="text" id="dm"  placeholder="Ex: WhatsApp, Telegram">
+              </div>
+    
+              <div class="profile">
+                <label for="profile">Public Profile </label>
+                <input formControlName="profile" type="text" id="profile" placeholder=" Ex: LinkedIn or Twitter profile">
+              </div>
+            </div>
+          </div>
+          <div class="btn-ctn">
+            <button class="prev" (click)="prev()">Previous</button>
+            <p>Powered by Wise Digital Wealth </p>
+            <button class="next" (click)="next()">Next</button>
+          </div>
+
+        </div>
+          
+        <div class="layer6"  *ngIf="LayerId===6">
+          <P> <span class="ff" style="color:#f50">{{LayerId}}</span> / 6</P>
+          <h2>You are literrally almost here</h2>
+          <div class="content6">
             <div class="how-ctn">
-              <label for="how">How Did You Know Us <i class="fa-solid fa-asterisk"></i></label>
-              <input formControlName="howKnowUs" type="text" id="How-know" placeholder="Select An Option"  list="how" required>
+              <label style="margin-left:0; justify-self: baseline; align-self: baseline;" for="howKnowUs">How Did You Know Us <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="howKnowUs" type="text" id="howKnowUs" placeholder="Select An Option"  list="how" required>
+              <div class="error-ctn" *ngIf="LandingPageForm.get('howKnowUs')?.invalid && LandingPageForm.get('howKnowUs')?.touched">
+                <small class="error-message" *ngIf="LandingPageForm.get('howKnowUs')?.errors?.['required']">This field is required</small>
+              </div> 
               <datalist id="how">
                 <option>I'm Already A Client</option>
                 <option>Recomendation</option>
                 <option>Social Media & Podcast</option>
                 <option>In Person Event</option>
+                <option>I Know Manuel Personally</option>
                 <option>Digital Event</option>
                 <option>Blog & NewsLetter</option>
                 <option>Partners & Affiliates</option>
@@ -69,31 +281,60 @@
                 <option>None Above</option>
               </datalist>
             </div>
+            
             <div class="suscribe-ctn">
-              <input formControlName="suscribe"   type="checkbox" id="suscribe" name="suscribe">
-              <label for="suscribe">I would also like to receive additional business communications and updates on 
-              Engage Digital Wealth products, services, solutions and events. </label>
-            </div>
-            <div class="privacy-ctn">
-              <input formControlName="terms"  type="checkbox" id="privacy" name="privacy" required>
-              <label for="privacy">By submitting this form, I consent Engage Digital Wealth storing, processing and contacting me in response to my inquiry. 
-              You can unsubscribe at any time. Please read our <a href="#">Privacy Policy</a> for more information. <i class="fa-solid fa-asterisk"></i> </label>
-            </div>
-            <div class="contactus-ctn">
-              <!--<span class="error-message"></span>-->
-              <button type="submit">Contact Us</button>
+              <label class="customcheckbox" for="suscribe" style="display: block;">
+                <input formControlName="suscribe"   type="checkbox" id="suscribe" name="suscribe" >
+                <span class="checkmark"></span>
+                I would also like to receive additional business communications and updates on  Engage Digital Wealth products, services, solutions and events.
+              </label>
+              
             </div>
   
-          </form>
-    </section>
+            <div class="privacy-ctn">
+              <label for="terms" class="customcheckbox" [ngClass]="{'error': LandingPageForm.get('terms')?.invalid && LandingPageForm.get('terms')?.touched}" style="display: block;">
+                <input formControlName="terms"  type="checkbox" id="terms" name="terms" required>
+                <span class="checkmark"></span>
+                <i class="fa-solid fa-asterisk"></i> By submitting this form, I consent Engage Digital Wealth storing, processing and contacting me in response to my inquiry. 
+                You can unsubscribe at any time. Please read our <a [routerLink]="['/privacy']">Privacy Policy</a> for more information. 
+              </label>
+            </div>
+          </div>
+          <div class="btn-ctn">
+            <button class="prev" (click)="prev()">Previous</button>
+            <p>Powered by Wise Digital Wealth </p>
+            <button class="submit" type="submit">Submit</button>
+          </div>
+        </div>
 
-    <section class="ct-f-text">
-        <ul>
-            <li>Engage Digital Wealth <span>&#169;</span> 2024 </li>
-            <li><a [routerLink]="['/privacy']">Privacy & Legal</a></li>
-            <li><a [routerLink]="['/conditions']">Terms of Service</a></li>
-            <li><a [routerLink]="['/do-no-track']">Do Not Sell My Info</a></li>
-            <li><a [routerLink]="['/cookies']">Cookies Policy</a></li>
-        </ul>
-    </section>
+
+
+
+
+        
+        <div class="layer7" *ngIf="LayerId===7">
+          <div class="content7">
+            <p>Thanks for choosing Us! We will back to you shortly.</p>
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" 
+            cy="26" r="25" fill="none" /><path class="checkmark__check" 
+            fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+            <button (click)="startLayer()">Start Over</button>
+          </div>
+          <div class="btn-ctn">
+            <p>Powered by Wise Digital Wealth </p>
+          </div>
+        </div>
+      </form> 
+        </section>
 </body>
+<section class="ct-f-text">
+  <ul>
+      <li>Wise Digital Wealth <span>&#169;</span> 2024 </li>
+      <li><a [routerLink]="['/privacy']">Privacy & Legal</a></li>
+      <li><a [routerLink]="['/conditions']">Terms of Service</a></li>
+      <li><a [routerLink]="['/do-no-track']">Do Not Sell My Info</a></li>
+      <li><a [routerLink]="['/cookies']">Cookies Policy</a></li> 
+      <span class="fi fi-us"></span>
+  </ul>
+</section>

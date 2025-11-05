@@ -1,42 +1,38 @@
 body{
+    max-width: 1920px;
     width: 100%;
-   height: 1500px;
-    background-size: cover;
-    background-position-y:-400px ;
-    background-color: #fff;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    z-index: 0;
-}
-
-.text-cover{
-    width: 100%;
-    height: 400px;
+    height: 80vh;
+    min-height: 1000px;
     display:flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    background:transparent;
+    background: #fff;
+    margin: 225px auto 0 auto;
+}
+
+section{
+    cursor: default;
+    width: 75%;
+    height: 1000px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+}
+
+section h2{
     margin: 0;
-    z-index: 0;
-}
-
-.text-cover h1{
-    color:#f50;
-    font-size: 55px;
-    background: transparent;
-    z-index: 0;
-}
-
-.text-cover p{
-    padding-top: 20px;
-    color:#111827;
-    font-size: 35px;
+    align-self: baseline;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 15px;
     font-weight: 600;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    color: #38323f80;
 }
+
 section p {
-    padding: 80px 0;
     margin: 0;
     align-self: baseline;
     font-size: 16px;
@@ -45,20 +41,6 @@ section p {
     background-color: #fff;
     text-align: justify;
 }
-
-section{
-    
-    cursor: default;
-    width: 75%;
-    height: 100vh;
-    margin-top: 100px;
-    max-height: 1100px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    margin:0 25%;
-}
-
 
 span{
     background:transparent;
@@ -76,11 +58,10 @@ section .lct-text{
 
 .form2-ctn{
     display:flex;
-    width:40%;
+    width:45%;
     height: 100%;
     border-radius: 0px;
     margin: 0;
-    background: #111827;
 
 }
 
@@ -88,235 +69,285 @@ section .lct-text{
 .form2-ctn form{
     display: flex;
     width: 100%;
+    height: 80%;
+    margin: auto;
+    flex-direction: column;
+    background: #111827;
+}
+
+form .layer1, form .layer2{
+    display: flex;
+    width: 80%;
     height: 100%;
     margin: auto;
     flex-direction: column;
     background: #111827;
 }
 
-.form2-ctnform div{
-    width: 90%;
-    height: 10%;
+form .ctn{
+    width: 100%;
+    height: 15%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     background: #111827;
 }
 
-.form2-ctn form input{
-    border: 0;
-    color:#fff;
+form .text-cover{
+    width: 100%;
+    height:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    margin: 0;
+    z-index: 0;
 }
 
-.form2-ctn  form .name-ctn div{
+form .text-cover h1{
+    color:#f50;
+    font-size: 2.5rem;
+    background: transparent;
+    z-index: 0;
+}
+
+form .text-cover p{
+    padding: 10px;
+    color:#fff;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'DM sans';
+}
+
+form .ctn div{
     width: 50%;
     height: 100%;
     margin: 0;
     display:flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: baseline;
     background: #111827;
 }
-.form2-ctn  form div label{
+
+form label{
+    display: flex;
     color: #fff;
     background: #111827;
     margin: 0;
-    padding-bottom: 5px;
-    font-size: 16px;
+    font-size: 1.2rem;
     font-family: "DM sans", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-.form2-ctn .name-ctn{
-    padding-left: 10%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin: 0;
-    justify-content: end;
-    background: #111827;
-}
 
-.form2-ctn  form .name-ctn input{
-    margin: 0;
-    width: 80%;
-    height: 40%;
-    background-color: #32383f80;
-    font-size: 12px;
-    padding-left: 5px;
-}
-
-.form2-ctn .email-ctn{
-    padding-left: 10%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    background: #111827;
-}
-.form2-ctn .company-ctn, .form2-ctn  .enquiree-ctn, .form2-ctn .budget-ctn, .form2-ctn .revenue-ctn, .form2-ctn .how-ctn{
-    padding-left: 10%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #111827;
-}
-
-.form2-ctn .company-ctn input, .email-ctn input, .budget-ctn input, .revenue-ctn input, .how-ctn input{
-    margin: 0;
-    width: 90%;
-    height: 40%;
-    background-color: #32383f80;
-    font-size: 12px;
-    padding-left: 5px;
-}
-.form2-ctn .email-ctn span{
-    height: 10%;
+form  i{
     background: transparent;
-    margin: 0;
-    opacity: 0;
-}
-.form2-ctn .enquiree-ctn{
-    height: 30%;
-    background: #000;
-}
-.form2-ctn .enquiree-ctn input{
-    display: flex;
-    margin: 0;
-    vertical-align: baseline;
-    line-height: 300px;
-    width: 90%;
-    height: 80%;
-    border-radius: 2px solid #f50;
-    background-color: #32383f80;
-    font-size: 12px;
-    padding-left: 5px;
-    justify-content: baseline;
-    align-items: baseline;
-    box-sizing: border-box;
-}
-
-/*
-Arreglar el mensaje de error 
-.get-started form input.invalid  {
-    border-color: #dc3545;
-}
-
-.enquiree-ctn input .error-message {
-    color: #dc3545;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-}
-
-*/
-
-.form2-ctn .suscribe-ctn, .privacy-ctn{
-    padding-left: 10%;
-    display: flex;
-    width: 90%;
-align-items: baseline;
-user-select: none;
-background: #000;
-}
-
-.form2-ctn .suscribe-ctn{
-    padding-top: 20px;
-    background: #000;
-
-}
-
-.form2-ctn .suscribe-ctn label, .privacy-ctn label {
-   padding-left: 4%;
-   padding-right: 80px;
-   background: transparent;
- }
- .form2-ctn .privacy-ctn a, .get-started form i{
-    font-size: 20px;
-    font-family: "Zain", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     color:#f50;
-    background: transparent;
-    text-decoration: none;
+    font-size: .6rem;  
+    margin: 0;
+    padding-top: 4px;
+    padding-left: 4px;
+    
 }
 
-.form2-ctn .contactus-ctn{
+
+form input{
+    width: 95%;
+    height: 38px;
+    min-height: 40px;
+    border: 1px;
+    color:#fff;
+    padding-left: 10px;
+    cursor: pointer;
+    background-color: #32383f80;
+    margin: 0;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+ form input:hover{
+    border:1px solid #f50;
+}
+
+form  .ctn .contactus-ctn{
     padding-top: 40px;
     display: flex;
-    width: 90%;
-    margin: 0;
-    align-items: baseline;
+    width: 100%;
+    margin: auto;
+    align-items: center;
     justify-content: end;
-    background: #000;
+    background: transparent;
+
 }
-.form2-ctn .contactus-ctn button{
-    width: 250px;
-    height: 60px;
+form .ctn button{
+    margin-right:0;
+    margin-bottom: 5%;
+    width: 180px;
+    height: 40px;
     border: 0;
     background: #f50;
-    font-size: 20px;
-    font-family: "Zain", sans-serif;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    font-family: "DM sans", sans-serif;
     font-weight: 500;
     font-style: normal;
     color:#fff;
 }
-.form2-ctn .contactus-ctn button:hover{
-    background-color: #32383f80;
-    transition: ease in .3s;
+form .ctn button:hover{
+    background-color: #c7ccd3;
+    transition: ease-in .3s;
+    color:#000;
 }
 
 
-.form2-ctn .contactus-ctn span{
+form .contactus-ctn span{
     width: 400px;height: 20px;
     justify-self: end;
     background:rgb(255, 255, 255);
     z-index: 999;
 }
 
-.navegator{
-    display: block;
-    position: absolute;
-    top:220px;
-    left:300px;
-    z-index: 10;
-}
 
-.navegator a, .navegator p, .navegator i{
-    display: inline-block;
-    font-size: 14px;
-    text-transform: capitalize;
-    margin: 0 5px;
-
-    
-
-}
-
-.current{
-    color:#f50;
-    font-weight: 500;
-}
-
-.navegator a, .navegator p{
-    cursor: pointer;
-    text-decoration: none;
-    font-family: 'DM sans';
-}
-
-.navegator a:hover{
-    font-weight: 700;
-    transition: ease-in .1s;
-}
-
-.navegator p:hover{
-    font-weight: 700;
-    transition: ease-in .1s;
-}
-
-label i{
+.error-ctn{
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
     margin: 0;
-    font-size: 8px;
+    position: relative;
+    height: 10px;
+    width: 180%;
+
+}
+
+.error-message {
+    color: #f50; 
+    font-size: .8em;
+    justify-self: baseline;
     background: transparent;
+    animation: vibrate 0.5s; 
+    margin-left: 0;
+}
+
+
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+}
+
+
+
+ form .layer2{
+    position: relative;
+    display: flex;
+    width: 85%;
+    height: 100%;
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin: 0 auto;
+}
+form .layer2 p{
+    text-transform: inherit;
+    text-align: center;
+    background: transparent;
+    color:#fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+form .layer2 button{
+    margin-top: 250px;
+    width: 160px;
+    height: 40px;
+    border: 0;
+    background: #f50;
+    font-size: 1.4rem;
+    font-family: "Zain", sans-serif;
+    border-radius: 2px;
+    font-weight: 500;
+    font-style: normal;
+    color:#000;
+}
+
+form .layer2 button:hover{
+    color:#fff;
+    background: #32383f80;;
+    border:1px solid #f50;
+}
+
+.layer2 .checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #f50;
+    stroke-miterlimit: 10;
+    background: #000;
+    box-shadow: inset 0px 0px 0px #000;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+
+.layer2 .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #f50;
+    fill:#000;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+ 
+}
+
+form .layer2 .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+
+form a {
+    background: transparent;
+    text-decoration: none;
+    font-size: .9rem;
     color: #f50;
-    padding-left: 5px;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #111827;
+    }
 }

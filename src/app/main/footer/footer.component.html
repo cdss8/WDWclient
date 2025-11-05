@@ -1,23 +1,22 @@
 
-<footer>
+<footer *ngIf="showFooter">
     <div class="ft-wrapper">
       <div class="ft-wr-box">
         <div class="ft-img-ct">
           <div class="log-inf">
-            <img class="img3" src="assets/logo.png" alt="logo">
-          <h3>
-            Engage Digital Wealth LLC
-            <br>Engage - Agencia Digital S.R.L
-          </h3>
-          <div class="smm">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-            <a href=""><i class="fa-brands fa-behance"></i></a>
-            <a href=""><i class="fa-brands fa-tiktok"></i></a>
-          </div>
+            <img class="img3" src="assets/logo.png" alt="logo" [routerLink]="['/']">
+            <h3>Wise Digital Wealth LLC
+              <br>Wise Digital Wealth S.R.L
+            </h3>
+            <div class="smm">
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+              <a href=""><i class="fa-brands fa-behance"></i></a>
+              <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            </div>
           </div>
           
         </div>
@@ -25,31 +24,34 @@
           <div class="ft-direct-links">
             <div class="links-ct">
               <p [routerLink]="['/podcast']">Speaking</p>
-              <p>Blog</p>
-              <p>Events</p>
-              <p>FAQ</p>
-              <p [routerLink]='["/locations"]'>Locations</p>
+              <p [routerLink]="['/about']">Company</p>
+              <p [routerLink]="['/faq']">FAQ</p>
+              <p [routerLink]="['/locations']">Locations</p>
             </div>
             <div class="contact">
-              <p style="text-decoration: none; cursor: default;">Contacts</p>
-              <p> <a href="">sales<i class="fa-light fa-at" style="font-size: 14px;"></i>engagedigitalwealth.com</a></p>
-              <p> Tel: +34 869 651 422</p>
-              <p> WhatsApp</p>
-              <p> Facebook</p>
-              <p>Telegram</p>
-              
-            </div>
+              <p [routerLink]="['/contact']">Get in touch</p>
+              <p [routerLink]="['/partnership']">Partnership</p> 
+              <p>sales<i class="fa-solid fa-at"></i>wisedigitalwealth.com</p> 
           </div>
+        </div>
           <div class="bn-wrapper">
-              <div id="sign-up-form">
-                <form id="newsletter-form">
+              <div >
+                <form id="newsletter-form" [formGroup]="newsLetter" (submit)="onSubmit()">
                   <div class="form-group">
-                      <label for="email">Could You Consider Subscribing for The Lastest News at Engage Digital Wealth ?</label>
-                      <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                      <span class="error-message"></span>
+                    <label for="email">Stay Updated for Upcoming Events and News at Wise Digital Wealth.<br> Suscribe for The Lastest Update. </label>
+                    <input type="email" formControlName="email" id="email" name="email" placeholder="your@email.com" required>
+                    <div class="error">
+                      <small class="error-message" *ngIf="newsLetter.get('email')?.touched && newsLetter.get('email')?.errors?.['required']">This field is required.</small>
+                      <small class="error-message" *ngIf="newsLetter.get('email')?.touched && newsLetter.get('email')?.errors?.['email']">Please enter a valid email address.</small>
+                    </div>
+
                   </div>
                   <button type="submit">Subscribe Now</button>
+                  <div *ngIf="success" class="ssc" >
+                    <p>Thank you for subscribing!</p>
+                  </div>
                 </form>
+                
               </div>
           </div>
         </div>

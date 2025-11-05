@@ -1,26 +1,36 @@
-<header>
+<header *ngIf="showHeader">
     <nav>
       <div class="img-container">
-        <img class="img" src="/assets/full-logo.png" alt="Engage Logo" [routerLink]="['']">
+        <img class="img" src="/assets/full-logo.png" alt="Wise Logo" [routerLink]="['']">
+        <img class="img2" src="/assets/logo.png" alt="Wise Logo" [routerLink]="['']">
       </div>
-      <nav class="s-menu">
-        <li><a [routerLink]="['/expertise']" target="'_blank'">Expertise</a></li>  
-        <li><a [routerLink]="['/discover']">Discover</a></li>
-        <li style="display: none;"><a [routerLink]="['/testimonials']">Testimonials</a></li>
-        <li><a [routerLink]="['/podcast']">Podcast</a></li>
-        <li><a [routerLink]="['/partnership']">Partnership</a></li> 
+      <nav class="s-menu" [class.open]="hamOpen">
+          <div>
+            <a [ngClass]="{'active': activeMenuItem === '/'}"
+            [routerLink]="['/']" >Home</a>
+
+
+            <a [ngClass]="{'active': activeMenuItem === '/expertise'}"
+            [routerLink]="['/expertise']">Expertise</a> 
+            
+            <a [ngClass]="{'active': activeMenuItem === '/discover'}"
+            [routerLink]="['/discover']">Discover</a>
+            
+            <a [ngClass]="{'active': activeMenuItem === '/testimonials'}"
+            [routerLink]="['/testimonials']">Testimonials</a>
+          </div>
+          <div> 
+            <button [class.open]="hamOpen" [routerLink]="['/contact']">Contact Us</button >
+            </div>
       </nav>
     
-      <div class="container">
-        <button [routerLink]="['/Contact-Us']">Contact Us</button>
         <div class="hamburger_menu">
-          <input type="checkbox" id="hamburger">
+          <input type="checkbox" id="hamburger" (click)="toggleHamburger()" [checked]="hamOpen">
           <label for="hamburger" class="hamburger">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
           </label>
         </div>
-    </div>
     </nav>
   </header>

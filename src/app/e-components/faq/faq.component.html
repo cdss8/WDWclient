@@ -1,0 +1,23 @@
+<body>
+    <section>
+      <h2>FAQ</h2>
+      <h1>Seeking Clarity? <b>We are your guide</b><br>
+        <b> Need More Clarity?</b> Contact Us</h1>
+      <div *ngFor="let faq of faqList" class="faq-item">
+        <button (click)="toggleAccordion(faq)" class="faq-title">
+         <div>
+          <p><span>{{ faq.id}}.</span> {{ faq.question }}</p>
+          <!--<a *ngIf="faq.link" routerLink="{{ faq.link }}"><i class='fas fa-external-link-alt'></i></a>-->
+         </div>
+          <span class="icon" [ngClass]="{ 'open': faq.isOpen }" aria-hidden="true">
+            <i class="fas" [ngClass]="faq.isOpen ? 'fa-minus' : 'fa-plus'"></i>
+          </span>
+        </button>
+        <div class="faq-content" *ngIf="faq.isOpen">
+          <p>{{ faq.answer}}</p>
+        </div>
+      </div>
+    </section>
+</body>
+<app-get-started></app-get-started>
+<br><br><br>

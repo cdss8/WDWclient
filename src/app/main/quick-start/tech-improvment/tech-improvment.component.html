@@ -1,12 +1,4 @@
-<app-header></app-header>
 <body>
-    <div class="navegator">
-        <a [routerLink]="['/discover']">discover</a> 
-        <i class="fa-solid fa-chevron-right"></i>
-        <a [routerLink]="['/quickstart']">quick start</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <a class="current">Technical Solutions</a>
-    </div>
     <section class="bs-pg-template">
         <div class="bs-title">
             <h1>Unlock the potential of your business. 
@@ -22,20 +14,85 @@
         </div>
     </section>
     <div class="bs-exp"> 
+        <div class="navegator">
+            <a [routerLink]="['/expertise']">Expertise</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a class="current" ngbTooltip="You are here" triggers="click:blur">Technology</a>
+        </div>
         <div class="bs-hder-ctn">
-            <h2></h2>
+            <h2>Leveraging Technology for Business Success: A Strategic Approach</h2>
         </div>
         <div class="bs-exp-ctn">
-            <div class ="bs-empty"></div>
             <div class="bs-content">
-                
+                <p>At Wise Digital Wealth, we believe that technology is not just a tool but a catalyst for transformation. By leveraging technology effectively, businesses can streamline operations, enhance collaboration, and drive innovation.
+                    According to a reports, organizations that embrace digital transformation are 23% more profitable than their peers. This underscores the importance of integrating advanced technologies into business strategies.
+                  <br><br> 
+
+                  </p>
             </div>
         </div>
+        <div class="st-services">
+            <div>
+                <div>
+                    <h1>Custom <br> Software Engineering</h1><br>
+                    <p class="def">Turns your unique ideas into powerful solutions with our tailored custom software development. 
+                        We handle the entire process, providing end-to-end solutions with our in-house developers and resources.</p>
+                </div>
+                <div>
+                    <h6>Some of our core stack and tools we use including HTML and CSS:</h6>
+                    <p> <span style="background: transparent; font-weight: 400;">Full Stack</span>: 
+                        ReactJS | Redux | NextJS | AngularJS | NodeJS (ExpressJS) | Nest JS | JS | TS
+                        Ruby | Java |  Golang | Kotlin | React Native | Swift | PostgreeSQL  DevOps | Testing...
+
+                    </p>
+                </div>
+            </div>
+            <img class="csd-img" src="/assets/explore/software-development.png" alt="Custom Sofware Services">
+            <div>
+                <div>
+                    <h1>Website & Mobile<br> Development </h1><br>
+                    <p class="def">From concept to launch, we create responsive websites and mobile applications that drive results and enhance your brand.</p>
+                </div>
+                <div>
+                    <h6>Custom E2E projects: from single page website development to full fustomized sofware, either for mobile or website:</h6>
+                    <p> <span style="background: transparent; font-weight: 400;">Custom website & app development (Stack mentioned above) | AI Solutions | Machine Learning | Natural Language Processing | Data Visualization | Chatbots...</span>
+                    <br> We build Monolithic and Microservice infraestructure depending on projects.<br>
+                    </p>
+                </div>
+            </div>
+            <img class="softdev" src="/assets/explore/custom-softdev.png" alt="Custom Sofware Development">
+            <div >
+                <div>
+                    <h1>Creativity & Design</h1><br>
+                    <p class="def">Maximize your impact with innovative and visually stunning designs.</p>
+                </div>
+                <div>
+                    <h6>Custom design based on users' experiences to optimize the functionality of your project:</h6>
+                    <p> Website Design | Custom Design | Mobile Design | UI/UX | XD | Design Optimization | Creativity | Prototyping |User Research...
+                        <br> <span style="background: transparent; font-weight: 400;">Stack</span> : Figma | Illustrator | Adobe XD | Photoshop | Miro | Blender
+                    </p>
+                </div>
+            </div>
+            <img class="design" src="/assets/explore/design.png" alt="Design & Creativity Template">
+            <div>
+                <div>
+                    <h1>Technical Integrations</h1><br>
+                    <p class="def">We take full care of our partners, configuring & optimizing their business processes for maximum efficiency and profit. </p>
+                </div>
+                <div>
+                    <h6>We offer expert technical assistance to resolve challenges and improve performance:</h6>
+                    <p> Shopify Store Development & Optimization | Amazon Store Development & Optimization 
+                     | CRM Integrations & Configurations | Marketing Tools Integration | Sales Tools Integration | CMS Websites Development & Optimization 
+                     | Payment Gateway Integration...</p>
+                </div>
+            </div>
+            <img class="integration" src="/assets/explore/integration.png" alt="Tecnical Integration">
+        </div>
         <div class="bs-cnt-ctn">
-            <h3>Want to See Your Business Thrive?</h3>
-            <button [routerLink]="['/Contact-Us']">Get a Free Consultation</button>
+            <h1>Send us a message and get noticed about our bonuses and guaranteees</h1>
         </div>
     </div>
-
 </body>
-<app-footer></app-footer>
+<br><br><br>
+<app-get-started></app-get-started>
+<br><br><br><br>

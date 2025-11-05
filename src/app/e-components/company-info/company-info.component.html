@@ -1,0 +1,103 @@
+<body>
+     
+  <section style="background-color: #111827;">
+    <h2>Culture</h2>
+    <div class="company">
+      <div>
+        <h5>Vision</h5>
+        <p>Help Business Owners to achieve excellence and inspire the public to achieve their dreams</p>
+      </div>
+      <div>
+        <h5>Values</h5>
+        <p>Strong work ethic, commitment to excellence, with a culture of and mutual respect</p>
+      </div>
+      <div>
+        <h5>What Matter<br>The Most</h5>
+        <p>We prioritize collaboration with companies and partners  based on their reputation for quality, competitive edge, and integrity</p>
+      </div>
+      <div>
+        <h5>Trustable<br>Partner</h5>
+        <p>Honesty and trust are the foundations for enduring partnerships. <br>We value feedbacks, integrity and transparency for exceptional deliveries. </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="color:#32383F80;">Prospect & Industries</h2>
+    <div class="prospect-ctn">  
+      <div class="txt">
+        <h1>Those we aim to find</h1>
+        <p> We know that investing in marketing and technology solutions isn't cheap, but it's a worthwhile investment for any company looking to grow. 
+          That's why we're committed to finding partners who are dedicated to achieving their goals and willing to invest in our solutions.<br><br>
+          We're selective about who we work with. We only partner with companies that meet our specific criteria. 
+          If you're not quite there yet, we encourage you to continue learning and growing. </p>
+      </div>
+      <div class="prospect">
+          <div> Tier 1 - Business Owners,<br> Founders & Leaders <img src="/assets/industry/director.png" alt="tier1"> <i> Decision Makers </i> </div> 
+          <div>EBITDA <img src="/assets/industry/ebitda.png" alt="cashflow"> <i>At least $ 500k </i> </div>
+          <div>Growing Company <img src="/assets/industry/growing.png" alt="growth"> <i> Consistently increasing over the time</i> </div>
+          <div>Cash Flow <img src="/assets/industry/money-flow.png" alt="cashflow"> <i>Ability to invest for growth goals</i> </div>
+        </div>
+     </div>
+     <div class="inds">
+      <div>
+          <div>B2B <img src="/assets/industry/b2b.png" alt="b2b"> </div>
+          <div>B2C <img src="/assets/industry/b2c.png" alt="b2c"></div>
+          <div>eCommerce <img src="/assets/industry/ecommerce.png" alt="ecomm"> </div>
+          <div>Healthcare <img src="/assets/industry/healthcare.png" alt="healthcare"> </div>
+          <div>Startup <img src="/assets/industry/startup.png" alt="startup"> </div>
+          <div>Banking <img src="/assets/industry/banking.png" alt="banking"> </div>
+          <div>Startup <img src="/assets/industry/startup.png" alt="startup"> </div>
+      </div>
+
+
+      <div>      
+          <div>Fintech <img src="/assets/industry/fintech.png" alt="fintech"> </div>
+          <div>Banking <img src="/assets/industry/vc.png" alt="vc"> </div>
+          <div>SaaS <img src="/assets/industry/saas.png" alt="saas"> </div>
+          <div>Software <img src="/assets/industry/sofware.png" alt="soft"> </div>
+          <div>Mobile <img src="/assets/industry/mobile.png" alt="mobile"> </div>
+      </div>
+
+      <div>
+        <div>Sports & Ent.<img src="/assets/industry/sports.png" alt="sporst"> </div>
+        <div>Brick & Mortar / Retails<img src="/assets/industry/brick&m.png" alt="B&M"></div>
+        <div>Fitness & Wellness<img src="/assets/industry/wellness.png" alt="fitness"> </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal">
+    <h2 style="color:#32383F80;">Legal</h2>
+   
+    <div *ngFor="let legal of legalList" class="legal-item">
+      <button (click)="toggleAccordion(legal)" class="legal-title">
+       <div>
+        <p  [innerHTML]="legal.title">{{ legal.title }}</p>
+        <a *ngIf="legal.link" routerLink="{{ legal.link }}"><i class='fas fa-external-link-alt'></i></a>
+       </div>
+        <span class="icon" [ngClass]="{ 'open': legal.isOpen }" aria-hidden="true">
+          <i class="fas" [ngClass]="legal.isOpen ? 'fa-minus' : 'fa-plus'"></i>
+        </span>
+      </button>
+      <div class="legal-content" *ngIf="legal.isOpen">
+        <p>{{ legal.content }}</p>
+      </div>
+    </div>
+    
+  </section>
+
+
+  <section class="careers" >
+    <h2  style="color:#32383F80;">Careers</h2>
+    <h5>Discover Opportunities</h5>
+        <div>
+          <div ngbTooltip="Keep connected for updates"  triggers="click:blur" placement="bottom"><p>Open Jobs</p></div>
+          <div ngbTooltip="Follow up for updates" triggers="click:blur" placement="bottom"><p>Join Us</p></div>
+          <div ngbTooltip="Remain engaged for news" triggers="click:blur" placement="bottom" ><p>Internships</p></div> 
+        </div>
+      </section>
+      <br><br>
+</body>
+<app-get-started></app-get-started>
+<br><br><br>

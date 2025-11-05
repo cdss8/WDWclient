@@ -1,93 +1,345 @@
 header{
     width: 100%;
     height: 10vh;
-    max-height: 100px;
-    
+    min-height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 header img{
- height: 100px;
- margin-left: 10%;
+ width: 85px;
+ margin: 0 0 0 10%;
 }
 
 body{
+    max-width: 1920px;
     width: 100%;
-    height: 90vh;
-    max-height: 1000px;
+    height: 60vh;
+    min-height: 700px;
+    max-height: 1500px;
     background: #fff;
     display: flex;
     flex-direction: column;
     margin: 0;
+    justify-content: space-between;
+    margin: auto;
 }
 
-.ct-text{
+section{
     width: 100%;
-    height: 12%;
+    margin: auto;
+    height: 55%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: transparent;
-    margin: 0;
+    max-height: 400px;
 }
 
+
+.ct-text{
+    min-width: 900px;
+    width: 50%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    background: transparent;
+    margin: 0 auto 25px auto ;
+}
 
 .ct-text h1{
     background: transparent;
+    text-transform: capitalize;
     margin: 0;
-    font-size: 20px;
-    font-family: 'Dm sans', sans-serif;
-    font-weight: 600;
+    font-size: 1.75rem;
+    font-family: 'DM sans', sans-serif;
+    font-weight: 800;
 }
 .ct-text p{
-    padding-top:16px ;
     background: transparent;
     margin: 0;
-    font-size: 12px;
+    font-size: 1.3rem;
     color: #f50;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-
-.ct-form{
-    width: 30%;
-margin: 0 auto;
-    height: 80%;
-    max-height: 850px;
+ form{
+    min-width: 900px;
+    padding-top: 10px;
     display: flex;
-    background: #111827;
-}
-
-
-.ct-form form{
-    display: flex;
-    width: 90%;
+    width: 50%;
     height: 100%;
-    background: transparent;
+    background: #111827;
     margin: auto;
     flex-direction: column;
+    min-height: 385px;
+    border-radius: 25px;
 }
 
-.ct-form form div{
-    width: 90%;
-    height: 10%;
+form i{
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+    background: transparent;
+    color:#f50;
+    font-size: .6rem;   
+    justify-self: baseline;
+    align-self: baseline;
+}
+
+
+form p{
+    background: transparent;
+    color: #fff;
+}
+form .ff{
+    background: transparent;   
+}
+
+form h2{
+    background: transparent;
+    color:#fff;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+form .layer1, form .layer2, form .layer3, 
+form .layer4, form .layer5, form .layer6,
+form .layer7{
     display: flex;
+    width: 85%;
+    height: 100%;
+    flex-direction: column;
+    background: transparent;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+form .content1, form .content3{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    min-height: 228px;
+    padding: 10px;
+    flex-direction: row;
+    background: transparent;
+}
+
+form .content2, form .content4, 
+form .content5,  
+form .content7 {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    min-height: 240px;
+    flex-direction: column;
+    align-items: baseline;
+    background: transparent;
+}
+form .content6{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+    align-items: baseline;
+    background: transparent;
+}
+
+form  .content2 div, form  .content4 div, form .content6 div{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    margin: auto;
+    flex-direction: column;
+    background: transparent;
+}
+
+form  .content5 .email{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+    flex-direction: column;
+    background: transparent;
+}
+
+form  .content5 .fullname,
+form  .content5 .location-ctn,
+form  .content5 .social
+{
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+display: flex;
+background: transparent;
+}
+
+.content5 .fullname .firstname,
+.content5 .fullname .lastname,
+.content5 .location-ctn .location,
+.content5 .location-ctn .phone,
+.content5 .social .dm,
+.content5 .social .profile {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.content5 .fullname .firstname,
+.content5 .location-ctn .location,
+.content5 .social .dm {
+    margin: 0;
+    justify-self: baseline;
+    background: transparent;
+}
+
+.content5 .fullname .lastname,
+.content5 .location-ctn .phone,
+.content5 .social .profile {
+    margin-right: 0;
+    justify-self: baseline;
+    background: transparent;
+}
+
+.location-ctn .phone .phone-ctn{
+    width: 100%;
+    background: transparent;
+}
+
+.content5 .location-ctn .phone div{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    align-items:center;
+    margin: 0;
     background: transparent;
 }
 
 
-.ct-form form input{
+
+.location-ctn .phone div select{
+    width: 20%;
+    min-height: 30px;
+    max-height: 50px;
     color:#fff;
+    background: #7e818580;
     border: 0;
 }
 
-.ct-form  form .name-ctn div{
-    width: 50%;
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: end;
+.location-ctn .phone div input{
+    width: 80%;
+    min-height: 30px;
+    max-height: 50px;
+    color:#fff;
+    background: #32383f80;
+    border: 0;
 }
+
+.location-ctn .phone div input:hover{
+    border:1px solid #f50;
+}
+
+.fullname input, .fullname label,
+.location-ctn input, .location-ctn label,
+.social input, .social label{
+    width: 100%;
+}
+
+form .content2 label, 
+form .content4 label,
+form .content5 label,
+form .content6 label{
+    background: transparent;
+    color:#fff;
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+form .content2 input, form .content2 textarea,
+form .content4 input, form .content4 textarea,
+form .content5 input, form .content5 select,
+form .content6 input
+{
+    padding-left: 10px;
+    height: 32px;
+    min-height: 32px;
+    color:#fff;
+    background: #32383f80;
+    border: 0;
+}
+form .content2 input:hover, form .content2 textarea:hover,
+form .content4 input:hover, form .content4 textarea:hover,
+form .content5 input:hover, form .content5 select:hover,
+form .content6 input:hover{
+    border: 1px solid #f50;
+}
+
+form .btn-ctn{
+    background: #111827;
+    display: flex;
+    width: 80%;
+    height: 20%;
+    flex-direction: row;
+    margin: 0 auto 20px auto;
+    align-items: end;
+}
+form  .btn-ctn p{
+    margin: 0 auto;
+    opacity: .4;
+}
+
+form .btn-ctn .prev, form .btn-ctn .next{
+    width: 120px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border:0;
+    background: #f50;
+    border-radius: 10px;
+}
+
+form .btn-ctn .prev:hover, form .btn-ctn .next:hover{
+    color:#fff;
+    background: #32383f80;;
+    border: 1px solid #f50;
+}
+
+
+form .content1 div, form .content3 div{
+    width: 30%;
+    height: 20vh;
+    min-height: 180px;
+    max-height: 200px;
+    background: Rgb(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+form .content1 label, form .content3 label{
+    background: transparent;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 30px 30px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+form .content1 label input, form .content3 label input{
+    margin-bottom: 20px;
+}
+
+
 
 .ct-form form div label{
     color: #eee;
@@ -99,160 +351,103 @@ margin: 0 auto;
     font-weight: 300;
     font-style: normal;
 }
-.name-ctn{
-    padding-left: 10%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin: 0;
-    justify-content: end;
-}
 
-
-.ct-form  form .name-ctn input{
-    margin: 0;
-    width: 80%;
-    height: 40%;
-    background-color: #32383f80;
-    font-size: 12px;
-    padding-left: 5px;
-}
-
-.email-ctn{
-    padding-left: 10%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.company-ctn, .enquiree-ctn, .budget-ctn, .revenue-ctn, .how-ctn{
-    padding-left: 10%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.content6 label{
+    align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.company-ctn input, .email-ctn input, .budget-ctn input, .revenue-ctn input, .how-ctn input{
-    margin: 0;
-    width: 90%;
-    height: 40%;
-    background-color: #32383f80;
-    font-size: 12px;
-    padding-left: 5px;
+.content6 label input {
+    display: none; /* Hide the default checkbox */
 }
-.email-ctn span{
-    height: 10%;
+.content6 label span {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    padding-right: 20px;
+    position: relative;
+    margin-right: 10px;
+    background-color: rgb(221, 221, 221);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.content6 label input:checked + .checkmark{
+    background-color:  transparent;
+    border-color: transparent;
+}
+
+.content6 label input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 8px;
+    height: 10px;
+    border: solid #f50;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.content1 label input,
+.content3 label input {
+text-align: center;
+    cursor: pointer;
+}
+
+.content1 label input,
+.content3 label input{
+    display: none; 
+}
+
+.customcheckbox.error {
+    border: 2px solid #f50; 
+    padding: 10px; 
+    border-radius: 2px; 
+    z-index: 9;
+}
+
+.radio-checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    background-color: rgb(221, 221, 221);
+    transition: background-color 0.3s, border-color 0.3s;
+    margin: 20px auto;
+}
+
+.custom-radio input:checked + .radio-checkmark {
+    background-color: #f50;
+    border-color: #f50;
+}
+
+.custom-radio input:checked + .radio-checkmark::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #f50;
+}
+
+.privacy-ctn a{
     background: transparent;
-    margin: 0;
-    opacity: 0;
-}
-.enquiree-ctn{
-    width: 100%;
-    height: 40%;
-}
-.enquiree-ctn input{
-    display: flex;
-    margin: 0;
-    vertical-align: baseline;
-    line-height: 300px;
-    width: 90%;
-    height: 80%;
-    border-radius: 2px solid #f50;
-    background-color: #32383f80;
-    font-size: 12px;
-    padding-left: 5px;
-    justify-content: baseline;
-    align-items: baseline;
-    box-sizing: border-box;
-}
-
-/*
-Arreglar el mensaje de error 
-.get-started form input.invalid  {
-    border-color: #dc3545;
-}
-
-.enquiree-ctn input .error-message {
-    color: #dc3545;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-}
-
-*/
-
-.suscribe-ctn, .privacy-ctn{
-    padding-left: 10%;
-    display: flex;
-    width: 90%;
-align-items: baseline;
-user-select: none;
-}
-
-.suscribe-ctn{
-    padding-top: 20px;
-
-}
-
-.suscribe-ctn label, .privacy-ctn label {
-   padding-left: 4%;
-   padding-right: 40px;
-   text-align: justify;
-   font-size: 11px;
- }
-.privacy-ctn a, .ct-form  form i{
-    font-size: 14px;
-    font-family: "Zain", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     color:#f50;
-    background: transparent;
     text-decoration: none;
 }
 
-.contactus-ctn{
-    padding-top: 40px;
-    display: flex;
-    width: 90%;
-    align-items: baseline;
-    justify-content: center;
-}
-.contactus-ctn button{
-    width: 150px;
-    height: 40px;
-    border: 0;
-    border-radius: 5px;
-    background: #f50;
-    font-size: 14px;
-    font-family: "Zain", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color:#fff;
-}
-.contactus-ctn button:hover{
-    background-color: #32383f80;
-transition: ease in .3s;
-border:1px solid #f50;
-border-radius: 12px;
-}
 
-
-/*.contactus-ctn span{
-    width: 400px;height: 20px;
-    justify-self: end;
-    background:rgb(255, 255, 255);
-    z-index: 999;
-}
-*/
 .ct-f-text{
     width: 100%;
-    height: 8%;
+    height: 15vh;
     background: transparent;
     display:flex;
     margin: 0;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -267,50 +462,735 @@ border-radius: 12px;
     display: inline;
     align-items: center;
     background: transparent;
-    font-size: 11px;
-    color: #aaa;
+    font-size: .95rem;
+    color: #00000050;
 }
 
 .ct-f-text ul li {
     padding:0 15px;
-    opacity: .6;
+    color: #00000050;
 }
 
-
-.navegator{
-    display: block;
-    position: absolute;
-    top:220px;
-    left:300px;
-}
-
-.navegator a, .navegator p, .navegator i{
-    display: inline-block;
-    font-size: 14px;
-    text-transform: capitalize;
-    margin: 0 5px;
-
-    
+.ct-f-text ul li a{
+    color:#000;
 
 }
 
-.current{
-    color:#f50;
+.error-ctn{
+    display: flex;
+    justify-content: end;
+    height: 10px;
+    margin: 0;
+    background: transparent;
+    z-index: 9;
+}
+
+.error-message {
+    width: auto; 
+    color: #f50; 
+    font-size: .95rem;
     font-weight: 500;
+    justify-self: baseline;
+    background: transparent;
+    animation: vibrate 0.5s; 
+    margin-right: 0px;
+
 }
 
-.navegator a, .navegator p{
-    cursor: pointer;
-    text-decoration: none;
-    font-family: 'DM sans';
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
 }
 
-.navegator a:hover{
-    font-weight: 700;
-    transition: ease-in .1s;
+.btn-ctn .submit{
+    width: 120px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border:0;
+    background: #4bb71b;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 
-.navegator p:hover{
-    font-weight: 700;
-    transition: ease-in .1s;
+form .content7{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form .content7 p{
+    font-size: 1.5rem;
+}
+
+form .content7 button{
+    width: 120px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border:0;
+    background: #f50;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+
+form .content7 button:hover, .btn-ctn .submit:hover{
+    color:#fff;
+    background: #4bb71b;
+}
+
+.content7 .checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #f50;
+    stroke-miterlimit: 10;
+    background: #111827;
+    box-shadow: inset 0px 0px 0px #111827;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+.content7 .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #f50;
+    fill:#111827;
+    fill: transparent;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+ 
+}
+
+.content7 .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #111827;
+    }
+}
+
+
+@media (max-width: 576px) {
+    header img{
+        width: 75px;
+        margin: 0 0 0 10%;
+       }
+    
+    .ct-text{
+        min-width: 300px;
+        max-height: 570px;
+        height: 15%;
+    }
+    
+    .ct-text h1{
+        text-align: center;
+        font-size: 1.3rem;
+        color: #fff;
+        padding-bottom: 10px;
+    }
+    .ct-text p{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    body{
+        padding-top: 25px;
+        height: 80vh;
+        min-height: 600px;
+        background: #111827;
+    }
+    form .btn-ctn .prev, form .btn-ctn .next{
+        width: 100px;
+        height: 28px;
+        font-size: 1rem;
+
+    }
+    section{
+        margin: 5% auto;
+        max-height: 400px;
+    }
+    form{
+        width: 100%;
+        height: 100%;
+        min-width: 300px;
+        max-height: 570px;
+    }
+    form .content2, form .content4, 
+    form .content5 {
+        display: flex;
+        width: 100%;
+        height: 70%;
+        min-height: 210px;
+        flex-direction: column;
+        align-items: baseline;
+        background: transparent;
+    }
+    
+    form h2{
+        font-size: 1.6rem;
+        text-transform: capitalize;
+    }
+    form .content1 div, form .content3 div{
+        min-height: 200px;
+        max-height: 200px;
+        width: 32%;
+    }
+
+    form .content1 label, form .content3 label{
+        font-size: .85rem;
+    }
+    form .content1, form .content3{
+        display: flex;
+        width: 100%;
+        height: 60%;
+        min-height: 200px;
+        padding: 10px;
+        flex-direction: row;
+        background: transparent;
+    }
+    form .content7 p{
+        font-size: 1.2rem;
+    }
+
+    .error-message{
+        font-size: .8rem;
+    }
+
+    .ct-f-text{
+        background: #111827;
+        min-height: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .ct-f-text ul{
+
+        margin: 0;
+        padding-top: 20px;
+        background: transparent;
+        
+    }
+    .ct-f-text ul li, .ct-f-text ul li span{
+        background: transparent;
+        font-size: .65rem;
+        color: #aaa;
+    }
+    
+    .ct-f-text ul li {
+        padding:0 5px;
+        color: #ccc;
+        background: transparent;
+    }
+    
+    .ct-f-text ul li a{
+        background: transparent;
+        color:#ccc;
+    }
+
+    form .btn-ctn{
+        width: 100%;
+    }
+
+    form  .btn-ctn p{
+        font-size: .8rem;
+        margin: 0 auto;
+        opacity: .4;
+        text-align: center;
+    }
+
+    form .content5  label{
+        font-size: .8rem;
+    }
+    
+    form .content5 .error-message {
+        font-size: .8rem;
+    }
+
+    form .privacy-ctn label, form .suscribe-ctn label{
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    header img{
+        width: 75px;
+        margin: 0 0 0 10%;
+       }
+    
+    .ct-text{
+        min-width: 550px;
+        height: 15%;
+    }
+    
+    .ct-text h1{
+        font-size: 1.3rem;
+        color: #fff;
+    }
+    .ct-text p{
+        font-size: 1.2rem;
+    }
+
+    body{
+        padding-top: 20px;
+        height: 80vh;
+        min-height: 600px;
+        background: #111827;
+    }
+    
+    section{
+        margin: 5% auto;
+        max-height: 400px;
+    }
+    form{
+        width: 100%;
+        height: 100%;
+        min-width: 550px;
+    }
+
+    form .content2, form .content4, 
+    form .content5 {
+        display: flex;
+        width: 100%;
+        height: 70%;
+        min-height: 210px;
+        flex-direction: column;
+        align-items: baseline;
+        background: transparent;
+    }
+    
+    form h2{
+        font-size: 1.6rem;
+        text-transform: capitalize;
+    }
+    form .content1 div, form .content3 div{
+        min-height: 200px;
+        max-height: 200px;
+    }
+
+    form .content1 label, form .content3 label{
+        font-size: 1rem;
+    }
+    form .content1, form .content3{
+        display: flex;
+        width: 100%;
+        height: 60%;
+        min-height: 200px;
+        padding: 10px;
+        flex-direction: row;
+        background: transparent;
+    }
+    .error-message{
+        font-size: .8rem;
+    }
+    .ct-f-text{
+        background: #111827;
+        min-height: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .ct-f-text ul{
+        margin: 0;
+        padding-top: 20px;
+        background: transparent;
+        
+    }
+    .ct-f-text ul li, .ct-f-text ul li span{
+        background: transparent;
+        font-size: .8rem;
+        color: #aaa;
+    }
+    
+    .ct-f-text ul li {
+        padding:0 10px;
+        color: #ccc;
+        background: transparent;
+    }
+    
+    .ct-f-text ul li a{
+        background: transparent;
+        color:#ccc;
+    }
+
+    form .btn-ctn{
+        width: 100%;
+    }
+
+    form  .btn-ctn p{
+        font-size: .9rem;
+        margin: 0 auto;
+        opacity: .4;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    header img{
+        width: 80px;
+        margin: 0 0 0 10%;
+       }
+    
+    .ct-text{
+        min-width: 700px;
+        height: 10%;
+    }
+    
+    .ct-text h1{
+        font-size: 1.6rem;
+        color: #fff;
+    }
+    .ct-text p{
+        font-size: 1.2rem;
+    }
+
+    body{
+        padding-top: 20px;
+        height: 80vh;
+        min-height: 600px;
+        background: #111827;
+    }
+    
+    section{
+        margin: 5% auto;
+        max-height: 400px;
+    }
+    form{
+        width: 100%;
+        height: 100%;
+        min-width: 700px;
+    }
+    form .content2, form .content4, 
+    form .content5 {
+        display: flex;
+        width: 100%;
+        height: 70%;
+        min-height: 210px;
+        flex-direction: column;
+        align-items: baseline;
+        background: transparent;
+    }
+    
+    form h2{
+        font-size: 1.6rem;
+        text-transform: capitalize;
+    }
+    form .content1 div, form .content3 div{
+        min-height: 170px;
+        max-height: 180px;
+    }
+
+    form .content1 label, form .content3 label{
+        font-size: 1.1rem;
+    }
+    form .content1, form .content3{
+        display: flex;
+        width: 100%;
+        height: 60%;
+        min-height: 200px;
+        padding: 10px;
+        flex-direction: row;
+        background: transparent;
+    }
+    .error-message{
+        font-size: .8rem;
+    }
+
+    .ct-f-text{
+        min-height: 10px;
+    }
+    
+    .ct-f-text ul{
+        margin: 0;
+        padding-top: 20px;
+        background: transparent;
+        
+    }
+    .ct-f-text ul li, .ct-f-text ul li span{
+        background: transparent;
+        font-size: .95rem;
+        color: #aaa;
+    }
+    
+    .ct-f-text ul li {
+        padding:0 15px;
+        color: #ccc;
+        background: transparent;
+    }
+    
+    .ct-f-text ul li a{
+        background: transparent;
+        color:#ccc;
+    
+    }
+    .ct-f-text{
+        background: #111827;
+        min-height: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .ct-f-text ul{
+        margin: 0;
+        padding-top: 20px;
+        background: #111827;
+        
+    }
+    .ct-f-text ul li, .ct-f-text ul li span{
+        background: #111827;
+        font-size: .95rem;
+        color: #aaa;
+    }
+    
+    .ct-f-text ul li {
+        padding:0 15px;
+        color: #ccc;
+        background: #111827;
+    }
+    
+    .ct-f-text ul li a{
+        background: #111827;
+        color:#ccc;
+    }
+
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+    
+    header img{
+        width: 80px;
+        margin: 0 0 0 10%;
+       }
+    
+    .ct-text{
+        height: 5%;
+    }
+    
+    .ct-text h1{
+        font-size: 1.6rem;
+        color: #fff;
+    }
+    .ct-text p{
+        font-size: 1.2rem;
+    }
+
+    body{
+        margin: 0;
+        height: 80vh;
+        min-height: 500px;
+        background: #111827;
+    }
+    
+    section{
+        margin: 5% auto;
+        max-height: 400px;
+    }
+    form{
+        width: 100%;
+        height: 100%;
+    }
+    form .content2, form .content4, 
+    form .content5 {
+        display: flex;
+        width: 100%;
+        height: 70%;
+        min-height: 210px;
+        flex-direction: column;
+        align-items: baseline;
+        background: transparent;
+    }
+    
+    form h2{
+        font-size: 1.6rem;
+        text-transform: capitalize;
+    }
+    form .content1 div, form .content3 div{
+        min-height: 170px;
+        max-height: 180px;
+    }
+
+    form .content1 label, form .content3 label{
+        font-size: 1.1rem;
+    }
+    form .content1, form .content3{
+        display: flex;
+        width: 100%;
+        height: 60%;
+        min-height: 200px;
+        padding: 10px;
+        flex-direction: row;
+        background: transparent;
+    }
+    .error-message{
+        font-size: .8rem;
+    }
+
+    .ct-f-text{
+        background: #111827;
+        min-height: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .ct-f-text ul{
+        margin: 0;
+        padding-top: 20px;
+        background: #111827;
+        
+    }
+    .ct-f-text ul li, .ct-f-text ul li span{
+        background: #111827;
+        font-size: .95rem;
+        color: #aaa;
+    }
+    
+    .ct-f-text ul li {
+        padding:0 15px;
+        color: #ccc;
+        background: #111827;
+    }
+    
+    .ct-f-text ul li a{
+        background: #111827;
+        color:#ccc;
+    }
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+
+   .ct-text{
+        height: 10%;
+    }
+    
+    .ct-text h1{
+        font-size: 1.6rem;
+        color: #fff;
+    }
+    .ct-text p{
+        font-size: 1.2rem;
+    }
+
+    body{
+        margin: 0;
+        height: 80vh;
+        min-height: 600px;
+        background: #111827;
+    }
+    
+    section{
+        margin: 5% auto;
+    }
+
+    form{
+        width: 100%;
+        height: 100%;
+    }
+    form .content2, form .content4, 
+    form .content5 {
+        display: flex;
+        width: 100%;
+        height: 70%;
+        min-height: 210px;
+        flex-direction: column;
+        align-items: baseline;
+        background: transparent;
+    }
+    
+    form h2{
+        font-size: 1.6rem;
+        text-transform: capitalize;
+    }
+    form .content1 div, form .content3 div{
+        min-height: 170px;
+        max-height: 180px;
+    }
+
+    form .content1 label, form .content3 label{
+        font-size: 1.1rem;
+    }
+    form .content1, form .content3{
+        display: flex;
+        width: 100%;
+        height: 60%;
+        min-height: 200px;
+        padding: 10px;
+        flex-direction: row;
+        background: transparent;
+    }
+    .error-message{
+        font-size: .8rem;
+    }
+
+    .ct-f-text{
+        background: #111827;
+        min-height: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .ct-f-text ul{
+        margin: 0;
+        padding-top: 20px;
+        background: #111827;
+        
+    }
+    .ct-f-text ul li, .ct-f-text ul li span{
+        background: #111827;
+        font-size: .95rem;
+        color: #aaa;
+    }
+    
+    .ct-f-text ul li {
+        padding:0 15px;
+        color: #ccc;
+        background: #111827;
+    }
+    
+    .ct-f-text ul li a{
+        background: #111827;
+        color:#ccc;
+    
+    }
+
+}
+
+@media(min-width:1440px) and (max-width:1800px){
+
+    .ct-f-text{
+        min-height: 10px;
+        padding-bottom: 20px;
+    }
 }

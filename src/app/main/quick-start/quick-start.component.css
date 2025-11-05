@@ -3,14 +3,14 @@ section{
     padding:0 2.5%;
     height: 95vh;
     width: 85%;
-    margin: 5vh 5%;
+    margin: 5vh auto;
     display: flex;
 }
 
 .more-info{
+    border: 0;
     padding:0 2.5%;
-    height: 95vh;
-    height: 2400px;
+    height: 2300px;
     background-color: #111827;
     display: flex;
     flex-direction: column;
@@ -31,9 +31,7 @@ section{
     align-items: center;
     color: #ddddddcc;
 }
-.more-info .h2line{
-    background-color: #ddddddcc;
-}
+
 .more-info-ctainer{
     width: 100%;
     height: 100%;
@@ -60,11 +58,11 @@ section{
     margin: 0;
     align-self: baseline;
     text-transform: uppercase;
-    font-family: DM sans;
-    letter-spacing: 3px;
+    font-family:'DM sans';
     padding-left: 50px;
-    font-size: 75px;
-    color: #fff  ;
+    font-size: 6rem;
+    color: #f50;
+    font-weight: 800;
     background-color: transparent;
 }
 
@@ -93,9 +91,7 @@ section{
     align-items: center;
     width: 48%;
     height:98%;
-    font-size: 20px;
     color:#fff;
-    justify-content:center ;
     flex-direction: column;
 }
 
@@ -106,14 +102,8 @@ section{
     cursor: pointer;
 }
 
-.m-i-boxes-ct div p{
-    margin-top: 30px;
-    font-size: 14px;
-}
-
 .s-sales, .s-brand, .s-team{
     border-bottom: 3px solid #eee;
-    cursor: pointer;
 }
 
 .s-sales div img{
@@ -143,63 +133,37 @@ section{
     cursor: pointer;
 }
 
-.t-template{
-    margin: 0;
-}
 
 .t-template h3{
-    cursor: pointer;
     margin: 0;
-    padding-top:10%;
+    padding-top:20%;
     color:#fff;
     display:flex;
     width: 100%;
-    font-size: 35px;
+    font-size: 2.5rem;
     height: 20%;
+    font-weight: 1000;
     background-color: transparent;
     flex-direction:column ;
+    text-transform: uppercase;
 }
 
 .t-template h3 span{
     margin: 0;
     padding-top: 10px;
     background:transparent;
-    font-size: 18px;
+    font-size:1.3rem;
     color: #ccc;
+    text-transform: capitalize;
 }
 
-
-.t-template h4{
-    margin: 0;
-    padding: 5%;
-    width: 100%;
-    height: 40%;
-    background-color:transparent;
-    display: flex;
-
-}
-
-.t-template h4 div{
-    margin: 0;
-    color:rgb(255, 255, 255, 0.3);
-    border-radius: 14px;
-    margin: auto;
-    font-weight: 300;
-    font-size: 14px;;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    font-family: "Zain", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
 .t-template h5{
-    padding-top:20px;
+    padding-top:2rem;
     width: 100%;
     height: 30%;
-    margin: 0;
+    margin-top: 20%;
     background-color: transparent;
-    /*justify-content:center ;*/
+
 }
 .t-template a{
     padding: 12px;
@@ -207,6 +171,7 @@ section{
     font-size: 16px;
     color: #ff5500;
     background-color: transparent;
+
 }
 .t-template a i {
     background-color: transparent;
@@ -218,4 +183,324 @@ section{
     color:#fff;
     transition: ease-in-out .3s;
     transform: translateX(10px);
+    cursor: pointer;
 }
+
+@media (max-width: 576px) {
+
+    .more-info h2{
+        font-size: 1rem;
+    }
+    .more-info{
+        width: 100%;
+        margin: 0;
+        padding-bottom: 75px;
+        height: 1900px;
+    }
+    .m-i-advantages h1{
+        font-size: 2.8rem;
+    }
+    .t-template h3{
+        font-size: 1.4rem;
+    }
+    .t-template h3 span{
+        font-size: 1.2rem;
+        font-weight: 400;
+    } 
+
+    .t-template h5 {
+        margin-top: 15%;
+    }
+    .t-template h5 a{
+        padding: 0;
+        font-size: 1.2rem;
+    }
+    .t-template i{
+        display: none;
+    }
+
+    .m-i-boxes-ct div{
+        flex-direction: column;
+    }
+    .m-i-boxes-ct div div{
+        margin: 1%;
+        align-items: center;
+        width: 98%;
+        padding: 0 10%;
+        height:48%;
+        color:#fff;
+        flex-direction: column;
+    }
+    .s-sales div img{
+        width: 35%;
+    }
+    
+    .s-brand div img{
+    width: 30%;
+    }
+    
+    .s-team div img{
+        width: 35%;
+    }
+    .s-tech div img{
+        width: 30%;
+
+    }
+    .s-sales, .s-brand, .s-team{
+        border-bottom: 0;
+    }
+    .m-i-boxes-ct .s-sales div, .m-i-boxes-ct .s-team div{
+        height: 50%;
+        margin: 0;
+        background: #18171c;
+    }
+
+  }
+  
+  @media (min-width: 577px) and (max-width: 768px) {
+    .more-info h2{
+        font-size: 1rem;
+    }
+    .more-info{
+        width: 100%;
+        margin: 0;
+        padding-bottom: 75px;
+        height: 2200px;
+    }
+    .m-i-advantages h1{
+        font-size: 3.5rem;
+    }
+    .t-template h3{
+        font-size: 1.5rem;
+    }
+    .t-template h3 span{
+        font-size: 1.2rem;
+        font-weight: 400;
+    } 
+    .t-template i{
+        display: none;
+    }
+    .t-template h5 {
+        margin-top: 10%;
+    }
+    .t-template h5 a{
+        padding: 0;
+        font-size: 1.1rem;
+    }
+    .m-i-boxes-ct div{
+        flex-direction: column;
+    }
+    .m-i-boxes-ct div div{
+        margin: 1%;
+        align-items: center;
+        width: 98%;
+        padding: 0 10%;
+        height:48%;
+        color:#fff;
+        flex-direction: column;
+    }
+    .s-sales div img{
+        width: 35%;
+    }
+    
+    .s-brand div img{
+    width: 30%;
+    }
+    
+    .s-team div img{
+        width: 35%;
+    }
+    .s-tech div img{
+        width: 30%;
+
+    }
+    .s-sales, .s-brand, .s-team{
+        border-bottom: 0;
+    }
+
+    .m-i-boxes-ct .s-sales div, .m-i-boxes-ct .s-team div{
+        height: 50%;
+        margin: 0;
+        background: #18171c;
+    }
+
+  }
+  
+  @media (min-width: 769px) and (max-width: 1025px) {
+    .more-info h2{
+        font-size: 1rem;
+    }
+    .more-info{
+        width: 100%;
+        margin: 0;
+        padding-bottom: 75px;
+        height: 2500px;
+    }
+    .m-i-advantages h1{
+        font-size: 3.8rem;
+    }
+    .t-template h3{
+        font-size: 1.8rem;
+    }
+    .t-template h3 span{
+        font-size: 1.2rem;
+        font-size: 400;
+    } 
+    .t-template i{
+        display: none;
+    }
+
+    .t-template h5 {
+        margin-top: 6%;
+    }
+    .t-template h5 a{
+        padding: 0;
+        font-size: 1.1rem;
+    }
+    .m-i-boxes-ct div{
+        flex-direction: column;
+    }
+    .m-i-boxes-ct div div{
+        margin: 1%;
+        align-items: center;
+        width: 98%;
+        padding: 0 10%;
+        height:48%;
+        color:#fff;
+        flex-direction: column;
+    }
+    .s-sales div img{
+        width: 30%;
+    }
+    
+    .s-brand div img{
+        width: 30%;
+    }
+    
+    .s-team div img{
+        width: 30%;
+    }
+    .s-tech div img{
+        width: 30%;
+
+    }
+    .s-sales, .s-brand, .s-team{
+        border-bottom: 0;
+    }
+
+    .m-i-boxes-ct .s-sales div, .m-i-boxes-ct .s-team div{
+        height: 50%;
+        margin: 0;
+        background: #18171c;
+    }
+
+  }
+  
+  @media (min-width: 1026px) and (max-width: 1200px) {
+
+    .more-info h2{
+        font-size: 1rem;
+    }
+    .more-info{
+        width: 100%;
+        margin: 0;
+        height: 2000px;
+    }
+    .m-i-advantages h1{
+        font-size: 3.5rem;
+    }
+    .t-template h3{
+        font-size: 2rem;
+    }
+    .t-template h3 span{
+        font-size: 1rem;
+    } 
+    .t-template h5 a{
+        font-size: 1.2rem;
+    }
+
+    .s-sales div img{
+        width: 80%;
+        height: 50%;
+    }
+    
+    .s-brand div img{
+        width: 80%;
+        height: 55%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .s-team div img{
+        width: 80%;
+        height: 45%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .s-tech div img{
+        width: 80%;
+        height: 50%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .s-sales, .s-brand, .s-team{
+        border-bottom: 2px solid #eee;
+    }
+  }
+  
+  @media (min-width: 1201px) and (max-width:1440px){
+
+    .more-info{
+        width: 100%;
+        margin: 0;
+        height: 2000px;
+    }
+    .m-i-advantages h1{
+        font-size: 4rem;
+    }
+    .t-template h3{
+        font-size: 2.5rem;
+    }
+    .t-template h3 span{
+        font-size: 1.5rem;
+    } 
+
+    .s-sales div img{
+        width: 70%;
+        height: 50%;
+    }
+    
+    .s-brand div img{
+        width: 70%;
+        height: 55%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .s-team div img{
+        width: 70%;
+        height: 45%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .s-tech div img{
+        width: 70%;
+        height: 50%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+  }
+  
+  @media(min-width:1440px) and (max-width:1800px){
+
+    .more-info{
+        height: 2100px;
+    }
+    .m-i-advantages h1{
+        font-size: 4.3rem;
+    }
+    .t-template h3{
+        font-size: 3rem;
+    }
+  }

@@ -1,12 +1,5 @@
-<app-header></app-header>
 <body>
-    <div class="navegator">
-        <a [routerLink]="['/discover']">discover</a> 
-        <i class="fa-solid fa-chevron-right"></i>
-        <a [routerLink]="['/quickstart']">quick start</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <a class="current">Boost Your sales</a>
-    </div>
+
     <section class="bs-pg-template">
         <div class="bs-title">
             <h1>Unlock the potential of your business 
@@ -15,33 +8,37 @@
         </div>
 
         <div class="bs-img">
-            <img src="/assets/items/item1-f.png" alt="Boost Sales img"> 
+            <img src="/assets/items/item1-f.png" alt="Sales & Marketing Images"> 
         </div>
         <div class="bs-txt">
              Get the full development and optimization of all potential sales Strategies for your business, <br> With a specific focus on what truly generates revenue.
         </div>
     </section>
+
     <div class="bs-exp"> 
+        <div class="navegator">
+            <a [routerLink]="['/expertise']">Expertise</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a class="current" ngbTooltip="You are here" triggers="click:blur">Marketing & Sales</a>
+        </div>
         <div class="bs-hder-ctn">
-            <h2>  Learn How at Engage Digital Wealth we help business owners and leaders attaining growth in a short period of time. </h2>
+            <h2>  Learn How We help business owners and leaders attaining growth in a short period of time. </h2>
         </div>
         <div class="bs-exp-ctn">
-            <div class ="bs-empty"></div>
             <div class="bs-content">
-                <p> At Engage Digital Wealth, we empower business owners and leaders to achieve 
-                remarkable growth in a short timeframe. If you're looking to elevate your business, 
+                <p> At Wise Digital Wealth, we empower Business Owners and Leaders to achieve 
+                remarkable growth in a short timeframe. If You're looking to elevate Your business, 
                 increasing revenue is key, and the quickest route to that is through boosting sales.
-                Imagine doubling your sales—business owners can achieve this by simply growing by 100%,
-                and tripling by 200%.
+                Business Owners can double their sales growing by 100%, and tripling, by 200%.
 
-                <br><br>Our mission at Engage Digital Wealth is to help you reach these ambitious goals in under five years,
-                 transforming your business into a more valuable and profitable entity.
+                <br><br>Our mission at Wise Digital Wealth is to help you reach these ambitious goals in under five years,
+                 transforming those business into a more valuable and profitable.
                     
-                <br><br>We understand that for some business owners, these targets may seem daunting, 
+                <br><br>We understand that for some Business Owners, these targets may seem daunting, 
                 especially in industries where average annual growth rates hover between 4% and 9%. 
-                But here's the good news: with Engage Digital Wealth, achieving these goals is entirely possible—if your business profile aligns with our expertise.
+                But here's the good news: with Wise Digital Wealth, achieving these goals is real, possible and achievable.
                     
-                <br><br>We know what it takes to make a significant impact on your bottom line. 
+                <br><br>It takes some time to make a significant impact on your bottom line, and we work with timeframes, dealines to ensure those results. 
                 Our tailored upselling blueprints, innovative sales strategies, and a mix of services 
                 are designed to give your business the boost it needs. We focus on what truly matters, 
                 maximizing your potential and delivering exceptional results.
@@ -53,11 +50,93 @@
                 </p>
             </div>
         </div>
+        <div class="st-services">
+            <div class="paid-media">
+                <div class="pmdef">
+                    <h1>Paid Media</h1>
+                    <br><p>Get More Of What You Paying For And Boost Your Business.</p>
+                    <br><P class="def">Maximize Your ROI and ROAS with Paid and Social Media solutions, maximize revenue, sales and elevate brand affinity.</P>
+                </div>
+                <div class="mosth">
+                    <h6>Some of the platforms and services for our media services:</h6>
+                    <p>Google Ads | Microsoft Advertising | Yandex direct | Yahoo Ads | Klaviyo | Amazon Ads | Display | Youtube Advertising 
+                        Direct Media | Video Marketing | Content creation | Social Media: Meta Partners -Facebook & Instagram-, LinkedIn, X(Twitter), Youtube,  TikTok, Twich, Advertising Optimization...
+                    </p>
+                </div>
+            </div>
+            <img class="pm-img" src="/assets/explore/paid-media.png" alt="Paid Media Template">
+            <div  class="cro">
+                <div class="crodef">
+                    <h1>Conversion Rate Optimization</h1>
+                    <br><p>Engage and Convert, Unlock Your Full Conversion Potential.</p>
+                    <br><P class="def">Improve your acquisition channels to increase your presence, increase your leads and skyrocket your revenue.</P>
+                </div>
+                <div class="croth">
+                    <h6>Our CRO strategies prioritize revenue channels and optimize their performance:</h6>
+                    <p>Marketing Automation | Marketing Cadence | Inbound & Outboubd strategies | CTA | Charts, Metrics & Analitycs | Custom Sales Channels | Sales Optimization | Website Optimization...</p>
+                </div>
+            </div>
+            <img class="cro-img" src="/assets/explore/CRO.png" alt="CRO Template">
+            <div class="bstrat">
+                <div>
+                    <h1>Business strategies</h1>
+                    <br><p>Business Strategies Services: Your Roadmap to Success.</p>
+                    <br><P class="def">Transform your vision into reality with tailored business strategies and build a succesfull business.</P>
+                </div>
+                <div>
+                    <h6>With tailored business strategies services, we prioritize the goals of our partners:</h6>
+                    <p> Consulting & Audit | Strategic Planing | Financial Analysis | Operational Efficiency | Innovation | ROI and ROAS Optimization | Monitoring & Reporting | Sales optimization
+                       | Product Launch | Market research | ABM | Risk Management | Management Optimization | Custom Analysis...
+                    </p>
+                </div>
+            </div>
+            <img class="bs-img" src="assets/explore/business-strategy.png" alt="Business Strategy Template">  
+            <div class="acquisition">
+                <div>
+                    <h1>Customer acquisition</h1><br>
+                    <p>Captivate, Convert, Cultivate: Elevate Your Acquisition Strategy.</p>
+                    <br><P class="def">Effective customer acquisition strategies can help your businesses grow its customer base and increase revenue.</P>
+                </div>
+                <div>
+                    <h6>You just need more leads for more sales:</h6>
+                    <p>  Lead Generation | PPC | Email Marketing | Lead Magnet | A/B Testing | PR |  Cross Partnership Program | Market Research | Marketing Campaings | CRM...</p>
+                </div>
+            </div>
+            <img class="ca-img" src="assets/explore/customer-acquisition.png" alt="Customer Acquisition Template ">  
+            <div class="acquisition">
+                <div>
+                    <h1>Pricing Optimization</h1><br>
+                    <p>Adjust and adapt your pricing strategy.</p>
+                    <br><P class="def">Wondering how to set the perfect price for your goods/services?</P>
+                </div>
+                <div>
+                    <h6>We optimize pricing for our partners ensuring their businesses thrive and guarantee are profitable: </h6>
+                    <p> Price Elasticity Analysis | A/B Testing for Pricing  | Demand Forecasting | Dynamic Pricing | Profit Margin Analysis | Market Research...
+                    </p>
+                </div>
+
+            </div>
+            <img class="pricing-img" src="/assets/explore/pricing-optimization.png" alt="Pricing Image">
+            <div >
+                <div>
+                    <h1>SEO</h1>
+                    <p>Reach Beyond Borders and Supercharge Your Online Presence.</p>
+                    <br><P class="def">Dominate the search engines, optimize visibility and become a global trusted authority with the help of internet. </P>
+                </div>
+                <div>
+                    <h6>Some of the SEO services we provide:</h6>
+                    <p> Technical and On-Site SEO | Keywords | BackLinks | Logs | Web Performance Optimization 
+                        | ASO | Ranking
+                    </p>
+                </div>
+            </div> 
+            <img class="seo-img" src="/assets/explore/seo.png" alt="">         
+        </div>
         <div class="bs-cnt-ctn">
-            <h3>Want to see your business thrive?</h3>
-            <button [routerLink]="['/Contact-Us']">Send us a message</button>
+            <h1>Are you ready to growth your sales?</h1>
         </div>
     </div>
-
 </body>
-<app-footer></app-footer>
+<br><br><br>
+<app-get-started></app-get-started>
+<br><br><br><br>

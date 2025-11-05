@@ -1,172 +1,589 @@
 body{
-    height: 300vh;
-    max-height: 3100px;
+    max-width: 1920px;
+    height: 80vh;
+    min-height: 2200px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 180px auto auto;
 }
 
 body .head-template{
     flex-direction: column;
     width: 80%;
-    height: 80vh;
-    max-height: 820px;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    background: #111827;
-    margin: 5vh 10%;
+    background: #18171c;
 }
 
-.head-template div{
-    width: 60%;
-    margin: 0 20%;
-    height: 100%;
+
+.head-template div {
+    width: 70%;
+    margin: auto;
+    padding: 5%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content:center;
-    align-items: center;
+    align-items: baseline;
     background: transparent;
+}
+
+.head-template .moketa{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.head-template .moketa div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #f50;
+
+}
+
+.moketa div:nth-child(1){
+    background:url('/assets/covers/1b.png');
+    background-size:60%;
+    background-position-x: 120px;
+
+
+}
+
+.moketa div:nth-child(2){
+    margin: 0;
+    align-items: baseline;
+    display: flex;
 }
 
 .head-template h1{
     background: transparent;
     margin: 0;
-    font-size: 50px;
+    font-size: 4rem;
+    font-weight: 800;
     color: #fff;
+    text-shadow: 2px 2px 2px solid #111827;
     text-transform: capitalize;
-
+    margin-bottom: 5%;
 }
 
 .head-template span{
     background: transparent;
     color: #f50;
 }
+
+.head-template h3{
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'Alata';
+    font-weight: 800;
+    margin: 0;
+    font-size: 1.55rem;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
 .head-template p{
-    line-height: 25px;
-    word-spacing: 3px;
-    padding-top:10% ;
+    padding-left: 25px;
     background: transparent;
     margin: 0;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 400;
+    font-size: 1.1rem;
+    color: #32383F;
+    font-weight: 500;
     font-family: 'DM sans', sans-serif;
 }
 
 .services{
-    margin-top: 5%;
-    width: 100%;
-    height: 80%;
+margin: 50px auto;
+    width: 80%;
+    height: 1200px;
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: transparent;
+    box-sizing: border-box;
 }
 
 .services div {
-    width: 70%;
-    height: 20%;
-    margin: 0 15% ;
-    background: transparent;
+    width: 100%;
+    height: 25%;
+    margin: auto ;
     display:flex;
     flex-direction: row;
     justify-content: center;
+    box-sizing: border-box;
 
  }
 
- 
-.services div div {
-    border-top-right-radius: 50px;
-    width: 20%;
-    margin: 15px;
-    height: 80%;
-    margin-bottom: 15%;
-    border: 0;
+.services .title{
+    width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    
-}
-
-/*duplicated*/
-.template{
-    border-top-right-radius: 50px;
-    width: 20%;
-    margin: 5px;
-    height: 98%;
-    border: 0;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.services .template:hover {
-   transition: .3s;
-   border-bottom: 3px solid #111827;
-}
-.services .template .tem-ctn{
-    width: 100%;
-    margin:0;
-    height: 20%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: rgba(213, 218, 224, 0.469);
-    justify-content: space-between;
-    border-bottom-left-radius: 50px;
-}
-
-.tem-ctn h1{
-    font-family: "DM Sans", sans-serif;
-    font-weight: 800;
-    font-size: 12px;
-    background: transparent;
-    color: #000;
-}
-section div span{
-    background: transparent;
-}
-
-section div span i{
-    background: transparent;
-    border: 0;
-    color: red;
-
-}
-
-.services .template .tem-txt{
-    width: 100%;
-    height: 80%;
+    background: #eee;
     margin: 0;
-    display: flex;
-
+    box-sizing: border-box;
 }
 
-.tem-txt p{
-    margin-left: 15px;
-    padding-right: 20px;
-    font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
+.services .sl img{
+    margin-bottom: 25px;
+    height: 40%;
     background: transparent;
-    color:#000;
-    opacity: 0.4;
-}
-
-
-.template .tem-txt:hover, .services div div:hover .tem-txt {
-    transform: translateX(20px);
-    transition: .5s;
-
-}
-
-.services .template:hover, .services .template:hover h1{
-    color: #f50;
     cursor: pointer;
 }
 
-.services .template:hover, .services .template:hover p{
-    opacity:1;
+.services .br img{
+    margin-bottom: 25px;
+    height: 40%;
+    background: transparent;
+    cursor: pointer;
 }
 
+.services .tm img{
+    margin-bottom: 25px;
+    height: 40%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.services .tch img{
+    margin-bottom: 25px;
+    height: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+.services .ctnt{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.services .ctnt .content{
+    height: 70%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: 0;
+}
+
+.services .ctnt .link{
+    height: 30%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.services .link p{
+
+    color: #f50;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    background: transparent;
+}
+.services .link i{
+    background: transparent;
+    font-size: 1rem;
+    color: #111827;
+}
+
+.services .link p:hover{
+    font-size: 1.3rem;
+    font-weight: 800;
+    transition: ease-in-out .4s;
+}
+
+.services .link p:hover i{
+    transform: translateX(20px);
+    font-size: 1.2rem;
+    color: #f50;
+    font-weight: 800;
+    transition: ease-in-out .4s;
+}
+
+.sl, .br, .tm, .tch{
+    border-bottom: 2px solid #111827;
+}
+
+.services h1{
+    font-size: 2.5rem;
+    background: transparent;
+    color: #000;
+    font-family: 'DM sans', sans-serif;
+    text-transform: capitalize;
+}
+
+.services li{
+    text-decoration: none;
+    background: transparent;
+    font-size: 1.2rem;
+    list-style: none;
+    cursor: default;
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 1900px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 400px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 400px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .services{
+        margin:0;
+        width: 100%;
+        height: 900px;
+    }
+
+    .services .sl img{
+        margin-bottom: 25px;
+        height: 20%;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .services .br img{
+        margin-bottom: 25px;
+        height: 20%;
+    }
+    
+    .services .tm img{
+        margin-bottom: 25px;
+        height: 20%;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .services .tch img{
+        margin-bottom: 25px;
+        height: 15%;
+    }
+    .services h1{
+        text-align: center;
+        font-size: 1.5rem;
+
+    }
+
+    .services li{
+        font-size: 1rem;
+    }
+    .services .link p:hover i{
+        font-size: 1rem;
+    }
+
+    .services .title{
+        width: 45%;
+    }
+    .services .ctn{
+        width:55%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 1900px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 500px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .services{
+        margin:0;
+        width: 100%;
+        height: 900px;
+    }
+
+    .services .sl img{
+        margin-bottom: 25px;
+        height: 30%;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .services .br img{
+        margin-bottom: 25px;
+        height: 30%;
+    }
+    
+    .services .tm img{
+        margin-bottom: 25px;
+        height: 30%;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .services .tch img{
+        margin-bottom: 25px;
+        height: 25%;
+    }
+    .services h1{
+        text-align: center;
+        font-size: 1.8rem;
+
+    }
+    .services .title{
+        width: 45%;
+    }
+    .services .ctn{
+        width:55%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 2000px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 750px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+        padding: 40px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .services{
+        margin:0;
+        width: 100%;
+        height: 1000px;
+    }
+
+    .services .sl img{
+        margin-bottom: 25px;
+        height: 30%;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .services .br img{
+        margin-bottom: 25px;
+        height: 30%;
+    }
+    
+    .services .tm img{
+        margin-bottom: 25px;
+        height: 30%;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .services .tch img{
+        margin-bottom: 25px;
+        height: 25%;
+    }
+    .services h1{
+        font-size: 2rem;
+
+    }
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 2000px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 900px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        padding: 50px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+
+    .services{
+        margin:0;
+        width: 100%;
+        height: 1000px;
+    }
+    .services h1{
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+    body{
+        margin: 100px auto auto;
+        min-height: 2100px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .head-template h1{
+        font-size: 3.5rem;
+    }
+
+    .services{
+        margin:0;
+        width: 100%;
+        height: 1100px;
+    }
+    .services h1{
+        font-size: 2.3rem;
+    }
+}
+
+@media(min-width:1440px) and (max-width:1800px){
+
+    body{
+        margin: 120px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    
+    .head-template h1{
+        font-size: 3.8rem;
+    }
+
+    .head-template p{
+        font-size: 1.5rem;
+    }
+
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .services{
+        width: 90%;
+        height: 1100px;
+    }
+    .services h1{
+        font-size: 2.4rem;
+    }
+}

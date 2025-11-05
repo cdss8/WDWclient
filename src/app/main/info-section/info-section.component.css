@@ -1,10 +1,9 @@
 
 section{
     padding:0 2.5%;
-    height: 120vh;
-    max-height: 1400px;
+    height: 900px;
     width: 85%;
-    margin: 5vh 5%;
+    margin: 5vh auto;
     background-color: #eee;
     display: flex;
     flex-direction: column;
@@ -14,7 +13,7 @@ h2{
     height: 10%;
     background-color: transparent;
     text-transform: uppercase;
-    padding-top: 25px;
+    padding-top: 50px;
     margin: 0;
     padding-left: 50px;
     font-size: 15px;
@@ -106,38 +105,6 @@ h2{
     margin: 0;
 }
 
-.map-ctn{
-    width: 100%;
-    height: 60%;
-    background: transparent;
-    display: flex;
-
-}
-svg{
-    background: transparent;
-    margin: 0 auto;
-}
-
-path {fill: #999; stroke: #eee;}
-path:hover {fill:#aaa;}
-path [id]{
-    border: 0px;
-}
-
-path[data-id="GB"], path[data-id="US"], path[data-id="ES"]{ 
-    fill: #f50; 
-    border: 0;
-    shape-rendering: crispEdges;
-    outline: 0;
-    outline-offset: 0;
-    cursor:pointer;
-}
-
-path:hover[data-id="GB"], path:hover[data-id="US"], path:hover[data-id="ES"]{ 
-    fill: #111827; 
-}
-
-
 
 
 .adv-m-info{
@@ -183,3 +150,125 @@ padding-left: 10px;
     transform: translateX(15px);
     font-size: 20px;
 }
+
+@media (max-width: 576px) {
+    section{
+        width: 100%;
+        margin-top: 0;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .adv-text h1{
+        font-size: 2rem;
+    }
+    
+    .adv-text div div h3{
+        font-size: 1.1rem;
+    }
+
+    .adv-text h3 i{
+        font-size: 1.1rem;
+    }
+
+    .adv-text div div p{
+        font-size: .9rem;
+        font-weight: 500;
+    }
+  }
+  
+  @media (min-width: 577px) and (max-width: 768px) {
+    section{
+        width: 100%;
+        margin-top: 0;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .adv-text h1{
+        font-size: 2.3rem;
+    }
+    
+    .adv-text div div h3{
+        font-size: 1.3rem;
+    }
+
+    .adv-text h3 i{
+        font-size: 1.2rem;
+    }
+
+    .adv-text div div p{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+  
+  }
+  
+  @media (min-width: 769px) and (max-width: 1025px) {
+    section{
+        width: 100%;
+        margin-top: 0;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .adv-text h1{
+        font-size: 2.3rem;
+    }
+    
+    .adv-text div div h3{
+        font-size: 1.3rem;
+    }
+
+    .adv-text h3 i{
+        font-size: 1.3rem;
+    }
+
+    .adv-text div div p{
+        font-size: 1.1rem;
+    }
+  }
+  
+  @media (min-width: 1026px) and (max-width: 1200px) {
+    section{
+        width: 100%;
+        margin-top: 0;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .adv-text h1{
+        font-size: 2.4rem;
+    }
+    
+    .adv-text div div h3{
+        font-size: 1.4rem;
+    }
+
+    .adv-text div div p{
+        font-size: 1.2rem;
+    }
+
+  }
+  
+  @media (min-width: 1201px) and (max-width:1440px){
+    section{
+        width: 100%;
+        margin-top: 0;
+    }
+    .adv-text h1{
+        font-size: 2.5rem;
+    }
+    
+    .adv-text div div h3{
+        font-size: 1.5rem;
+    }
+
+    .adv-text div div p{
+        font-size: 1.3rem;
+    }
+  }
+  
+  @media(min-width:1440px) and (max-width:1800px){
+
+  }

@@ -1,15 +1,35 @@
-<app-header></app-header>
-
-    <body>
-        <section class="head-template">
-            <div>
-                <h1>Real Results, Real People - Explore Testimonials & Use Cases</h1>
-                <p>Customer-Proven, Company-Approved. Don't Take Our Word First - See How Our Customers Benefits</p>
+<body>
+    <section class="head-template">
+        <div>
+            <h1>Testimonials
+                <br><span>Behind the scenes: real-world experiences</span>
+            </h1>
+            <div class="moketa">
+                <div></div>
+                <div>
+                    <h3>Trust</h3>
+                    <p>Transparency and honesty. Trusted by many.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
     
-        <section class="services">
-            <div>Stay Updated for Lastest News</div>
-        </section>
-    </body>
-<app-footer></app-footer>
+    <section class="t-cards">
+        <div class="card" [class.fade]="fade">
+            <div class="img-ctn">
+                <img  [class.ease]="ease" src="{{testimonialArray[i].img}}" alt="Tier image">
+            </div>
+            <div class="content">
+                <h4>{{testimonialArray[i].role}}</h4>
+                <h1>{{testimonialArray[i].name}}</h1>
+                <p>{{testimonialArray[i].review}}</p>
+                <h3><b>{{testimonialArray[i].rating}}</b> of 5</h3>
+            </div>
+        </div>
+        <div class="pagination">
+            <button (click)="prevPage()" [disabled]="i === 0">Previous</button>
+            <span ><b>{{i + 1}}</b> / {{total}}</span>
+            <button (click)="nextPage()" [disabled]="i === total - 1">Next</button>
+        </div>
+    </section>
+</body>

@@ -1,61 +1,113 @@
 body{
-    height: 150vh;
-    max-height: 2000px;
+    height: 80vh;
+    min-height: 1700px;
+    max-width: 1920px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 180px auto auto;
 }
 
 body .head-template{
     flex-direction: column;
     width: 80%;
-    height: 250px;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    background: #111827;
-    margin: 5vh 10%;
+    background: #18171c;
 }
 
-.head-template div{
-    width: 100%;
-    height: 100%;
-    margin: 0;
+
+.head-template div {
+    width: 70%;
+    margin: auto;
+    padding: 5%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: baseline;
     background: transparent;
+}
+
+.head-template .moketa{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.head-template .moketa div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #f50;
+
+}
+
+.moketa div:nth-child(1){
+    background:url('/assets/covers/2b.png');
+    background-size:60%;
+    background-position-x: 120px;
+
+
+}
+
+.moketa div:nth-child(2){
+    margin: 0;
+    align-items: baseline;
+    display: flex;
 }
 
 .head-template h1{
     background: transparent;
-    text-transform: capitalize;
     margin: 0;
-    font-size: 40px;
-    color: #f50;
-
-
-}
-.head-template p{
-    padding-top:25px ;
-    background: transparent;
-    text-transform: capitalize;
-    margin: 0;
-    font-size: 18px;
+    font-size: 4rem;
+    font-weight: 800;
     color: #fff;
-    font-weight: 400;
+    text-shadow: 2px 2px 2px solid #111827;
+    text-transform: capitalize;
+    margin-bottom: 5%;
+}
+
+.head-template span{
+    background: transparent;
+    color: #f50;
+}
+
+.head-template h3{
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'Alata';
+    font-weight: 800;
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+.head-template p{
+    padding-left: 25px;
+    background: transparent;
+    margin: 0;
+    font-size: 1.1rem;
+    color: #32383F;
+    font-weight: 500;
     font-family: 'DM sans', sans-serif;
 }
 
-
 .dw-dcv{
-    width: 70%;
+    width: 80%;
     height: 800px;
-    margin: 0 auto 15%;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: #eee;
+
 }
 
 .dw-dcv .ds-row{
@@ -63,26 +115,35 @@ body .head-template{
     width: 100%;
     height:50%;
     display: flex;
-    background-color: transparent;
     justify-content: center;
+    border-bottom: 2px solid #111827;
 }
  .dw-dcv .ds-row div{
-    width: 20%;
-    height:80%;
+    width: 33.3%;
+    height:100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content:center;
-    align-items:baseline;
-    border-bottom-right-radius: 10px;
+    align-items:center;
     margin: 0 auto;
 }
 
-.ds-row div h1{
+.dw-dcv .ds-row div div{
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: baseline;
+    background: transparent;
+}
+
+
+.ds-row div  h1{
     margin: 0;
     background: transparent;
     font-size: 24px;
     color:#111827;
-
 }
 
 .dw-dcv div i{
@@ -126,8 +187,264 @@ body .head-template{
     cursor: pointer;
 }
 
-.p{padding-top: 50px;
-    color: #aaa;
+
+@media (max-width: 576px) {
+    body{
+        margin: 100px auto auto;
+        min-height:1500px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 400px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 400px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .dw-dcv div i{
+        display: none;
+    }
+    
+    .ds-row div p{
+        font-size: .85rem;
+    }
+
+    .dw-dcv{
+        width: 100%;
+        height: 600px;
+        margin: 0;
+    }
+    .ds-row div  h1, .ds-row div:hover i{
+        font-size: 1.1rem;
+    }
 }
 
-.p span{color: #aaa;}
+@media (min-width: 577px) and (max-width: 768px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 1500px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 500px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .dw-dcv div i{
+        display: none;
+    }
+    
+    .ds-row div p{
+        font-size: .85rem;
+    }
+    .dw-dcv{
+        width: 100%;
+        height: 600px;
+        margin: 0;
+    }
+    .ds-row div  h1, .ds-row div:hover i{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 1500px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 750px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+        padding: 40px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .dw-dcv div i, .ds-row div p{
+        font-size: 1rem;
+    }
+
+    .dw-dcv{
+        width: 100%;
+        height: 600px;
+        margin: 0;
+    }
+    .ds-row div  h1, .ds-row div:hover i{
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 1500px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 900px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        padding: 50px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .dw-dcv{
+        width: 100%;
+        height: 600px;
+        margin: 0;
+    }
+    .dw-dcv div i{
+        font-size: 1.3rem;
+    }
+    .ds-row div  h1, .ds-row div:hover i{
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .head-template h1{
+        font-size: 3.5rem;
+    }
+    .dw-dcv{
+        margin: 0 ;
+        width: 100%;
+    }
+
+}
+
+@media(min-width:1440px) and (max-width:1800px){
+
+    body{
+        margin: 120px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    
+    .head-template h1{
+        font-size: 3.8rem;
+    }
+
+    .head-template p{
+        font-size: 1.5rem;
+    }
+
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .dw-dcv{
+        width: 90%;
+    }
+}

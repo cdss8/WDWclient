@@ -1,63 +1,84 @@
-<app-header></app-header>
 <body>
-    <section class="head-template">
-        <div>
-            <h1>Uncover A World Of Possibilities - Explore & Discover</h1>
-            <p>Explore engage Digital Wealth</p>
-        </div>
-    </section>
+        <section class="head-template">
+            <div>
+                <h1>Discover  
+                    <br><span>Dive into our world and expand your horizons</span></h1>
+                <div class="moketa">
+                    <div></div>
+                    <div>
+                        <h3>Explore</h3>
+                        <p>Learn more about us and get in touch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <section class="dw-dcv">
         <div class="ds-row">
-            <div [routerLink]="['/quickstart']">
-                <h1>Quick Start<i class="fa-solid fa-arrow-right"></i></h1>
-                <p>Popular And Recommemded Solutions To Increase Your Revenue</p>
+            <div [routerLink]="['/faq']" style="background-color: #f5f5f5;">
+                <div>
+                    <h1>FAQ <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Questions? We have the answers.</p>
+                </div>
+                </div>
+            <div [routerLink]="['/about']" style="background-color: #f2f2f2;">
+                <div>
+                    <h1>About Us <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Learn the More About "The Company" From A to Z.</p>
+
+                </div>
             </div>
-            <div [routerLink]="['/resources']">
-                <h1>Resources<i class="fa-solid fa-arrow-right"></i></h1>
-                <p>Useful Materials, Insights and Links</p>
-            </div>
-            <div [routerLink]="['/company']">
-                <h1>Company <i class="fa-solid fa-arrow-right"></i></h1>
-                <p>Learn the More About "The Company" From A to Z</p>
+            <div [routerLink]="['/team']" style="background-color: #fafafa;">
+                <div>
+                    <h1>Team <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Meet our core team and leaders.</p>
+                </div>
             </div>
             
         </div>
         <div class="ds-row">
-            <div [routerLink]="['/team']">
-                <h1>Team<i class="fa-solid fa-arrow-right"></i></h1>
-                <p>Meet Our Core Team and Leaders</p>
+            <div [routerLink]="['/locations']" style="background-color:#eee;">
+                <div>
+                    <h1>Locations <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Global reach, and local establishment.</p>
+                </div>
             </div>
-            <div>
-                <h1>Legal<i class="fa-solid fa-arrow-right"></i></h1>
-                <p>Trust, Clarity and Transparency Matters - Explore Our Legal Disclosures</p>
+            <div style="background-color: #f1f1f1;"  ngbTooltip="Updates are coming soon" triggers="click:blur" placement="bottom">
+                <div>
+                    <h1>Blog <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Learn more.</p>
+                </div>
             </div>
-            <div style="opacity:0; cursor:default;">
-                <h1><i class="fa-solid fa-arrow-right"></i></h1>
-                <p></p>
+            <div style="cursor:default; background-color: #FAF9F6"  ngbTooltip="Updates are coming soon" triggers="click:blur" placement="bottom">
+                <div>
+                    <h1>Careers <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Are you the best in your field? Submit your application.</p>
+                </div>
             </div>
             
             
         </div>
         <div class="ds-row">
-            <div [routerLink]="['/locations']">
-                <h1>Locations <i class="fa-solid fa-arrow-right"></i></h1>
-                <p>Global Reach, and Local Establishment</p>
+            <div [routerLink]="['/podcast']" style="background-color: #fbfbfb;">
+                <div>
+                    <h1>Podcast <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Suscribe and listen.</p>
+                </div>
             </div>
-            <div style="opacity:0; cursor:default;">
-                <h1><i class="fa-solid fa-arrow-right"></i></h1>
-                <p></p>
+            <div [routerLink]="['/partnership']" style="cursor:default; background-color: #f9f9f9">
+                <div>
+                    <h1>Partnership <i class="fa-solid fa-arrow-right"></i></h1>
+                    <p>Want to explode profit and opportunities?</p>
+                </div>
             </div>
-            <div style="opacity:0; cursor:default;">
-                <h1><i class="fa-solid fa-arrow-right"></i></h1>
-                <p></p>
+            <div style="cursor:default; background-color: #eee">
+                <div>
+                    <h1></h1>
+                    <p></p>
+                </div>
             </div>
 
         </div>
-        
-        <p class="p">Engage Digital Wealth <span>&#169;</span> 2024 </p>
     </section>
 
-    </body>
-    
-<app-footer></app-footer>
+</body>

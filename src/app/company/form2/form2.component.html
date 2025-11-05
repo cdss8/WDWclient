@@ -1,69 +1,80 @@
-
-<app-header-template></app-header-template>
-    <body>
-      <div class="navegator">
-        <a [routerLink]="['']">Home</a> 
-        <i class="fa-solid fa-chevron-right"></i>
-        <a class="current">do no track my info</a>
-    </div>
-        <div class="text-cover">
-            <h1>    PERSONAL INFORRMATION</h1>
-            <p>Do No Sell My Personal Information</p>
-        </div>
-                
+<body>    
         <section>
-          <p> Please, fill out the form below if you are want to be removed from the email list for Marketing Goals of Engage Digital Wealth LLC.
-            <br> By filling out this form, You wont receives updates, your email and personal information wont be tracked or be sell to 3rd companies. </p>
-
+          <h2>do no track</h2>
+          
             <div class="form2-ctn">
-                <form id="getstarted" [formGroup]="doNoSellMyDataForm" (submit)="submitDoNoSellMyData()">
-                    <div class="name-ctn">
-                      <div class="fname">
-                        <label for="firstname">First Name <i class="fa-solid fa-asterisk"></i></label>
-                        <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
+                <form id="getstarted" [formGroup]="doNoSellMyDataForm" (submit)="onSubmit()">
+                  <div class="layer1"*ngIf="success===0">
+                    <div class="text-cover">
+                      <h1>Do No Sell My Personal Information</h1>
+                      <p> Please, fill out the form below if you are want to be removed from the email list for Marketing Goals of Engage Digital Wealth LLC. 
+                        By filling out this form, You wont receives updates, your email and personal information wont be tracked or be sell to 3rd companies. </p>
+                    </div>     
+                    <div class="ctn">
+                      <div>
+                        <label for="firstname">First Name </label>
+                        <input formControlName="firstName" type="text" id="firstName"  placeholder="First Name">
                       </div>
-                      <div class="lname">
-                        <label for="lastname">Last Name <i class="fa-solid fa-asterisk"></i></label>
-                        <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+                      <div>
+                        <label for="lastname">Last Name </label>
+                        <input formControlName="lastName" type="text" id="lastName" placeholder="Last Name">
                       </div>
                     </div>
-                    <div class="email-ctn">
-                      <label for="email">Email <i class="fa-solid fa-asterisk"></i></label>
-                      <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
-                      <span class="error-message">The entry is Invalid</span>
-                    </div>
-                    <div class="name-ctn">
-                        <div class="fname">
-                          <label for="city">City <i class="fa-solid fa-asterisk"></i></label>
-                          <input formControlName="city" type="text" id="city"  placeholder=" " required>
-                        </div>
-                        <div class="lname">
-                          <label for="zipcode">Street<i class="fa-solid fa-asterisk"></i></label>
-                          <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
-                        </div>
-                      </div>
-                      <div class="name-ctn">
-                        <div class="fname">
-                          <label for="firstname">Zip-Code<i class="fa-solid fa-asterisk"></i></label>
-                          <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
-                        </div>
-                        <div class="lname">
-                          <label for="lastname">Phone<i class="fa-solid fa-asterisk"></i></label>
-                          <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
-                        </div>
-                      </div>
-                      <div class="email-ctn">
-                        <label for="email">Additional comments<i class="fa-solid fa-asterisk"></i></label>
-                        <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
-                        <span class="error-message">The entry is Invalid</span>
-                      </div>
 
-                      <div class="email-ctn">
-                        submit
+                    <div class="ctn">
+                        <div>
+                          <label for="country">Country </label>
+                          <input formControlName="country" type="text" id="country"  placeholder="Country">
+                        </div>
+                        <div>
+                          <label for="city">City</label>
+                          <input formControlName="city" type="text" id="city" placeholder="City">
+                        </div>
                       </div>
+                      <div class="ctn">
+                        <div>
+                          <label for="street">Street</label>
+                          <input formControlName="street" type="text" id="street"  placeholder="Street">
+                        </div>
+                        <div>
+                          <label for="zip">Zip-Code</label>
+                          <input formControlName="zip" type="text" id="zip" placeholder="Zip Code">
+                        </div>
+                      </div>
+                      <div class="ctn">
+                        <div>
+                          <label for="email">Email<i class="fa-solid fa-asterisk"></i></label>
+                          <input formControlName="email" type="text" id="email"  placeholder="Email " required>
+                          <div class="error-ctn"  *ngIf="doNoSellMyDataForm.get('email')?.invalid && doNoSellMyDataForm.get('email')?.touched">
+                            <small class="error-message" *ngIf="doNoSellMyDataForm.get('email')?.errors?.['required']">This field is required</small>
+                            <small class="error-message" *ngIf="doNoSellMyDataForm.get('email')?.errors?.['email']">Please choose a correct email</small>
+                          </div>
+                        </div>
+                        <div>
+                          <label for="phone">Phone</label>
+                          <input formControlName="phone" type="text" id="phone" placeholder="Ex: +34 919 XX XX XX">
+                        </div>
+                      </div>
+                      <div class="ctn"> 
+                        <div class="contactus-ctn">
+                          <button type="submit"> Send</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer2" *ngIf="success===1">
+                    <p>We appreciate your proactive step in protecting your privacy.
+                      <br>Your request to not track your information has been successfully recorded.
+                      <br><br><br>
+                      If you have any questions or need further assistance, feel free to reach out to our support team.
+                      <br><br><br>Your privacy matters to us! </p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" 
+                    cy="26" r="25" fill="none" /><path class="checkmark__check" 
+                    fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+                    <button (click)="restartFn()">Start Over</button>
+                </div>
                   </form>
             </div>         <!--ng-->
         </section>
        
-    </body>
-<app-footer-template></app-footer-template>
+</body>

@@ -1,74 +1,580 @@
 body{
-    height: 120vh;
-    max-height: 2000px;
+    height: 80vh;
+    min-height: 1850px;
+    max-width: 1920px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 180px auto auto;
 }
-
 body .head-template{
     flex-direction: column;
-    width: 100%;
-    height: 250px;
+    width: 80%;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    background: #111827;
-    margin: 0;
+    background: #18171c;
 }
 
-.head-template div{
-    width: 100%;
-    height: 100%;
-    margin: 0;
+
+.head-template div {
+    width: 70%;
+    margin: auto;
+    padding: 5%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: baseline;
     background: transparent;
+}
+
+.head-template .moketa{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.head-template .moketa div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #f50;
+
+}
+
+.moketa div:nth-child(1){
+    background:url('/assets/covers/3b.png');
+    background-size:60%;
+    background-position-x: 120px;
+
+
+}
+
+.moketa div:nth-child(2){
+    margin: 0;
+    align-items: baseline;
+    display: flex;
 }
 
 .head-template h1{
     background: transparent;
     margin: 0;
-    font-size: 34px;
+    font-size: 4rem;
+    font-weight: 800;
     color: #fff;
-
-
+    text-shadow: 2px 2px 2px solid #111827;
+    text-transform: capitalize;
+    margin-bottom: 5%;
 }
+
+.head-template span{
+    background: transparent;
+    color: #f50;
+}
+
+.head-template h3{
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'Alata';
+    font-weight: 800;
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
 .head-template p{
-    padding-top:30px ;
+    padding-left: 25px;
     background: transparent;
     margin: 0;
-    font-size: 16px;
-    color: #f50;
-    font-weight: 600;
+    font-size: 1.1rem;
+    color: #32383F;
+    font-weight: 500;
     font-family: 'DM sans', sans-serif;
 }
 
+.t-cards{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 50px auto;
+    height: 900px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
 
-.head-template button{
-    height:50px;
-    width: 200px;
-    border-radius: 0;
-    border: 0;
-    background:#f50;
+.card{
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    background: #f9f9f9;
+    border-radius: 50px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(0px);
+    cursor: default;;
+}
+
+.card.fade {
+    opacity: 0;
+    transform: translateY(-20px); /* Move up slightly during fade */
+}
+
+.card .img-ctn{
+    position: absolute;
+  left: -50px;
+    width: 120px;
+    height: 150px;
+    background: #fff;
+    margin: 100px auto;
+    border-radius: 15px;
+
+}
+
+.img-ctn img{
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+.card .content{
+    width: 90%;
+    height: 60%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 0 ;
+}
+
+.content h3{
+    color: #000;
+    font-family: 'Alata';
+}
+
+.content h1{
     color:#000;
-    font-size:14px;
     font-weight: 600;
 }
 
-.head-template button:hover{
-    background-color: rgb(213, 218, 224);
+.content h4{
+    color:#f50;
+}
+.content p{
     color:#000;
-    transition: ease-out .35s;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.content b{
+    background: transparent;
+    color: #f50;
+    font-size: 2rem;
+    
+}
+
+.content h3, .content h1, .content h4, .content p{
+    margin-left:25%;
+    background: transparent;
+}
+
+.pagination{
+    margin-top: 5%;
+    width: 30%;
+    height: 10%;
+    text-align: center;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.pagination button{
+    width: 130px;
+    height: 40px;
+    border: 0;
+    border-radius: 12px;
+    background: #f50;
+    cursor:pointer;
+    color:#fff;
+    font-weight: 600;
+}
+
+.pagination button:hover{
+    background: #32383F;
+    transition: ease-in-out .3s;
+}
+
+.pagination button.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .pagination button.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .pagination button.fade-out {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .pagination button.fade-out.active {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .pagination span,  .pagination b{
+    background: transparent;
+    font-size:1rem;
+  }
+
+  .pagination b{
+    color:#f50;
+    font-size:1.25rem;
+  }
+  
+  @media (max-width: 576px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 400px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 400px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .t-cards{
+        width: 100%;
+    }
+
+    .card{
+        width: 95%;
+        height: 60%;
+    }
+    .card .img-ctn{
+        position: absolute;
+      top:-200px;
+      left: 40%;
+        width: 120px;
+        height: 150px;
+        background: #fff;
+        margin: 100px auto;
+        border-radius: 15px;
+    
+    }
+    .pagination{
+        width: 80%;
+        align-items: center;
+    }
+
+    
+    .content h1{
+        color:#000;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    
+    .content h4{
+        color:#f50;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+    .content p{
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 500px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .t-cards{
+        width: 100%;
+    }
+
+    .card{
+        width: 90%;
+        height: 60%;
+    }
+    .card .img-ctn{
+        position: absolute;
+      top:-200px;
+      left: 42%;
+        width: 120px;
+        height: 150px;
+        background: #fff;
+        margin: 100px auto;
+        border-radius: 15px;
+    
+    }
+    .pagination{
+        width: 70%;
+        align-items: center;
+    }
+
+    
+    .content h1{
+        color:#000;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    
+    .content h4{
+        color:#f50;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .content p{
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 750px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+        padding: 40px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .t-cards{
+        width: 100%;
+    }
+
+    .card{
+        width: 85%;
+        height: 40%;
+    }
+    .card .img-ctn{
+        position: absolute;
+      top:-200px;
+      left: 45%;
+        width: 120px;
+        height: 150px;
+        background: #fff;
+        margin: 100px auto;
+        border-radius: 15px;
+    
+    }
+    .pagination{
+        width: 60%;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 900px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        padding: 50px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .t-cards{
+        width: 100%;
+    }
+
+    .card{
+        width: 75%;
+        height: 40%;
+    }
+    .pagination{
+        width: 50%;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .head-template h1{
+        font-size: 3.5rem;
+    }
+    .t-cards{
+        width: 100%;
+    }
+
+    .card{
+        width: 70%;
+        height: 40%;
+    }
+    .pagination{
+        width: 40%;
+        align-items: center;
+    }
 
 }
-.services{
-    margin-top: 5%;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
+
+@media(min-width:1440px) and (max-width:1800px){
+
+    body{
+        margin: 120px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    
+    .head-template h1{
+        font-size: 3.8rem;
+    }
+
+    .head-template p{
+        font-size: 1.5rem;
+    }
+
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    
+    .t-cards{
+        width: 90%;
+    }
+
+    .card{
+        width: 70%;
+        height: 40%;
+    }
+
 }

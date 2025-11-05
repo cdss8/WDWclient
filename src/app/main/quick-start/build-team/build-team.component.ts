@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from "../../header/header.component";
 import { RouterModule } from '@angular/router';
-import { FooterComponent } from "../../footer/footer.component";
-import { PartnersComponent } from "../../partners/partners.component";
+import { GetStartedComponent } from "../../get-started/get-started.component";
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-build-team',
   standalone: true,
-  imports: [HeaderComponent, RouterModule, FooterComponent, PartnersComponent],
+  imports: [RouterModule, GetStartedComponent, NgbTooltip],
   templateUrl: './build-team.component.html',
   styleUrl: './build-team.component.css'
 })

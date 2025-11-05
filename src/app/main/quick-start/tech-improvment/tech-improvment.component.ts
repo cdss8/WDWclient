@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from "../../header/header.component";
 import { RouterModule } from '@angular/router';
-import { FooterComponent } from "../../footer/footer.component";
-import { AdvantagesComponent } from "../../advantages/advantages.component";
 import { PartnersComponent } from "../../partners/partners.component";
+import { GetStartedComponent } from "../../get-started/get-started.component";
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tech-improvment',
   standalone: true,
-  imports: [HeaderComponent, RouterModule, FooterComponent, AdvantagesComponent, PartnersComponent],
+  imports: [RouterModule,  PartnersComponent, GetStartedComponent, NgbTooltip],
   templateUrl: './tech-improvment.component.html',
   styleUrl: './tech-improvment.component.css'
 })

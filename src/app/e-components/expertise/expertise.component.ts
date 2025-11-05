@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from "../../main/header/header.component";
-import { FooterComponent } from "../../main/footer/footer.component";
-import { HeaderTemplateComponent } from '../header-template/header-template.component';
 import { RouterModule } from '@angular/router';
 import { GetStartedComponent } from "../../main/get-started/get-started.component";
 import { Router } from '@angular/router';
-
+import { GrowBrandComponent } from '../../main/quick-start/grow-brand/grow-brand.component';
 @Component({
   selector: 'app-expertise',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, RouterModule, HeaderTemplateComponent, GetStartedComponent],
+  imports: [ RouterModule, GetStartedComponent, GrowBrandComponent],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.css'
 })

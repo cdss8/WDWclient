@@ -1,0 +1,211 @@
+body{
+    max-width: 1920px;
+    width: 100%;
+    height: 80vh;
+    min-height: 1150px;
+    display:flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 180px auto 0 auto;
+}
+
+section{
+    cursor: default;
+    width: 80%;
+    height: 100vh;
+    min-height: 1100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+}
+
+section h2{
+    margin: 0;
+    align-self: baseline;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding-bottom: 80px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    color: #38323f80;
+}
+
+section .text-cover{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background:transparent;
+    margin: 0;
+}
+
+section .text-cover h1{
+    color:#f50;
+    font-size: 3.2rem;
+    background: transparent;
+    text-align: center;
+}
+
+section p {
+    padding: 80px 15%;
+    align-self: baseline;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family:'DM sans', sans-serif;
+    background-color: #fff;
+    text-align: justify;
+}
+
+section h4{
+    padding:0 15%;
+}
+
+section h4 b{
+    color:#f50;
+}
+
+
+
+section .lct{
+    display:flex;
+    width: 100%;
+    padding: 0 15%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+}
+
+section .lct div{
+    box-sizing: border-box;
+    display:flex;
+    width: 20%;
+    height: 100%;
+    justify-content: baseline;
+    align-items: baseline;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor: default;
+}
+
+.lct div img{
+    width: 200px;
+    height: 250px;
+    border-radius: 4px;
+    cursor: default;
+}
+
+section div p{
+    align-self: baseline;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family:DM sans;
+    font-weight: 400;
+    background-color: #fff;
+    color:#111827;
+    text-align: justify;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.lct img:hover {
+    cursor: default;
+    border-bottom: 5px solid rgba(255, 85, 0, 0.808);
+    transition: all 0.2s;
+
+}
+
+
+.title{
+    background: transparent;
+    font-size:12px;
+    font-style:italic;
+    color: rgb(255, 85, 0);
+    cursor: default;
+}
+
+.countries{
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background:transparent;
+    cursor: default;
+}
+span{
+    background:transparent;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+
+.navegator{
+    display: block;
+    position: absolute;
+    top:220px;
+    left:300px;
+    z-index: 100;
+}
+
+.navegator a, .navegator p, .navegator i{
+    display: inline-block;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 0 5px; 
+}
+
+.current{
+    color:#f50;
+    font-weight: 500;
+}
+
+.navegator a, .navegator p{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'DM sans';
+}
+
+.navegator a:hover{
+    font-weight: 700;
+    transition: ease-in .1s;
+}
+
+.navegator p:hover{
+    font-weight: 700;
+    transition: ease-in .1s;
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+
+}
+
+@media(min-width:1440px) and (max-width:1800px){
+
+}

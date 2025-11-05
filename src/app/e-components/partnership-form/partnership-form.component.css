@@ -1,57 +1,108 @@
 body{
-    height: 160vh;
-    max-height: 1600px;
+    max-width: 1920px;
+    height: 80vh;
+    min-height: 1700px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 180px auto auto;
 }
 
 body .head-template{
     flex-direction: column;
     width: 80%;
-    margin: 5vh 10%;
-    height: 250px;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    background: #111827;
+    background: rgb(24, 23, 28);
 }
 
-.head-template div{
-    width: 90%;
-    height: 100%;
-    margin: 0;
+
+.head-template div {
+    width: 70%;
+    margin: auto;
+    padding: 5%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: baseline;
     background: transparent;
+}
+
+.head-template .moketa{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.head-template .moketa div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #f50;
+
+}
+
+.moketa div:nth-child(1){
+    background:url('/assets/covers/2b.png');
+    background-size:60%;
+    background-position-x: 120px;
+
+
+}
+
+.moketa div:nth-child(2){
+    margin: 0;
+    align-items: baseline;
+    display: flex;
 }
 
 .head-template h1{
     background: transparent;
     margin: 0;
-    font-size: 40px;
-    color: #f50;    
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 2px 2px solid #111827;
     text-transform: capitalize;
+    margin-bottom: 5%;
 }
+
+.head-template span{
+    background: transparent;
+    color: #f50;
+}
+
+.head-template h3{
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'Alata';
+    font-weight: 800;
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
 .head-template p{
-    padding-top:25px ;
+    padding-left: 25px;
     background: transparent;
     margin: 0;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 400;
-    text-transform: capitalize;
-    text-transform: capitalize;
-
+    font-size: 1.1rem;
+    color: #32383F;
+    font-weight: 500;
+    font-family: 'DM sans', sans-serif;
 }
-
-
 .main-csf{
-    width: 70%;
+    width: 60%;
     height: 800px;
-    margin: 5% auto 15%;
+    margin:5% auto 0 auto;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -64,10 +115,7 @@ body .head-template{
     margin: 0;
 }
 
-.simple-form form{
-    background: #111827;
-}
-.simple-form form, .simple-form .sf-contacts{
+.simple-form .sf-contacts{
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -75,106 +123,613 @@ body .head-template{
     width: 50%;
 }
 
-
-
-.simple-form form div{
-    width: 100%;
-    height: 20%;
-    background-color: transparent;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.simple-form label{
-    width: 80%;
-    height: 10%;
-    margin: 0 10%;
-    padding-top: 20px;
-    display: flex;
-    justify-content: baseline;
-    background: transparent;
-    color: #fff;
-    font-size: 12px;
-    font-family: 'DM sans', sans-serif;
-}
-
-label i{
-    margin: 0;
-    font-size: 8px;
-    background: transparent;
-    color: #f50;
-    padding-left: 5px;
-}
-
-.simple-form input{
-    border:0;
-    background:  #32383f80;
-    width: 80%;
-    height: 35%;
-    margin: 10px 10% 0;
-    display: flex;
-    justify-content: baseline;
-    align-items: baseline;
-    color: #fff;
-    font-size: 14px;
-
-}
-
-.simple-form form button{
-    width: 150px;
-    height: 40px;
-    margin-right: 10%;
-    border: 0;
-    background: #f50;
-    border-radius: 2px;
-    color: #000;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'DM sans', sans-serif;
-}
-
-.simple-form form button:hover{
-    color: #fff;
-    transition: ease-in .2s;
-    background:  #adb1b5a1;
-}
-
-.sf-contacts{
-display: flex;
-}
-
-
-
 .sf-contacts div{
-    width: 100%;
-    height: 20%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: transparents;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        background: transparents;
 }
 
 .sf-contacts div p{
     font-weight: 500;
-    font-size: 22px;
+    font-size: 1.2rem;
     font-family: 'DM sans', sans-serif;
     margin: 0;
     color:#111827;
-    text-transform: capitalize;
-}
 
-.sf-contacts div h5{
+}    
+
+form{
+    background: #111827;  
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0;
-    padding-top: 5px;
-    font-weight: 300;
-    font-size: 16px;
-    font-family: 'DM sans', sans-serif;
+    width: 50%;
+}
+.layer1, .layer2{
+    display: flex;
+    width: 75%;
+    height: 95%;
+    padding-top: 5%;
+    background: transparent;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-.p, .p span{
-    margin-top: 150px;
-    color: #1118279d;
+form .layer1 div{
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+
+form .layer1 label{
+    display: flex;
+    color: #eee;
+    background: transparent;
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    font-family: "DM sans";
+    font-weight: 500;
+    font-style: normal;
+}
+
+form  .layer1 input, form .layer1 textarea{
+    border: 0;
+    color:#fff;
+    margin: 0;
+    width: 100%;
+    height: 45%;
+    min-height: 45%;
+    background-color: #32383f80;
+    font-size: 1.2rem;
+    font-family: "DM sans";
+    padding-left: 5px;
+    cursor: pointer;
+}
+form .layer1 input:hover, form.layer1  textarea:hover{
+    border:1px solid #f50;
+}
+
+form .layer1 .privacy{
+    height: 12%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: baseline;
+}
+form .privacy label{
+    display: block;
+    cursor: pointer;
+    font-size: .95rem;
+    text-align: justify;
+    align-items:baseline;
+}
+
+form  .layer1 .privacy  input {
+   display: none; 
+}
+
+form a{
+    background: transparent;
+    color: #f50;
+}
+form .layer1 .privacy .checkmark {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    padding-right: 20px;
+    position: relative;
+    margin-right: 20px;
+    background-color: rgb(221, 221, 221);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+form  .privacy input:checked +  .checkmark {
+    background-color: transparent; 
+}
+
+form  .privacy input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 8px;
+    height: 10px;
+    border: solid #f50;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+form .contactus-ctn{
+    align-items: end;
+    justify-content: center;
+}
+
+.contactus-ctn button{
+    width: 160px;
+    height: 40px;
+    border: 0;
+    background: #f50;
+    font-size: 1.4rem;
+    font-family: "Zain", sans-serif;
+    border-radius: 2px;
+    font-weight: 500;
+    font-style: normal;
+    color:#000;
+}
+.contactus-ctn button:hover{
+    background-color: #32383f80;
+    transition: ease in .3s;
+    color: #fff;
+}
+
+.error-ctn{
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    margin: 0;
+    position: relative;
+    height: 10px;
+    width: 100%;
+
+}
+
+.error-message {
+    color: #f50; 
+    font-size: .9em;
+    justify-self: baseline;
+    background: transparent;
+    animation: vibrate 0.5s; 
+    margin-left: 0;
+}
+
+.customcheckbox.error {
+    border: 2px solid #f50; 
+    padding: 10px; 
+    border-radius: 2px; 
+}
+
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+}
+
+ form .layer2{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin: 0 auto;
+}
+form .layer2 p{
+    background: transparent;
+    color:#fff;
+    font-size: 1.5rem;
+    padding: 0 50px;
+    text-align: center;
+}
+
+form .layer2 button{
+    margin-top: 250px;
+    width: 160px;
+    height: 40px;
+    border: 0;
+    background: #f50;
+    font-size: 1.4rem;
+    font-family: "Zain", sans-serif;
+    border-radius: 2px;
+    font-weight: 500;
+    font-style: normal;
+    color:#111827;
+}
+
+form .layer2 button:hover{
+    color:#fff;
+    background: #32383f80;;
+    border:1px solid #f50;
+}
+
+.layer2 .checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #f50;
+    stroke-miterlimit: 10;
+    background: #111827;
+    box-shadow: inset 0px 0px 0px #111827;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+
+.layer2 .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #f50;
+    fill:#111827;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+ 
+}
+
+form .layer2 .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+
+form a {
+    background: transparent;
+    text-decoration: none;
+    font-size: .9rem;
+    color: #f50;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #111827;
+    }
+}
+
+form  i{
+    background: transparent;
+    color:#f50;
+    font-size: .6rem;  
+    margin: 0;
+    padding-top: 4px;
+    padding-left: 4px;
+    
+}
+
+
+@media (max-width: 576px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 2100px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 400px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 400px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .main-csf{
+        width: 95%;
+        padding: 0 5%;
+        height: 1200px;
+    }
+
+    .simple-form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .simple-form .sf-contacts{
+        width: 100%;
+        height: 35%;
+        padding-left: 20%;
+    }
+    .sf-contacts div p{
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    form{
+        margin: auto;
+        width: 100%;
+        height: 65%;
+    }
+
+    form .layer1 label{
+        font-size: 1rem;
+    }
+    .contactus-ctn button{
+        margin-top: 30px;
+        width: 150px;
+        height: 35px;
+    }
+
+    form .layer2 button{
+        width: 150px;
+        height: 35px;
+    }
+    form .layer2 p{
+        font-size: 1.3rem;
+        padding: 0 25px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    body{
+        margin: 100px auto auto;
+        min-height: 2100px;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 500px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .main-csf{
+        width: 95%;
+        padding: 0 5%;
+        height: 1200px;
+    }
+
+    .simple-form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .simple-form .sf-contacts{
+        width: 100%;
+        height: 35%;
+        padding-left: 20%;
+    }
+    .sf-contacts div p{
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    form{
+        margin: auto;
+        width: 100%;
+        height: 65%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 750px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+        padding: 40px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .main-csf{
+        width: 100%;
+        padding: 0 5%;
+    }
+    .simple-form .sf-contacts{
+        width: 35%;
+    }
+    .sf-contacts div p{
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    form{
+        width: 65%;
+    }
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 900px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        padding: 50px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .main-csf{
+        width: 100%;
+        padding: 0 5%;
+    }
+    .simple-form .sf-contacts{
+        width: 40%;
+    }
+    form{
+        width: 60%;
+    }
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .head-template h1{
+        font-size: 3.5rem;
+    }
+    .main-csf{
+        width: 85%;
+    }
+    .simple-form .sf-contacts{
+        width: 45%;
+    }
+    form{
+        width: 55%;
+    }
+
+}
+
+@media(min-width:1440px) and (max-width:1800px){
+
+    body{
+        margin: 120px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    
+    .head-template h1{
+        font-size: 3.8rem;
+    }
+
+    .head-template p{
+        font-size: 1.5rem;
+    }
+
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .main-csf{
+        width: 75%;
+    }
 }

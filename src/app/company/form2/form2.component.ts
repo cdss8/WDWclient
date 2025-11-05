@@ -1,38 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FooterTemplateComponent } from "../../e-components/footer-template/footer-template.component";
-import { HeaderTemplateComponent } from "../../e-components/header-template/header-template.component";
 import { FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
+import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-form2',
   standalone: true,
-  imports: [RouterModule, FooterTemplateComponent, HeaderTemplateComponent, ReactiveFormsModule],
+  imports: [RouterModule, ReactiveFormsModule, CommonModule],
   templateUrl: './form2.component.html',
   styleUrl: './form2.component.css'
 })
 
 export class Form2Component implements OnInit{
-  ngOnInit(): void {
-    window.scrollTo(0,0);
-  }
-  doNoSellMyDataForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-    company: new FormControl('', Validators.required),
-    message: new FormControl('', Validators.required),
-    budget: new FormControl('', Validators.required),
-    anualRevenue:new FormControl('', Validators.required),
-    howKnowUs: new FormControl('', ),
-    terms: new FormControl(false, Validators.requiredTrue),
-    suscribe: new FormControl(false)
+
+  doNoSellMyDataForm:FormGroup;
+  success=0;
+
+  constructor(){
+  this.doNoSellMyDataForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    country: new FormControl(''),
+    city: new FormControl(''),
+    street: new FormControl(''),
+    zip: new FormControl(''),
+    phone: new FormControl(''),
 
   });
-
+}
+  /*
   submitDoNoSellMyData() {
-    // Get the form values
-
     this.doNoSellMyDataForm.value.firstName ?? '',
     this.doNoSellMyDataForm.value.lastName ?? '',
     this.doNoSellMyDataForm.value.email ?? '',
@@ -45,5 +43,35 @@ export class Form2Component implements OnInit{
     console.log("user",this.doNoSellMyDataForm);
  // Perform any additional processing or validation on the form values
   }
+  */
 
+  trimmedData(doNoSellMyDataForm:any):any{
+    const trimmedValues = { ...doNoSellMyDataForm };
+    for (const key in trimmedValues) {
+      if (typeof trimmedValues[key] === 'string') {
+        trimmedValues[key] = trimmedValues[key].trim();
+        }
+      }   
+    return trimmedValues;
+  }
+
+  onSubmit() {
+    if (this.doNoSellMyDataForm.valid) {
+      const formValues = this.doNoSellMyDataForm.value;
+      const trimmedValues = this.trimmedData(formValues); 
+      console.log(trimmedValues); 
+       this.success ++;
+    }else {
+      this.doNoSellMyDataForm.markAllAsTouched();  
+    }
+  }
+  restartFn(){
+    this.doNoSellMyDataForm.reset();
+    this.success=0;
+  }
+
+  ngOnInit(): void {
+    window.scrollTo(0,0);
+  }
 }
+

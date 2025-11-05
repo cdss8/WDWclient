@@ -1,0 +1,251 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: end;
+}
+
+button{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: #f50;
+    border-radius: 5px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.12rem;
+    animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0px #f50,0 0 0 0px #ff5500;  }
+    20% { transform: scale(1); }
+    80% { box-shadow: 0 0 0 6px #00d2ff00,0 0 0 12px rgba(0,210,255,0); }
+  }
+
+button:hover{
+    background: #32383f;
+    transition: all .4s;
+    animation: pulse2 1.8s ease-in-out infinite;
+}
+@keyframes pulse2 {
+    0% { box-shadow: 0 0 0 0px #111827,0 0 0 0px #111827;  }
+    20% { transform: scale(1); }
+    80% { box-shadow: 0 0 0 6px #00d2ff00,0 0 0 12px rgba(0,210,255,0); }
+  }
+
+button i {
+    text-align: center;
+    background: transparent;
+    color:#fff;
+    margin: 0
+}
+
+button #icon2{
+    font-size: 1.8rem; 
+}
+
+button #icon2--open{
+transition: ease-in-out 3s;
+
+}
+
+.ctn{
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0);
+    width: 350px;
+    height: 220px;
+    border-radius: 20px;
+    background: #f6f6f6;
+    transition: transfrom .8s ease-out;
+  }
+  
+  .ctn--open {
+    opacity: 1;
+    transform: translateY(-280px);
+  }
+
+.ctn .dm{
+    height: 85%;
+    width: 100%;
+    background: transparent;
+}
+
+#dm-icons{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: left 1s;
+    margin-top: 1%;
+}
+
+#dm-icons div{
+    height: 33.3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: transparent;
+}
+#dm-icons .tt p{
+    font-size: 1.3rem;
+}
+
+#dm-icons a {
+    text-decoration: none;
+    display: flex;
+    width: 33%;
+    margin: 0 2%;
+    justify-content: center;
+    height: 85%;
+    background: transparent;
+    align-items: end;
+  }
+
+#dm-icons a div{
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    
+
+}
+
+#dm-icons .wa i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    display: flex;
+    background: #24cc63;  
+}
+
+#dm-icons .msg i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    color: #006AFF;
+    background: white;
+}
+
+#dm-icons .x i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    display: flex;
+    background: #000;
+}
+#dm-icons .tg i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #0084c6;
+    display: flex;
+    background: #fff;
+}
+#dm-icons i{
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#dm-icons p{
+    background: transparent;
+    color: #000;
+    font-weight: 600;
+    font-size: .9rem;
+    align-self: end;
+}
+#dm-icons div:nth-child(2) a:nth-child(1):hover div{
+    border:2px solid #24cc63;   
+}
+#dm-icons div:nth-child(2) a:nth-child(2):hover div{
+    border:2px solid  #006AFF;
+}
+
+#dm-icons a:nth-child(1):hover div{
+    border:2px solid #000;  
+}
+
+#dm-icons a:nth-child(2):hover div{
+    border:2px solid #0084c6;
+}
+
+
+#email{
+    background: transparent;
+    width: 100%;
+    height: 18%;
+    display: flex;
+   align-items: center;
+}
+
+#email p, #email i{
+    background: transparent;
+    font-weight: 700;
+    margin: 0 auto;
+
+}
+
+.ctn .prt{
+    height: 20%;
+    width: 100%;
+    background: transparent;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
+}
+
+.prt p{
+    background: #f50;
+    display: flex;
+    align-items: center;
+padding-left: 26%;
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    font-size: .85rem;
+    margin: 0 auto;
+    font-weight: 500;
+    font-family: 'DM sans';
+}
+
+.prt i{
+    background: transparent;
+    font-size: .9rem;
+    padding-left: 10px;
+    margin: 0;
+}
+.prt:hover p{
+    color: #fff;
+
+}
+
+.prt:hover i{
+    color: #fff;
+    transform: translateX(15px);
+    transition: ease-in-out .3s;
+}
+.prt:hover{
+    background: #fafbfc;}

@@ -1,12 +1,4 @@
-<app-header></app-header>
 <body>
-    <div class="navegator">
-        <a [routerLink]="['/discover']">discover</a> 
-        <i class="fa-solid fa-chevron-right"></i>
-        <a [routerLink]="['/quickstart']">quick start</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <a class="current">Long-Term Brand Growth</a>
-    </div>
     <section class="bs-pg-template">
         <div class="bs-title">
             <h1>Elevate Your Brand to New Heights
@@ -21,36 +13,79 @@
         </div>
     </section>
     <div class="bs-exp"> 
+        <div class="navegator">
+            <a [routerLink]="['/expertise']">Expertise</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a class="current" ngbTooltip="You are here" triggers="click:blur">Branding</a>
+        </div>
         <div class="bs-hder-ctn">
-            <h2>Build a Trustworthy Brand That Sells Itself with Engage Digital Wealth</h2>
+            <h2>Build a Trustworthy Brand That Sells Itself with Wise Digital Wealth</h2>
         </div>
         <div class="bs-exp-ctn">
-            <div class ="bs-empty"></div>
             <div class="bs-content">
                 <p>To develop an effective brand growth strategy, 
-                Business Owners need to consider a variety of factors that can affect your brand's success.
-                Somes like brand awareness, perception, association and consideration, can all play a significant role in a user's decision-making process 
+                Business Owners need to consider a variety of factors that can affect the success of the brand.
+                Brand awareness, brand perception, association and considerations, can all play a significant role in the decision-making process of users 
                 when choosing or building a brand.
 
-                <br><br>A strong brand awareness strategy is the key. By combining tactics like market penetration, 
-                expansion into new markets, brand revitalization, innovative product launches, etc. 
-                Business owners can create a powerful brand that resonates with their audience.
-
-                <br><br>At Engage Digital Wealth, we specialize in building a trustworthy brand that makes selling effortless for your business. 
+                <br><br> Business owners can create a powerful brands that resonates with their audience simply by combining tactics like market penetration, 
+                expansion into new markets, brand revitalization, innovative product launches, etc. At Wise Digital Wealth, we specialize in building a trustworthy brand that makes selling effortless for businesses. 
                 Our diverse strategies are tailored to fit the unique needs of each industry, ensuring your brand stands out.
 
-                <br><br>When developed correctly, a strong brand creates a virtuous cycle that benefits both businesses and their owners.
-                The two key outcomes? Increased revenue and soaring sales. 
-                <br><br>Let's work together to elevate your brand and drive your success!
-            
+                <br><br>When created correctly a brand, it creates a virtuous cycle that benefits businesses owners: high demand, audience & atention, strong identity & personality, sales & revenue increasment etc. 
+                As outcome, the business trives and it becomes easier to sell the brand's product and services, in other words, the brand sells itself.
+                
+                <br><br>At Wise Digital Wealth, with the help of the experts, we fully take care of your brand for those results. 
+                <br><br>Let's work together to elevate your brand and drive your success!     
             </p>
             </div>
         </div>
+        <div class="st-services">
+            <div class="paid-media">
+                <div >
+                    <h1>Long-Term Brand Growth</h1>
+                    <br><p>Invest in your brand today and reap the rewards for years to come.</p>
+                    <br><p class="def">Build a legacy that resonates with your audience by nurturing authentic connections and delivering consistent value over time.</p>
+                </div>
+                <div >
+                    <h6>Some of our long-term brand services:</h6>
+                    <p> Branding | Sales Strategies | Trending | Targeting | Brand Comms Audit 
+                        <br> Marketplaces (Amazon, Asos, eBay, etc.) | eCommerce Store & Shopify Stores | Naming 
+                        <br> Tagline | Social Media | Content Creation...
+                </div>
+            </div>
+            <div class="cro">
+                <div>
+                    <h1>Brand Identity & Strategy</h1><br>
+                    <p>Build a strong brand identity and foster customer loyalty.</p>
+                    <br><p class="def">Transform your brand into a trusted entity for your customers. 
+                        Create lasting relationships with customers, fostering loyalty through exceptional experiences and meaningful interactions.</p>
+                </div>
+                <div >
+                    <h6>Some of the services we provide:</h6>
+                    <p> Customized Branding & Rebranding | Logo Design | Research, Feedbak & Analitycs | Custom Branding Strategy... </p>
+                </div>
+            </div>
+            <div >
+                <div>
+                    <h1>Product Launch</h1><br>
+                    <p>Moneztizing Your auditory with the Launch of your own Product.
+                        <br>Turning your following into profit.</p>
+                    <br><p class="def"> We help business owners, companies, celebrities and influencers social media influencers and guru to launch their own product and monetize their audience.</p>
+                </div>
+                <div>
+                    <h6>Here are some of the additional services we offer:</h6>
+                    <p>Product Development | Branding and positioning | Marketing Strategy Development | Content Creation | Public Relations...
+                    </p>
+                </div>
+            </div>
+            <img class="br-img" src="/assets/explore/branding.png" alt="Branding Template">
+        </div>
         <div class="bs-cnt-ctn">
-            <h3>Want to See Your Business Thrive?</h3>
-            <button [routerLink]="['/Contact-Us']">Get a Free Consultation</button>
+            <h1>Want to see your business thrive?</h1>
         </div>
     </div>
-
 </body>
-<app-footer></app-footer>
+<br><br><br>
+<app-get-started></app-get-started>
+<br><br><br>

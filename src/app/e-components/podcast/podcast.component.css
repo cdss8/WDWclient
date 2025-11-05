@@ -1,55 +1,108 @@
 body{
-    height: 120vh;
-    max-height: 2000px;
+    max-width: 1920px;
+    height: 80vh;
+    min-height: 1550px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 180px auto auto;
 }
 
 body .head-template{
     flex-direction: column;
     width: 80%;
-    height: 250px;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    background: #111827;
-    margin: 5vh 10%;
+    background: rgb(24, 23, 28);
 }
 
-.head-template div{
-    width: 100%;
-    height: 100%;
-    margin: 0;
+
+.head-template div {
+    width: 70%;
+    margin: auto;
+    padding: 5%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: baseline;
     background: transparent;
+}
+
+.head-template .moketa{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.head-template .moketa div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #f50;
+
+}
+
+.moketa div:nth-child(1){
+    background:url('/assets/covers/2b.png');
+    background-size:60%;
+    background-position-x: 120px;
+
+
+}
+
+.moketa div:nth-child(2){
+    margin: 0;
+    align-items: baseline;
+    display: flex;
 }
 
 .head-template h1{
     background: transparent;
     margin: 0;
-    font-size: 40px;
-    color: #f50;
-
-
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 2px 2px solid #111827;
+    text-transform: capitalize;
+    margin-bottom: 5%;
 }
+
+.head-template span{
+    background: transparent;
+    color: #f50;
+}
+
+.head-template h3{
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'Alata';
+    font-weight: 800;
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
 .head-template p{
-    padding-top:25px ;
+    padding-left: 25px;
     background: transparent;
     margin: 0;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 400;
+    font-size: 1.1rem;
+    color: #32383F;
+    font-weight: 500;
     font-family: 'DM sans', sans-serif;
 }
-
 .services{
     margin: 5vh 10%;
     width: 80%;
-    height: 60%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -72,6 +125,8 @@ body .head-template{
 }
 .podcast-info{
     flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
 }
 .podcast-info h3{
     font-size: 14px;
@@ -81,7 +136,7 @@ body .head-template{
     color: #f50;
 }
 .podcast-info h2{
-    font-size: 22px;
+    font-size: 1.82rem;
     font-weight: 400;
     padding-bottom: 15px;
     text-transform: capitalize;
@@ -92,7 +147,6 @@ body .head-template{
     font-size: 14px;
     font-weight: 300;
     padding-bottom: 15px;
-
     font-family: 'DM sans', sans-serif;
 }
 .podcast-cover div{
@@ -100,6 +154,11 @@ body .head-template{
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+}
+
+.podcast-cover div:nth-child(1){
+    border-right: 2px solid #f50;
 }
 
 .podcast-cover div h1{
@@ -112,15 +171,16 @@ body .head-template{
 }
 
 .podcast-cover div p{
-    font-weight: 200;
-    padding-top: 10px;
+    font-weight: 400;
+    padding-top: 1rem;
     color: #f50;
     text-transform: capitalize;
 }
 
 .podcast-cover div img{
     margin-top: 15%;
-    height: 220px;
+    margin-left: 10%;
+    height: 200px;
     cursor:pointer;
 }
 
@@ -148,6 +208,7 @@ margin-top: 15px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     cursor:pointer;
     color: #000;
+    align-self: center;
  }
 
  .podcast-cover button:hover{
@@ -162,17 +223,6 @@ background: #32383f2a;
     display: flex;
     margin: 0;
 }
-.podcast-info{
-    align-items: center;
-    justify-content: baseline;
-}
-
-.podcast-info p{
-    margin: 0 50px;
-    padding: 0;
-    background: transparent;
-}
-
 
 .bn-wrapper{
     margin-top: 70px;
@@ -201,9 +251,9 @@ background: #32383f2a;
 }
 .bn-wrapper label {
     background: transparent;
-    align-self: baseline;
-    font-size: 18px;
-    font-family: "Zain", sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "DM sans", sans-serif;
     font-weight: 500;
     font-style: normal;
 
@@ -222,22 +272,15 @@ background: #32383f2a;
     outline: none;
     border-color: #ff5500;
 }
-.bn-wrapper input[type="email"].invalid {
-    border-color: #dc3545;
-}
-.bn-wrapper .error-message {
-    display: none;
-    color: #dc3545;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-}
+
 .bn-wrapper button {
     justify-self: center;
     align-self: center;
-    width: 60%;
+    width: 20%;
+    min-width: 150px;
     margin-top: 10px;
-    font-size: 16px;
-    font-family: "Zain", sans-serif;
+    font-size: 1rem;
+    font-family: "DM sans", sans-serif;
     font-weight: 500;
     font-style: normal;
     padding: 0.75rem;
@@ -261,4 +304,454 @@ color: #fff;
 
 .suscb p span{
     color: #aaa;
+}
+.error{
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+.error-message {
+    padding-top: 10px;
+    width: auto; 
+    color: #f50; 
+    font-size: .9em;
+    justify-self: baseline;
+    background: transparent;
+    animation: vibrate 0.5s; 
+    margin-left: 0;
+}
+
+.ssc{
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    background: #fff;
+    padding: 10px auto;
+   animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ssc p{
+    background: transparent;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'DM sans';
+    color: #0a8502;;
+}
+
+
+@media (max-width: 576px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 400px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 400px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+
+    .podcast-cover div img{
+        height: 90px;
+        cursor:pointer;
+    }
+    .services{
+        margin: 5vh 0;
+        width: 100%;
+    }
+    .podcast-info h2{
+        font-size: 1.4rem;
+    }
+
+    #sign-up-form {
+        border-radius: 8px;
+        width: 90%;
+    }
+
+    .podcast {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    
+    .podcast-info,  .podcast-cover{
+        width: 100%;
+        margin: 1% 0;
+        height: 48%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+    }
+
+    .podcast-cover div h1{
+        background: transparent;
+        margin: 0 auto;
+        font-size: 1.3rem;
+    }
+
+    .podcast-cover div p{
+        font-weight: 400;
+        padding:0;
+        color: #f50;
+        text-transform: capitalize;
+    }
+
+    .podcast-cover div img{
+        margin:auto;
+        width: 120px;
+        cursor:pointer;
+        align-items: center;
+    }
+
+    .podcast-cover div h3{
+        margin: 0 auto;
+        padding:0;
+        font-size: 16px;
+        font-family: 'DM sans', sans-serif;
+        font-weight: 500;
+    }
+
+
+    .podcast-cover button{
+        margin-top: 5px;
+    }
+    
+    .podcast-info{
+        justify-content: end;
+    }
+    .podcast-info h3{
+        padding-bottom: 0px;
+    }
+    .podcast-info h2{
+        padding-bottom: 0px;
+    }
+
+    .podcast-info p{
+        padding-bottom: 0px;
+    }
+    .bn-wrapper label {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 500px;
+        text-align: center;
+        border: 2px solid #f50;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        padding: 40px 10px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .podcast-cover div img{
+        height: 90px;
+        cursor:pointer;
+    }
+    .services{
+        margin: 5vh 0;
+        width: 100%;
+    }
+    .podcast-info h2{
+        font-size: 1.4rem;
+    }
+
+    #sign-up-form {
+        border-radius: 8px;
+        width: 90%;
+    }
+
+    .podcast {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    
+    .podcast-info,  .podcast-cover{
+        width: 100%;
+        margin: 1% 0;
+        height: 48%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+    }
+
+    .podcast-cover div h1{
+        background: transparent;
+        margin: 0 auto;
+        font-size: 1.3rem;
+    }
+
+    .podcast-cover div p{
+        font-weight: 400;
+        padding:0;
+        color: #f50;
+        text-transform: capitalize;
+    }
+
+    .podcast-cover div img{
+        margin:auto;
+        width: 120px;
+        cursor:pointer;
+        align-items: center;
+    }
+
+    .podcast-cover div h3{
+        margin: 0 auto;
+        padding:0;
+        font-size: 16px;
+        font-family: 'DM sans', sans-serif;
+        font-weight: 500;
+    }
+
+
+    .podcast-cover button{
+        margin-top: 5px;
+    }
+    
+    .podcast-info{
+        justify-content: end;
+    }
+    .podcast-info h3{
+        padding-bottom: 0px;
+    }
+    .podcast-info h2{
+        padding-bottom: 0px;
+    }
+
+    .podcast-info p{
+        padding-bottom: 0px;
+    }
+    .bn-wrapper label {
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 750px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+        padding: 40px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .podcast-cover div img{
+        margin-top: 30%;
+        height: 140px;
+        cursor:pointer;
+    }
+    .services{
+        margin: 5vh 0;
+        width: 100%;
+    }
+    .podcast-info h2{
+        font-size: 1.5rem;
+    }
+
+    #sign-up-form {
+        border-radius: 8px;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1026px) and (max-width: 1200px) {
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    .head-template div{
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-template h1{
+        width: 900px;
+        text-align: justify;
+        border: 2px solid #f50;
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        padding: 50px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .head-template p{
+        font-size: 1.1rem;
+    }
+    .podcast-cover div img{
+        margin-top: 25%;
+        height: 150px;
+        cursor:pointer;
+    }
+    .services{
+        margin: 5vh 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1201px) and (max-width:1440px){
+    body{
+        margin: 100px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+
+    .head-template h1{
+        font-size: 3.5rem;
+    }
+    .podcast-cover div img{
+        margin-top: 25%;
+        height: 150px;
+        cursor:pointer;
+    }
+    .services{
+        margin: 5vh 0;
+        width: 100%;
+
+    }
+}
+
+@media(min-width:1440px) and (max-width:1800px){
+
+    body{
+        margin: 120px auto auto;
+    }
+
+    body .head-template{
+        flex-direction: column;
+        width: 100%;
+        height: 900px;
+    }
+    
+    .head-template h1{
+        font-size: 3.8rem;
+    }
+
+    .head-template p{
+        font-size: 1.5rem;
+    }
+
+    .head-template .moketa{
+        width: 500px;
+        height: 40%;
+    }
+    .services{
+        margin: 5vh 5%;
+        width: 90%;
+
+    }
 }

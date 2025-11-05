@@ -8,49 +8,93 @@
           <br>Get in touch for 100 % free custom audit and Lets take together
           <br> Your business to the next level </h4>
         </div>
-        <div class="gs-text-2">
-<!--planned calendy calendar--> 
-        </div>
+
       </div>
       <div class="gs-form">
 
         <!--ng-->
-        <form id="getstarted" [formGroup]="contactUsForm" (submit)="submitContactUs()">
-          <div class="name-ctn">
+        <form [formGroup]="contactUsForm" (submit)="onSubmit()">
+          <div class="layer1" *ngIf="sucessLayer===0">
             <div class="fname">
-              <label for="firstname">First Name</label>
-              <input formControlName="firstName" type="text" id="firstName"  placeholder=" " required>
+              <label for="firstname">First Name <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="firstName" type="text" id="firstName"  placeholder="First Name " required>
+              <div class="error-ctn"  *ngIf="contactUsForm.get('firstName')?.invalid && contactUsForm.get('firstName')?.touched">
+                <small class="error-message" *ngIf="contactUsForm.get('firstName')?.errors?.['required']">This field is required</small>
+              </div>
             </div>
+            
             <div class="lname">
-              <label for="lastname">Last Name</label>
-              <input formControlName="lastName" type="text" id="lastName" placeholder=" " required>
+              <label for="lastname">Last Name <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="lastName" type="text" id="lastName" placeholder="Last Name " required>
+              <div class="error-ctn"  *ngIf="contactUsForm.get('lastName')?.invalid && contactUsForm.get('lastName')?.touched">
+                <small class="error-message" *ngIf="contactUsForm.get('lastName')?.errors?.['required']">This field is required</small>
+              </div>
+            </div>
+  
+            <div class="email">
+              <label for="email">Email <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="email"   type="email" id="email" placeholder="Your@email.com" required>
+              <div class="error-ctn" *ngIf="contactUsForm.get('email')?.invalid && contactUsForm.get('email')?.touched">
+                <small class="error-message" *ngIf="contactUsForm.get('email')?.errors?.['required']">This field is required</small>
+                <small class="error-message" *ngIf="contactUsForm.get('email')?.errors?.['email']">Please enter a valid email address.</small>
+              </div>
+            </div>
+  
+            <div class="company">
+              <label for="company">Company <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="company"  type="text" id="Company" placeholder="Company or https://company.com " required>
+              <div class="error-ctn"  *ngIf="contactUsForm.get('company')?.invalid && contactUsForm.get('company')?.touched">
+                <small class="error-message" *ngIf="contactUsForm.get('company')?.errors?.['required']">This field is required</small>
+              </div>
+            </div>
+            
+            <div class="revenue">
+              <label for="revenue"> What Is your Current Revenue <i class="fa-solid fa-asterisk"></i></label>
+              <input formControlName="revenue"  type="text" id="revenue" placeholder="Input your data or Select an Option" list="rev" required >
+              <div class="error-ctn"  *ngIf="contactUsForm.get('revenue')?.invalid && contactUsForm.get('revenue')?.touched">
+                <small class="error-message" *ngIf="contactUsForm.get('revenue')?.errors?.['required']">This field is required</small>
+              </div>
+              <datalist id="rev">
+                <option value="Bellow $500.000 per year">
+                <option value="Between $500.000 and $ 2 million per year">
+                <option value="Between $2 and $ 5 million per year">
+                <option value="Between $5 and $ 10 million per year">
+                <option value="More than $ 10 million per year">
+              </datalist>
+            </div>
+            
+            
+            <div class="message">
+              <label for="message">Message <i class="fa-solid fa-asterisk"></i></label>
+              <textarea formControlName="message" id="message"  placeholder="Quick Message About Your Project" required>  </textarea>
+              <div class="error-ctn"  *ngIf="contactUsForm.get('message')?.invalid && contactUsForm.get('message')?.touched">
+                <small class="error-message" *ngIf="contactUsForm.get('message')?.errors?.['required']">This field is required</small>
+              </div>
+            </div>
+  
+            <div class="privacy">
+              <label class="customcheckbox" for="terms" [ngClass]="{'error': contactUsForm.get('terms')?.invalid && contactUsForm.get('terms')?.touched}" >
+                <input formControlName="terms"  type="checkbox" id="terms" name="terms" required>
+                <span class="checkmark"></span> 
+                By submitting this form, I consent Engage Digital Wealth storing, processing and contacting me in response to my inquiry. 
+                You can unsubscribe at any time. Please read our <a [routerLink]="['/privacy']">Privacy Policy</a> for more information. 
+              </label>
+            </div>
+  
+            <div class="contactus-ctn">
+              <button type="submit">Contact Us</button>
             </div>
           </div>
-
-          <div class="email-ctn">
-            <label for="email">Email <i class="fa-solid fa-asterisk"></i></label>
-            <input formControlName="email"   type="email" id="email-gs" placeholder="Your@email.com" required>
-            <span class="error-message">The entry is Invalid</span>
-          </div>
-          <div class="company-ctn">
-            <label for="company">Company</label>
-            <input formControlName="company"  type="text" id="Company" placeholder=" " required>
-          </div>
-          <div class="enquiree-ctn">
-            <label for="enquiree">Message</label>
-            <input formControlName="message" type="text" id="Message"  placeholder="Quick Message About Your Project" required>
-          </div>
-
-          <div class="privacy-ctn">
-            <input formControlName="terms"  type="checkbox" id="privacy" name="privacy" required>
-            <label for="privacy">By submitting this form, I consent Engage Digital Wealth processing my data according to their <a href="#">Privacy Policy</a>.</label>
-          </div>
-          <div class="contactus-ctn">
-            <span class="error-message"></span>
-            <button type="submit">Contact Us</button>
-          </div>
-
+          <div class="layer2" *ngIf="sucessLayer===1">
+            <p>Thanks for choosing Us! We will back to you shortly.</p>
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" 
+            cy="26" r="25" fill="none" /><path class="checkmark__check" 
+            fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+            <button (click)="restartFn()">Go ahead again</button>
+        </div>
         </form>
+        
       </div>
     </div>
     </section>

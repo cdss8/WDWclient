@@ -1,9 +1,15 @@
-<app-header></app-header>
 <body>
     <section class="head-template">
         <div>
-            <h1>Interested in joining forces or providing value?</h1>
-            <p>Send us your message, and we will explore and consider potential partnerships together</p>
+            <h1>Partnership 
+                <br><span>we welcome valuable proposals & opportunities</span></h1>
+                <div class="moketa">
+                    <div></div>
+                    <div>
+                        <h3>Business-To-Business</h3>
+                        <p>Want to help us to explode profit?</p>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -11,49 +17,81 @@
         <div class="simple-form">
             <div class="sf-contacts">
                 <div>
-                    <p>Investors & press</p>
-                    <h5>investors<i class="fa-light fa-at" style="font-size: 14px;"></i>engagedigitalwealth.com</h5>
-                    <h5>press<i class="fa-light fa-at" style="font-size: 14px;"></i>engagedigitalwealth.com</h5>
-                </div>
-                <div>
-                    <p>Providers & Affiliates</p>
-                    <h5>info<i class="fa-light fa-at" style="font-size: 14px;"></i>engagedigitalwealth.com</h5>
-                </div>
-                <div>
-                    <p>general enquiries</p>
-                    <h5>hello<i class="fa-light fa-at" style="font-size: 14px;"></i>engagedigitalwealth.com</h5>
-
-                </div>
-                <div>
-                    <p>Sales Department</p>
-                    <h5>sales<i class="fa-light fa-at" style="font-size: 14px;"></i>engagedigitalwealth.com</h5>
-
+                    <p><b>Investors:</b>
+                        <br> investors<i class="fa-light fa-at"></i>wisedigitalwealth.com</p><br><br>
+                    <p><b>Providers, Affiliates:</b>
+                        <br>partnership<i class="fa-light fa-at" ></i>wisedigitalwealth.com</p><br><br>
+                    <p><b>General enquiries:</b>
+                        <br>hello<i class="fa-light fa-at" ></i>wisedigitalwealth.com</p><br><br>
+                    <p><b>Sales department:</b>
+                        <br>sales<i class="fa-light fa-at"></i>wisedigitalwealth.com</p><br><br>
+                    <p><b>Press:</b>
+                        <br>press<i class="fa-light fa-at"></i>wisedigitalwealth.com</p><br><br>
                 </div>
             </div>
-            <form action="">
-                <div>
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullName"  placeholder=" ">
+            <form [formGroup]="partnershipForm" (submit)="onSubmit()">
+                <div class="layer1" *ngIf="success===0">
+                    <div>
+                        <label for="fullname">Full Name <i class="fa-solid fa-asterisk"></i></label>
+                        <input type="text" id="fullName" formControlName="fullName" placeholder="First Name Last Name ">
+                        <div class="error-ctn"  *ngIf="partnershipForm.get('fullName')?.invalid && partnershipForm.get('fullName')?.touched">
+                            <small class="error-message" *ngIf="partnershipForm.get('fullName')?.errors?.['required']">This field is required</small>
+                          </div>
+                    </div>
+    
+                    <div>
+                        <label for="email">Corp. Email <i class="fa-solid fa-asterisk"></i></label>
+                        <input  type="text" formControlName="email" placeholder="your_work@email.com" required>
+                        <div class="error-ctn"  *ngIf="partnershipForm.get('email')?.invalid && partnershipForm.get('email')?.touched">
+                            <small class="error-message" *ngIf="partnershipForm.get('email')?.errors?.['required']">This field is required</small>
+                            <small class="error-message" *ngIf="partnershipForm.get('email')?.errors?.['email']">Please choose a correct email</small>
+                          </div>
+                    </div>
+                    <div> 
+                        <label for="company">Company/Brand <i class="fa-solid fa-asterisk"></i></label>
+                        <input type="text" formControlName="company"  placeholder="Company or https://website.com " >
+                        <div class="error-ctn"  *ngIf="partnershipForm.get('company')?.invalid && partnershipForm.get('company')?.touched">
+                            <small class="error-message" *ngIf="partnershipForm.get('company')?.errors?.['required']">This field is required</small>
+                          </div>
+                    </div>
+                    <div>
+                        <label for="fullname">Title/Position<i class="fa-solid fa-asterisk"></i></label>
+                        <input type="text" id="title" formControlName="title" placeholder="Ex: CEO, Partnership Manager, etc. ">
+                        <div class="error-ctn"  *ngIf="partnershipForm.get('title')?.invalid && partnershipForm.get('title')?.touched">
+                            <small class="error-message" *ngIf="partnershipForm.get('title')?.errors?.['required']">This field is required</small>
+                          </div>
+                    </div>
+                    <div> 
+                        <label for="message">Message <i class="fa-solid fa-asterisk"></i></label>
+                        <textarea formControlName="message" id="message"  placeholder="Your Best Proposal" required>  </textarea>
+                        <div class="error-ctn"  *ngIf="partnershipForm.get('message')?.invalid && partnershipForm.get('message')?.touched">
+                            <small class="error-message" *ngIf="partnershipForm.get('message')?.errors?.['required']">This field is required</small>
+                          </div>
+                    </div>
+                    <div class="privacy">
+                        <label class="customcheckbox" for="dataPrivacy" [ngClass]="{'error': partnershipForm.get('dataPrivacy')?.invalid && partnershipForm.get('dataPrivacy')?.touched}" >
+                          <input formControlName="dataPrivacy"  type="checkbox" id="dataPrivacy" name="dataPrivacy" required>
+                          <span class="checkmark"></span> <i class="fa-solid fa-asterisk"></i>
+                          By submitting this form, I consent Wise Digital Wealth storing, processing and contacting me in response to my inquiry. 
+                          You can unsubscribe at any time. Please read our <a [routerLink]="['/privacy']">Privacy Policy</a> for more information. 
+                          
+                        </label>
+                      </div>
+    
+                    <div class="contactus-ctn"> 
+                        <button type="submit"> Send</button>
+                    </div>
                 </div>
-                <div>
-                    <label for="email">Corp. Email <i class="fa-solid fa-asterisk"></i> </label>
-                    <input  type="text" id="email"  placeholder=" " required>
-                </div>
-                <div> 
-                    <label for="company">Company or/and Brand</label>
-                    <input type="text" id="company"  placeholder=" " >
-                </div>
-                <div> 
-                    <label for="message">Message</label>
-                    <input type="text" id="message"  placeholder=" " style="height:40%;">
-                </div>
-                <div> 
-                    <button> Send</button>
+                <div class="layer2" *ngIf="success===1">
+                    <p>Thanks for your message! 
+                    <br><br> Our experts will study this proposal and get back to you if we consider it relevant !</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" 
+                    cy="26" r="25" fill="none" /><path class="checkmark__check" 
+                    fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+                    <button (click)="restartFn()">Start Over</button>
                 </div>
             </form>
-
         </div>
-        <p class="p">Engage Digital Wealth <span>&#169;</span> 2024 </p>
     </section>
 </body>
-<app-footer></app-footer>
