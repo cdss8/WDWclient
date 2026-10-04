@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TeamComponent } from '../team/team.component';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GetStartedComponent } from "../../main/get-started/get-started.component"; 
@@ -20,7 +19,7 @@ interface Legal {
 @Component({
   selector: 'app-company-info',
   standalone: true,
-  imports: [RouterModule, TeamComponent, PrivacyPolicyComponent, CommonModule, NgbModule, DiscoverComponent, GetStartedComponent],
+  imports: [RouterModule, PrivacyPolicyComponent, CommonModule, NgbModule, DiscoverComponent, GetStartedComponent],
   templateUrl: './company-info.component.html',
   styleUrl: './company-info.component.css'
 })

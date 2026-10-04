@@ -16,7 +16,6 @@ import { TestimonialsComponent } from './e-components/testimonials/testimonials.
 import { PodcastComponent } from './e-components/podcast/podcast.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CompanyInfoComponent } from './e-components/company-info/company-info.component';
-import { TeamComponent } from './e-components/team/team.component';
 import { CookiesPolicyComponent } from './company/cookies-policy/cookies-policy.component';
 import { FaqComponent } from './e-components/faq/faq.component';
 import { NgModule } from '@angular/core';
@@ -42,7 +41,6 @@ const routesConfig: Routes = [
     {path:'technology', component:TechImprovmentComponent, title: 'Tech Solutions | Wise Digital Wealth'},
     {path:'locations', component:LocationdetailsComponent, title: 'Future Offices | Wise Digital Wealth '},
     {path:'about', component:CompanyInfoComponent, title:'Company | Wise Digital Wealth'},
-    {path:'team', component:TeamComponent, title:'Terms & Conditions | Wise Digital Wealth'},
     {path:'faq', component:FaqComponent, title:'FAQ | Wise Digital Wealth'},
     {path:'cookies', component:CookiesPolicyComponent, title:'Cookies | Wise Digital Wealth'},
     {path:'**', redirectTo:'/'},

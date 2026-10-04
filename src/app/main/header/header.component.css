@@ -76,7 +76,7 @@ nav{
     margin: 0;
     display: inline-block;
     width: 130px;
-    font-size: 1.25rem;  
+    font-size: 12px;  
     font-family: "DM sans", sans-serif;
     font-weight: 500;
     text-decoration: none;
@@ -112,7 +112,7 @@ header nav button{
     border:0;
     background: rgba(0, 0, 0, 0.09);
     color:#000;
-    font-size: 1.3rem;
+    font-size: 12px;
     cursor:pointer;
     overflow: hidden;
     font-family: "DM sans", sans-serif;
@@ -232,7 +232,7 @@ label.hamburger {
         margin: 0;
         width: 140px;
         height: 40px;
-        font-size: 1.1rem;
+        font-size: 12px;
     }
     .hamburger_menu{
         padding-right: 25px;
@@ -327,14 +327,14 @@ label.hamburger {
     .s-menu a{
         width: 50%;
         min-width: 400px;
-        font-size: 1.2rem;
+        font-size: 12px;
      }
 
      header nav button{
         margin: 0;
         width: 140px;
         height: 40px;
-        font-size: 1.1rem;
+        font-size: 12px;
     }
     .hamburger_menu{
         padding-right: 50px;
@@ -430,14 +430,14 @@ label.hamburger {
     .s-menu a{
         width: 50%;
         min-width: 400px;
-        font-size: 1.2rem;
+        font-size: 12px;
      }
 
      header nav button{
         margin: 0;
         width: 140px;
         height: 40px;
-        font-size: 1.1rem;
+        font-size: 12px;
     }
 
     .hamburger_menu{
@@ -535,14 +535,14 @@ label.hamburger {
     .s-menu a{
         width: 50%;
         min-width: 400px;
-        font-size: 1.2rem;
+        font-size: 12px;
      }
 
      header nav button{
         margin: 0;
         width: 140px;
         height: 40px;
-        font-size: 1.1rem;
+        font-size: 12px;
     }
     .hamburger_menu{
         padding-right: 100px;
